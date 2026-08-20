@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CONTACT_EMAIL, DISPLAY, SUBSTACK_URL, trackSubstack } from './shared'
+import { DISPLAY, SUBSTACK_URL, trackSubstack } from './shared'
 
 export function MarketingFooter() {
   return (
@@ -19,9 +19,9 @@ export function MarketingFooter() {
             <Link to="/about" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
               About
             </Link>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
+            <Link to="/lets-chat" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
               Contact
-            </a>
+            </Link>
             <Link to="/privacy" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
               Privacy Policy
             </Link>

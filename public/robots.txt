@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /lets-chat
 
 Sitemap: https://www.empireoflightcollective.com/sitemap.xml

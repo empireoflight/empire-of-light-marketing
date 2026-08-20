@@ -60,7 +60,6 @@ export default function LetsChatPage() {
         title="Let's Chat | Empire of Light"
         description="Send a quick note and Kelly will get back to you."
         path="/lets-chat"
-        noindex
       />
       <MarketingHeader />
 

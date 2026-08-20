@@ -3,7 +3,7 @@ import founderPhoto from '../assets/landing/founder-photo.jpg'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
-import { BOOKING_URL, CONTACT_EMAIL, DISPLAY, Eyebrow, primaryButton, secondaryButtonOnDark, trackBooking } from '../components/shared'
+import { BOOKING_URL, DISPLAY, Eyebrow, primaryButton, secondaryButtonOnDark, trackBooking } from '../components/shared'
 
 const BRINGS = [
   '15+ years leading product and UX in complex organizations',
@@ -56,13 +56,13 @@ export default function AboutPage() {
               >
                 Connect on LinkedIn &rarr;
               </a>
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
+              <Link
+                to="/lets-chat"
                 className="text-[14px] font-semibold uppercase tracking-[0.1em]"
                 style={{ ...DISPLAY, color: '#A96D0F' }}
               >
-                Email me &rarr;
-              </a>
+                Get in touch &rarr;
+              </Link>
             </div>
           </div>
         </div>
