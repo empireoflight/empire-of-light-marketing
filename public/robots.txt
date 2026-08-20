@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /login
-Disallow: /signup
-Disallow: /invite/
-Disallow: /onboarding
-Disallow: /teams
+Disallow: /lets-chat
 
 Sitemap: https://www.empireoflightcollective.com/sitemap.xml
