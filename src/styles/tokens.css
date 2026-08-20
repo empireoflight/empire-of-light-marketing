@@ -1,0 +1,9 @@
+/*
+ * Minimal color tokens carried over from the Empire of Light app's design
+ * system — just the two the marketing site's buttons reference
+ * (Button.tsx in the app repo uses the same values).
+ */
+@theme {
+  --color-eol-accent: oklch(0.72 0.14 78);
+  --color-eol-ink: oklch(0.18 0.015 60);
+}
