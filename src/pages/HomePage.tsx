@@ -52,6 +52,33 @@ const PILOT_INCLUDES = [
 
 const WHO_FOR = ['AI transformation initiatives', 'Leadership teams', 'Product organizations', 'Mission-driven organizations navigating meaningful change']
 
+const BEFORE_AFTER = [
+  {
+    before: 'Team members didn’t contribute to the vision, so people pull in different directions and aren’t as engaged.',
+    after: 'Team members are bought into the vision and move together.',
+  },
+  {
+    before: 'Team members are hesitant to take action — lots of planning, not enough doing.',
+    after: 'Team members take action more quickly.',
+  },
+  {
+    before: 'Work is kept hidden or in silos.',
+    after: 'Work becomes visible, so others can build on it.',
+  },
+  {
+    before: 'Role and scope friction goes unspoken until it blows up.',
+    after: 'Friction is addressed proactively, building stronger relationships.',
+  },
+  {
+    before: 'Team members are fatigued by the AI landscape.',
+    after: 'Team members are reenergized.',
+  },
+  {
+    before: 'The leader is exhausted from carrying the whole load.',
+    after: 'The leader is having more fun, with a team that has room to contribute meaningfully.',
+  },
+]
+
 const APP_SHOTS = [
   { src: shotVision, alt: 'The team vision screen', caption: 'The committed vision, always at the top', position: 'top', zoom: 1.15 },
   { src: shotFriction, alt: 'Friction processing with grounding breathwork', caption: 'Friction Processing', position: 'top' },
@@ -184,6 +211,50 @@ export default function HomePage() {
             className="block w-full rounded-2xl object-cover"
             style={{ aspectRatio: '750 / 549' }}
           />
+        </div>
+      </section>
+
+      {/* Before / After */}
+      <section className="px-6 pb-16 md:px-8 md:pb-24" style={{ background: '#FDFAF4' }}>
+        <div className="mx-auto max-w-[1120px]">
+          <div className="mb-10 max-w-[720px]">
+            <Eyebrow>The transformation</Eyebrow>
+            <h2 className="m-0 mb-2 text-[30px] leading-[1.1] font-light md:text-[42px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+              What changes for a team
+            </h2>
+          </div>
+          <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#D8D2DC' }}>
+            <table className="w-full min-w-[640px] border-collapse text-left">
+              <thead>
+                <tr>
+                  <th
+                    className="px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.14em]"
+                    style={{ ...DISPLAY, color: '#544D5A', background: '#F1EBE0', width: '50%' }}
+                  >
+                    Before
+                  </th>
+                  <th
+                    className="px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.14em]"
+                    style={{ ...DISPLAY, color: '#A96D0F', background: '#FDF0DC', width: '50%' }}
+                  >
+                    After
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {BEFORE_AFTER.map((row, i) => (
+                  <tr key={i} style={{ background: '#FFFFFF' }}>
+                    <td className="border-t px-6 py-5 text-[15px] leading-[1.6] md:text-[16px]" style={{ borderColor: '#D8D2DC', color: '#544D5A' }}>
+                      {row.before}
+                    </td>
+                    <td className="border-t border-l px-6 py-5 text-[15px] leading-[1.6] md:text-[16px]" style={{ borderColor: '#D8D2DC', color: '#131114' }}>
+                      {row.after}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
