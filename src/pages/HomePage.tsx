@@ -346,11 +346,14 @@ export default function HomePage() {
         >
           <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
             <Eyebrow>Founding co-creator investment</Eyebrow>
-            <div className="text-[48px] leading-none font-semibold md:text-[64px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              $2,000
+            <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+              $500&ndash;$5,000
             </div>
             <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
               per team &middot; 4&ndash;6 weeks
+            </div>
+            <div className="mt-1 text-[13px]" style={{ color: '#544D5A' }}>
+              Sliding scale, based on team size and scope
             </div>
           </div>
           <div>

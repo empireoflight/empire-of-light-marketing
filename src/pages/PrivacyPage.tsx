@@ -112,6 +112,27 @@ export default function PrivacyPage() {
         </div>
       </section>
 
+      {/* Leadership and outcome reporting */}
+      <section className="px-6 py-16 md:px-8 md:py-20">
+        <div className="mx-auto max-w-[760px]">
+          <Eyebrow>What your leadership sees</Eyebrow>
+          <div className="flex flex-col gap-4">
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
+              Empire of Light is designed to build trust between a team and the leadership who sponsor it — not to give leadership a window
+              into what any individual said. What we share with your leadership is a synthesized before-and-after summary of outcomes, built
+              from the same kind of anonymized, aggregated signals described in the privacy tiers above — enough to show the program is
+              working, without exposing what any one person wrote.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              We do not make your reflections, check-ins, vision answers, or friction sessions directly available to anyone outside your
+              participating team — including leadership. If you want to bring your own vision answers, task updates, or anything else to a
+              conversation with your leadership, that’s entirely your call to make. We just won’t do it for you, and we won’t share it on your
+              behalf.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What we collect */}
       <section className="px-6 py-16 md:px-8 md:py-20">
         <div className="mx-auto max-w-[760px]">
