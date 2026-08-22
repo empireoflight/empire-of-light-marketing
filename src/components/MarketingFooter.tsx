@@ -25,6 +25,9 @@ export function MarketingFooter() {
             <Link to="/privacy" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
               Privacy Policy
             </Link>
+            <Link to="/terms" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
+              Terms of Service
+            </Link>
           </div>
         </div>
         <div

@@ -245,7 +245,8 @@ export default function PrivacyPage() {
             {CONTACT_EMAIL}
           </a>
           <p className="mt-8 text-[14px]" style={{ color: '#544D5A' }}>
-            See also our <Link to="/thesis" style={{ color: '#A96D0F' }}>thesis</Link> and{' '}
+            See also our <Link to="/terms" style={{ color: '#A96D0F' }}>terms of service</Link>,{' '}
+            <Link to="/thesis" style={{ color: '#A96D0F' }}>thesis</Link>, and{' '}
             <Link to="/about" style={{ color: '#A96D0F' }}>about</Link> pages.
           </p>
         </div>
