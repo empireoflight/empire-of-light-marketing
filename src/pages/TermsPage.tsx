@@ -6,10 +6,8 @@ import { CONTACT_EMAIL, DISPLAY, Eyebrow } from '../components/shared'
 
 const LAST_UPDATED = 'August 20, 2026'
 
-// TODO (Kelly): fill in before publishing — see the callout in the
-// "Governing law" section below for why these matter.
-const GOVERNING_LAW_STATE = '[Your State]'
-const BUSINESS_NAME = 'Kelly Woznicki, doing business as Empire of Light'
+const GOVERNING_LAW_STATE = 'Washington'
+const BUSINESS_NAME = 'Empire of Light LLC'
 
 export default function TermsPage() {
   return (
