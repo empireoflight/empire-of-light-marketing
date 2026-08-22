@@ -9,17 +9,14 @@ export function MarketingFooter() {
           <span className="text-[13px] font-semibold uppercase tracking-[0.14em]" style={{ ...DISPLAY, color: 'rgba(251,247,242,.6)' }}>
             Empire of Light
           </span>
-          <span className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
-            Reimagine &middot; Do &middot; Unlearn &middot; Evolve
-          </span>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/thesis" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Thesis
             </Link>
-            <Link to="/about" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
+            <Link to="/about" className="text-[14px]" style={{ color: '#FEE16A' }}>
               About
             </Link>
-            <Link to="/lets-chat" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
+            <Link to="/lets-chat" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Contact
             </Link>
             <Link to="/privacy" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
