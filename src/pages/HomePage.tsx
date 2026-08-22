@@ -289,7 +289,7 @@ export default function HomePage() {
       </section>
 
       {/* The cycle */}
-      <section id="framework" className="px-6 pt-16 pb-20 md:px-8 md:py-[88px]" style={{ background: '#F9F9F9' }}>
+      <section id="framework" className="px-6 pt-16 pb-10 md:px-8 md:pt-[88px] md:pb-12" style={{ background: '#F9F9F9' }}>
         <div className="mx-auto grid max-w-[1120px] items-center gap-12 md:grid-cols-2 md:gap-[56px]">
           <div>
             <Eyebrow>The cycle</Eyebrow>
@@ -316,7 +316,7 @@ export default function HomePage() {
       </section>
 
       {/* Before / After */}
-      <section className="px-6 pb-16 md:px-8 md:pb-24" style={{ background: '#FDFAF4' }}>
+      <section className="px-6 pt-14 pb-16 md:px-8 md:pt-16 md:pb-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-10 max-w-[720px]">
             <Eyebrow>The transformation</Eyebrow>
