@@ -206,7 +206,7 @@ export default function HomePage() {
             Unlock the collective intelligence <em style={{ fontStyle: 'normal', fontWeight: 600 }}>already inside your team</em>
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Shift the hive mind of your organization so more ambitious visions come to life faster, with more unity.
+            Shift the hive mind. Bring more ambitious visions to life faster, with more unity.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
