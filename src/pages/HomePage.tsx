@@ -156,7 +156,7 @@ const APP_PRACTICES = [
     title: 'Process the friction first, then have the conversation',
     body: [
       'When something is grinding, you walk through it alone in the app: ground, reflect on what happened, clarify what you actually need. Nothing is shared while you’re still figuring out what you think.',
-      'Then it generates a discussion guide — what to say, what you need, what you’re asking for — so the conversation starts clear instead of hot. Friction is information, and this is how it gets used.',
+      'Then it generates a discussion guide based on the perspective of all parties. Friction is information, and this is how it gets used.',
     ],
     shot: { src: shotFriction, alt: 'Friction processing with grounding breathwork', position: 'top' },
     tier: { n: 0, label: 'Ephemeral, never stored', bg: '#131114', fg: '#FBF7F2', dot: '#2E7D5B' },
@@ -244,50 +244,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What this is */}
-      <section id="what" className="px-6 py-16 md:px-8 md:py-[88px]" style={{ background: '#FFFFFF' }}>
-        <div className="mx-auto max-w-[1120px]">
-          <div className="mb-11 max-w-[820px]">
-            <Eyebrow>What this is</Eyebrow>
-            <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              An app your team runs weekly, and facilitation to get the first cycle right
-            </h2>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              A hybrid, on purpose. Software alone doesn&rsquo;t change how a team talks to each other, and a workshop alone doesn&rsquo;t survive
-              the week after. So we facilitate the beginning, and the app carries the rhythm from there.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
-              <Eyebrow>The app</Eyebrow>
-              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
-                Where the vision, the friction and the energy live
-              </h3>
-              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
-                The committed vision sits at the top. Underneath it: individual reflection, friction processing, weekly energy check-ins, and a
-                rollup that shows the team where it can evolve. Minutes a week, inside the work you&rsquo;re already doing.
-              </p>
-            </div>
-            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
-              <Eyebrow>The facilitation</Eyebrow>
-              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
-                We run your first cycle with you
-              </h3>
-              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
-                A vision workshop built from what your team wrote, biweekly working sessions on progress and friction, and one full evolve cycle.
-                After it, the app is yours to keep running.
-              </p>
-            </div>
-          </div>
-          <div className="mt-6 rounded-[20px] px-7 py-6" style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}>
-            <p className="m-0 max-w-[820px] text-[17px] leading-[1.6]" style={{ color: '#131114' }}>
-              This is heart-centered work. We assume everyone on the team is doing their best with what they have &mdash; so nothing here is used
-              to grade, rank or manage anyone. That posture is what makes people willing to say the true thing.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* The cycle */}
       <section id="framework" className="px-6 pt-16 pb-10 md:px-8 md:pt-[88px] md:pb-12" style={{ background: '#F9F9F9' }}>
         <div className="mx-auto grid max-w-[1120px] items-center gap-12 md:grid-cols-2 md:gap-[56px]">
@@ -312,6 +268,50 @@ export default function HomePage() {
             className="block w-full rounded-2xl object-cover"
             style={{ aspectRatio: '750 / 549' }}
           />
+        </div>
+      </section>
+
+      {/* What this is */}
+      <section id="what" className="px-6 py-16 md:px-8 md:py-[88px]" style={{ background: '#FFFFFF' }}>
+        <div className="mx-auto max-w-[1120px]">
+          <div className="mb-11 max-w-[820px]">
+            <Eyebrow>What this is</Eyebrow>
+            <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+              An app your team runs weekly, and facilitation to get the first cycle right
+            </h2>
+            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+              A hybrid, on purpose. Software alone doesn&rsquo;t change how a team talks to each other, and a workshop alone doesn&rsquo;t survive
+              the week after. So we facilitate the beginning, and the app carries the rhythm from there.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
+              <Eyebrow>The app</Eyebrow>
+              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
+                Where the vision, the friction and the energy live
+              </h3>
+              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
+                The committed vision sits at the top. Underneath it: individual reflection, friction processing, weekly energy check-ins, task
+                and experiment tracking, and a rollup that shows the team where it can evolve.
+              </p>
+            </div>
+            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
+              <Eyebrow>The facilitation</Eyebrow>
+              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
+                We run your first cycle with you
+              </h3>
+              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
+                A vision workshop built from what your team wrote, biweekly working sessions on progress and friction, and one full evolve cycle.
+                After it, the app is yours to keep running.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 rounded-[20px] px-7 py-6" style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}>
+            <p className="m-0 max-w-[820px] text-[17px] leading-[1.6]" style={{ color: '#131114' }}>
+              This is heart-centered work. We assume everyone on the team is doing their best with what they have &mdash; so nothing here is used
+              to grade, rank or manage anyone. That posture is what makes people willing to say the true thing.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -574,10 +574,6 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <p className="m-0 mb-4.5 text-[17px] leading-[1.55] md:text-[19px]" style={{ color: '#131114' }}>
-              Refunded if your team completes the program and doesn&rsquo;t find it valuable. (We believe a little skin in the game helps everyone
-              show up differently.)
-            </p>
             <p className="m-0 mb-2 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#26222A' }}>
               <strong style={{ fontWeight: 600 }}>Why be a founding co-creator?</strong>
             </p>

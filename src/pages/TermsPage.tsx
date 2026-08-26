@@ -70,9 +70,9 @@ export default function TermsPage() {
               investment between $500 and $5,000, based on team size and scope, as described on the home page.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              That investment is refunded if your team completes the program and doesn’t find it valuable. For larger or more complex
-              engagements, we may put the specific scope, timeline, and payment terms in a separate written agreement — where that happens,
-              its terms govern the engagement itself, and these website terms continue to cover your use of the site around it.
+              For larger or more complex engagements, we may put the specific scope, timeline, and payment terms in a separate written
+              agreement — where that happens, its terms govern the engagement itself, and these website terms continue to cover your use of
+              the site around it.
             </p>
           </div>
         </div>
