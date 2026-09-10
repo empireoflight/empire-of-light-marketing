@@ -64,7 +64,7 @@ const BEFORE_AFTER = [
     after: 'Team members are bought into the vision and move together.',
   },
   {
-    before: 'Team members are hesitant to take action — lots of planning, not enough doing.',
+    before: 'Team members are hesitant to take action; there’s a lot of planning and not enough doing.',
     after: 'Team members take action more quickly.',
   },
   {
@@ -88,15 +88,15 @@ const BEFORE_AFTER = [
 const DIFFERENTIATORS = [
   {
     title: 'Heart-centered',
-    body: 'We start from the assumption that everyone is doing their best with what they have. No scores, no rankings, no performance trail. People say the true thing when it can’t be held against them.',
+    body: 'We start from the assumption that everyone is doing their best with what they have. Nothing here is scored, ranked, or kept as a performance record, so people can be honest without it being held against them.',
   },
   {
     title: 'Transparent by design',
-    body: 'Every question tells you who will see the answer before you type it. Nothing is gathered quietly, and nothing is reported behind the team’s back.',
+    body: 'Every question tells you who will see your answer before you type it. Nothing is collected quietly, and nothing gets reported behind the team’s back.',
   },
   {
     title: 'Inside the work, not beside it',
-    body: 'An engagement survey happens twice a year and lands as a slide. This runs weekly, on the vision your team is already moving on, so what surfaces gets used the same week.',
+    body: 'A typical engagement survey runs twice a year and ends up as a slide. This runs weekly, built around the vision your team is already working toward, so whatever surfaces gets used that same week.',
   },
 ]
 
@@ -119,11 +119,11 @@ const FAQS = [
   },
   {
     q: 'Is this software or consulting?',
-    a: 'Both, plainly. The pilot is facilitated by us — the vision workshop, the biweekly sessions, one full evolve cycle. The app is what carries the work between sessions and what your team keeps afterward.',
+    a: 'Both. We facilitate the pilot directly (the vision workshop, the biweekly sessions, one full evolve cycle), and the app carries the work between sessions and stays with your team afterward.',
   },
   {
     q: 'Can we just use the app?',
-    a: 'No, teams get considerably more out of the first cycle when we facilitate it, and we want to set you up well!',
+    a: 'Not for the first cycle. Teams get a lot more out of it when we facilitate that first round, and we want your team set up well before you’re running it on your own.',
   },
   {
     q: 'How much time does it take?',
@@ -131,7 +131,7 @@ const FAQS = [
   },
   {
     q: 'Who sees what our team writes?',
-    a: 'We have different tiers of data privacy depending on the type of information that we are collecting. Some isn’t saved anywhere, some is only for you, some is synthesized to the team level with AI, and some is shown verbatim to your team. This is all made explicit in the app.',
+    a: 'We use different privacy tiers depending on the type of information being collected. Some isn’t saved anywhere, some is only for you, some is synthesized to the team level with AI, and some is shown verbatim to your team. This is all made explicit in the app.',
   },
   {
     q: 'What size team works best?',
@@ -144,8 +144,8 @@ const APP_PRACTICES = [
     eyebrow: '01 · Co-create a vision',
     title: 'Everyone answers first. Then you see where you actually agree.',
     body: [
-      'Each person completes the vision questionnaire on their own, so the loudest voice in the room isn’t the vision. The app synthesizes the responses, then flags what the team is aligned on and where it quietly disagrees.',
-      'Both go into the workshop. The disconnects are the agenda — that’s where the hour is worth spending.',
+      'Each person completes the vision questionnaire on their own, so the loudest voice in the room isn’t automatically the vision. The app synthesizes the responses and flags where the team is already aligned, and where it quietly isn’t.',
+      'Both go into the workshop, and the disagreements get equal billing. That’s usually where the most useful hour gets spent.',
     ],
     shot: { src: shotVision, alt: 'The team vision screen', position: 'top', zoom: 1.15 },
     tier: { n: 2, label: 'AI-assisted', bg: '#EDE4FA', fg: '#131114', dot: '#8B5CF6' },
@@ -155,8 +155,8 @@ const APP_PRACTICES = [
     eyebrow: '02 · Friction mitigator',
     title: 'Process the friction first, then have the conversation',
     body: [
-      'When something is grinding, you walk through it alone in the app: ground, reflect on what happened, clarify what you actually need. Nothing is shared while you’re still figuring out what you think.',
-      'Then it generates a discussion guide based on the perspective of all parties. Friction is information, and this is how it gets used.',
+      'When something is grinding, you work through it alone in the app first: what happened, what you’re actually feeling, what you need. None of it is shared while you’re still figuring out what you think.',
+      'Once everyone involved has done that, the app generates a discussion guide built from all sides. The friction becomes material for an actual conversation, instead of something everyone quietly works around.',
     ],
     shot: { src: shotFriction, alt: 'Friction processing with grounding breathwork', position: 'top' },
     tier: { n: 0, label: 'Ephemeral, never stored', bg: '#131114', fg: '#FBF7F2', dot: '#2E7D5B' },
@@ -166,8 +166,8 @@ const APP_PRACTICES = [
     eyebrow: '03 · Team vibe check',
     title: 'A weekly read on what’s giving energy and what’s draining it',
     body: [
-      'Two questions, a few minutes, once a week. What actually felt energizing, and what felt heavy, confusing or repetitive.',
-      'The evolve rollup turns those weeks into a pattern the team can act on: what to keep, what to stop, and where the team can grow next cycle. It’s shown to the team, not filed for the leader.',
+      'Two questions, a few minutes, once a week: what felt energizing, and what felt heavy, confusing, or repetitive.',
+      'The evolve rollup turns those weekly answers into a pattern the team can act on for the next cycle. The team sees it directly. It isn’t collected for the leader to review privately.',
     ],
     shot: { src: shotCheckin, alt: 'Weekly vibe check', position: 'top' },
     tier: { n: 3, label: 'Team aggregate', bg: '#FDE3CB', fg: '#131114', dot: '#D99A22' },
@@ -206,7 +206,7 @@ export default function HomePage() {
             Unlock the collective intelligence <em style={{ fontStyle: 'normal', fontWeight: 600 }}>already inside your team</em>
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Shift the hive mind. Bring more ambitious visions to life faster, with more unity.
+            Bring more ambitious visions to life, faster and more united.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
@@ -233,13 +233,17 @@ export default function HomePage() {
             <OctopusIcon size={46} />
           </div>
           <p className="m-0 mb-6 text-[22px] leading-[1.35] font-light md:text-[30px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-            An octopus has nine brains. One in the head, one in each arm. It doesn&rsquo;t move by command &mdash; it moves by agreement.
+            An octopus has nine brains: one in its head, and one in each arm. When they&rsquo;re not in sync, it gives itself away &mdash;
+            trying to camouflage against the reef, it ends up flashing through seven different colors at once, broadcasting exactly the
+            confusion it&rsquo;s trying to hide.
+          </p>
+          <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+            Most teams run the same way. The intelligence is there, distributed across everyone in the room, but when it&rsquo;s not
+            aligned, the internal friction leaks out anyway: mixed signals, stalled decisions, work that doesn&rsquo;t add up to one
+            direction. Everyone moves. Not always together.
           </p>
           <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-            Your team already has a hive mind. The problem is, it&rsquo;s a little like an octopus with nine brains and no group chat. There&rsquo;s
-            intelligence everywhere, but most of it never gets surfaced, integrated, or intentionally addressed. So everyone moves, but not always
-            together. Empire of Light is the rhythm &mdash; and the app &mdash; that helps teams unify their intelligence and{' '}
-            <strong style={{ fontWeight: 700 }}>MOVE</strong> together.
+            Empire of Light is the rhythm, and the app, that helps a team get its arms working from the same signal and move as one.
           </p>
         </div>
       </section>
@@ -253,8 +257,8 @@ export default function HomePage() {
               Reimagine, Do, Unlearn, Evolve
             </h2>
             <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              The Empire of Light Framework helps teams build a shared vision, take meaningful action, work through friction, and continuously
-              evolve together. This is a new rhythm for how teams navigate rapid change together.
+              The Empire of Light Framework gives teams a shared vision, a way to take meaningful action, a way to work through friction,
+              and a way to keep evolving. It&rsquo;s a new rhythm for navigating rapid change together.
             </p>
             <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
               Read the full thesis
@@ -280,8 +284,8 @@ export default function HomePage() {
               An app your team runs weekly, and facilitation to get the first cycle right
             </h2>
             <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              A hybrid, on purpose. Software alone doesn&rsquo;t change how a team talks to each other, and a workshop alone doesn&rsquo;t survive
-              the week after. So we facilitate the beginning, and the app carries the rhythm from there.
+              It&rsquo;s intentionally both. Software alone doesn&rsquo;t change how a team talks to each other. A workshop alone
+              doesn&rsquo;t survive the week after it ends. So we facilitate the beginning, and the app carries the rhythm from there.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
@@ -291,8 +295,8 @@ export default function HomePage() {
                 Where the vision, the friction and the energy live
               </h3>
               <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
-                The committed vision sits at the top. Underneath it: individual reflection, friction processing, weekly energy check-ins, task
-                and experiment tracking, and a rollup that shows the team where it can evolve.
+                The committed vision sits at the top. Below it, the day-to-day: individual reflection, friction processing, weekly energy
+                check-ins, task and experiment tracking, and a rollup that shows the team where it can evolve next.
               </p>
             </div>
             <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
@@ -302,14 +306,14 @@ export default function HomePage() {
               </h3>
               <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
                 A vision workshop built from what your team wrote, biweekly working sessions on progress and friction, and one full evolve cycle.
-                After it, the app is yours to keep running.
+                After that, the app is yours to keep running.
               </p>
             </div>
           </div>
           <div className="mt-6 rounded-[20px] px-7 py-6" style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}>
             <p className="m-0 max-w-[820px] text-[17px] leading-[1.6]" style={{ color: '#131114' }}>
-              This is heart-centered work. We assume everyone on the team is doing their best with what they have &mdash; so nothing here is used
-              to grade, rank or manage anyone. That posture is what makes people willing to say the true thing.
+              This is heart-centered work. We start from the assumption that everyone on the team is doing their best with what they have,
+              so nothing here is used to grade, rank, or manage anyone. That&rsquo;s what gives people room to be honest.
             </p>
           </div>
         </div>
@@ -368,8 +372,8 @@ export default function HomePage() {
               From a conversation to a vision your team is actually moving on
             </h2>
             <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              It starts with a conversation, not a self-serve signup flow. We assess fit together, and once your team is in, we run the first
-              cycle with you. After it, the app is yours to keep running.
+              It starts with a conversation. We assess fit together, and once your team is in, we run the first cycle with you. After it,
+              the app is yours to keep running.
             </p>
           </div>
           <div
@@ -391,8 +395,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-7 text-center text-[15px]" style={{ color: 'rgba(251,247,242,.5)' }}>
-            Step 1 is a conversation. From step 4 on, it&rsquo;s the facilitated engagement &mdash; the app carries all of it, before, during, and
-            after.
+            Step 1 is a conversation. From step 4 on, it&rsquo;s the facilitated engagement, with the app carrying everything before,
+            during, and after.
           </p>
           <div className="mt-9 flex justify-center">
             <a
@@ -471,11 +475,11 @@ export default function HomePage() {
           <div className="mb-12 max-w-[820px]">
             <Eyebrow color="#FEE16A">Why this is different</Eyebrow>
             <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
-              Most tools measure the team. This one is used by the team.
+              Built to be used by the team, not just measure it
             </h2>
             <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              Change management decks and culture surveys collect from people and report upward. This runs the other direction: the team writes,
-              the team sees it, the team decides what to do about it.
+              Change management decks and culture surveys collect input and report it upward. This works in the opposite direction. The
+              team writes it, the team reads it, and the team decides what happens next.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -564,7 +568,7 @@ export default function HomePage() {
           <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
             <Eyebrow>Founding co-creator investment</Eyebrow>
             <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              $500&ndash;$5,000
+              $1,000&ndash;$10,000
             </div>
             <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
               per team &middot; 4&ndash;6 weeks
@@ -578,8 +582,8 @@ export default function HomePage() {
               <strong style={{ fontWeight: 600 }}>Why be a founding co-creator?</strong>
             </p>
             <p className="m-0 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#26222A' }}>
-              Build an aligned, adaptable, and energized team that creates momentum toward your most important goals &mdash; and influence a
-              framework designed for the future of how humans work together.
+              Build a team that&rsquo;s aligned, adaptable, and has real energy behind your most important goals, and help shape a
+              framework for the future of how people work together.
             </p>
           </div>
         </div>
@@ -621,13 +625,12 @@ export default function HomePage() {
           <div>
             <Eyebrow>A note from the founder</Eyebrow>
             <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#131114' }}>
-              I&rsquo;ve seen magic emerge on teams when the right conditions are there: a good vision, a nimble way to work through experiments
-              and tasks, a way to process the friction that naturally arises on teams (I see this as a gift, nothing to fear) and a way to evolve
-              and celebrate!
+              I&rsquo;ve seen real magic emerge on teams when the conditions are right: a good shared vision, a nimble way to work through
+              experiments and tasks, a way to process the friction that naturally comes up (I think of that as a gift, not something to
+              fear), and a way to evolve and celebrate together.
             </p>
             <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              Now I want to share the magic with you. For leaders, this makes managing teams so much easier, more innovative, and so much more
-              fun.
+              Now I want to bring that to your team. For leaders, it makes running a team so much easier, more innovative, and more fun.
             </p>
             <Link to="/about" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
               Meet Kelly &rarr;

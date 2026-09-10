@@ -67,7 +67,7 @@ export default function TermsPage() {
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
               Booking a conversation through this site is a conversation, not a commitment — either of us can decide it’s not the right fit.
               If we move forward, your team becomes a founding co-creator for a 4&ndash;6 week facilitated engagement at a sliding-scale
-              investment between $500 and $5,000, based on team size and scope, as described on the home page.
+              investment between $1,000 and $10,000, based on team size and scope, as described on the home page.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               For larger or more complex engagements, we may put the specific scope, timeline, and payment terms in a separate written

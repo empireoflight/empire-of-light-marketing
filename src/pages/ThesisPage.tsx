@@ -8,7 +8,7 @@ import { BOOKING_URL, DISPLAY, Eyebrow, OctopusIcon, primaryButton, secondaryBut
 const REVOLUTIONS = [
   {
     label: 'Technological revolution',
-    body: 'Artificial intelligence is rapidly changing how work gets done — and what work is even for.',
+    body: 'Artificial intelligence is rapidly changing how work gets done, and what work is even for.',
   },
   {
     label: 'Cultural revolution',
@@ -20,19 +20,18 @@ const REVOLUTIONS = [
   },
 ]
 
-
 const CYCLE_STAGES = [
   {
     n: '01',
     title: 'Reimagine',
     subtitle: 'Clarify Vision',
-    body: 'Connect with what feels meaningful, alive, and worth creating — through presence, not analysis. What future are we creating? Why does it matter? What values guide us? A compelling vision becomes an organizing force that aligns decisions across the whole system.',
+    body: 'Connect with what feels meaningful, alive, and worth creating, through presence rather than analysis. What future are we creating? Why does it matter? What values guide us? A compelling vision becomes an organizing force that aligns decisions across the whole system.',
   },
   {
     n: '02',
     title: 'Do',
     subtitle: 'Take Aligned Action',
-    body: 'Act before certainty. Individuals begin acting from the identity they’re becoming — experimenting, committing, building something. Small experiments generate learning while creating forward momentum. Progress emerges through cycles of action, not perfect planning.',
+    body: 'Act before certainty. Individuals begin acting from the identity they’re becoming: experimenting, committing, building something. Small experiments generate learning while creating forward momentum. Progress emerges through cycles of action, not perfect planning.',
   },
   {
     n: '03',
@@ -49,19 +48,19 @@ const CYCLE_STAGES = [
 ]
 
 const SCALING_BODY = [
-  'The same cycle can operate at multiple scales: an individual clarifying a personal vision, a leadership team clarifying a strategic vision, a startup clarifying a product vision.',
+  'Consider what that looks like in practice: an individual clarifying a personal vision, a leadership team clarifying a strategic vision, a startup clarifying a product vision.',
   'This opens up a larger possibility: what if the inner work traditionally done by individuals could become a collective capability?',
   'This is the premise of lightwork at scale.',
-  'Lightwork is, at its core, the practice of bringing awareness, intention, and love to the places where we are operating unconsciously — so that we can transform rather than simply reproduce old patterns.',
+  'Lightwork is, at its core, the practice of bringing awareness, intention, and love to the places where we’re operating unconsciously, so we can transform rather than simply reproduce old patterns.',
   'At scale, that means creating the conditions for groups to do the same thing together: surface what is really happening, work through the friction that keeps people disconnected, reconnect with what matters, and channel that energy toward something they want to create.',
-  'The framework is especially well-suited to group transformation. The visions can be bigger, the actions more impactful, and — counterintuitively — the friction work is often easier to do collectively. Group dynamics surface hidden assumptions, competing mental models, and relationship patterns that don’t as easily come to the surface in individual work alone.',
-  'Empire of Light does not replace individual therapeutic work or 1:1 therapy. It provides a practical framework for helping groups transform together while building something meaningful.',
+  'The framework is especially well-suited to group transformation. The visions can be bigger, the actions more impactful, and the friction work is often easier to do collectively. Group dynamics surface hidden assumptions, competing mental models, and relationship patterns that don’t come to the surface as easily in individual work alone.',
+  'Empire of Light isn’t a replacement for individual therapeutic work or 1:1 therapy. It’s a practical framework for helping groups transform together while building something meaningful.',
 ]
 
 const WHY_BETTER = [
   {
     title: 'Rooted in unconditional love',
-    body: 'A purpose greater than any individual, and a direction to move toward together, makes difficult conversations possible without collapsing into blame. It is a shift from operating through protection to operating through connection — keeping hard conversations in service of growth, not blame.',
+    body: 'A purpose greater than any individual, and a direction to move toward together, makes difficult conversations possible without collapsing into blame. It’s a shift from operating through protection to operating through connection, keeping hard conversations in service of growth.',
   },
   {
     title: 'Vision- and action-oriented',
@@ -89,7 +88,7 @@ const RESEARCH_QUESTIONS = [
   'How can collective intelligence be measured?',
   'What role does vision play in sustaining adaptation?',
   'Which facilitation practices most effectively help teams metabolize friction?',
-  'How can AI support — not replace — the uniquely human capacities that enable collective transformation?',
+  'How can AI support, not replace, the uniquely human capacities that enable collective transformation?',
 ]
 
 function SectionHeading({ eyebrow, title, color }: { eyebrow: string; title: string; color?: string }) {
@@ -160,31 +159,29 @@ export default function ThesisPage() {
               The pace of change is accelerating, but most organizations still operate on models designed for an old paradigm.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              At the same time, people have been doing a tremendous amount of their own expansion work — becoming more conscious,
-              healing old patterns, reconnecting with what matters, and imagining different ways of living and working. That work
-              matters. But eventually, we reach the limits of what we can transform on our own.
+              At the same time, people have been doing a tremendous amount of their own expansion work: becoming more conscious, healing
+              old patterns, reconnecting with what matters, imagining different ways of living and working. That work matters, but
+              eventually we reach the limits of what we can transform on our own.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
-              If we want a different future, we have to change the systems we are part of. And we have to change them together.
+              If we want a different future, we have to change the systems we&rsquo;re part of, and we have to change them together.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               We don&rsquo;t need to transform everything at once. We can start by creating{' '}
-              <strong style={{ color: '#131114', fontWeight: 600 }}>pockets of light</strong> — teams, organizations, and communities
-              where people work differently: with more trust, connection, creativity, meaning, and collective intelligence.
+              <strong style={{ color: '#131114', fontWeight: 600 }}>pockets of light</strong>: teams, organizations, and communities where
+              people work differently, with more trust, connection, creativity, meaning, and collective intelligence.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Then we create another pocket. And another.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Over time, those pockets become patterns. Patterns become systems. And systems begin to change.
+              We create one pocket of light, then another, and then another. Over time, those pockets start to form a pattern, and
+              patterns are what eventually shift systems.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
               This is lightwork at scale: taking the work of individual transformation into the places where we create the future
               together.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Transformation is not simply a problem to solve. It is a process of adaptation — and the next generation of organizations
-              will need an operating system that develops collective intelligence alongside strategy and execution.
+              Transformation is a process of adaptation, not simply a problem to solve, and the next generation of organizations will
+              need an operating system that develops collective intelligence alongside strategy and execution.
             </p>
           </div>
         </div>
@@ -200,13 +197,10 @@ export default function ThesisPage() {
           />
           <div className="flex flex-col gap-5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Through four years of observing my own transformation — combined with product strategy practice and organizational
-              facilitation — I began to notice a recurring pattern: meaningful change did not happen through a linear progression from
-              insight to action.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              It emerged through a continual movement between imagining what could be, acting toward it, encountering friction, letting go
-              of what no longer fit, and integrating what was learned.
+              Through four years of observing my own transformation, combined with product strategy practice and organizational
+              facilitation, I began to notice a recurring pattern: meaningful change didn&rsquo;t happen through a linear progression
+              from insight to action. It emerged through a continual movement between imagining what could be, acting toward it,
+              encountering friction, letting go of what no longer fit, and integrating what was learned.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               I call this pattern Reimagine &rarr; Do &rarr; Unlearn &rarr; Evolve. This currently represents a working theory, refined
@@ -214,18 +208,18 @@ export default function ThesisPage() {
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               <strong style={{ color: '#FBF7F2', fontWeight: 600 }}>Thesis:</strong> Individual and collective transformation follow the
-              same underlying adaptive pattern — moving from contraction and self-protection toward connection, creativity, and adaptive
-              action. From a fear-based operating system to one rooted in trust and, at its deepest level, unconditional love.
+              same underlying adaptive pattern, moving from contraction and self-protection toward connection, creativity, and adaptive
+              action. From a fear-based operating system to one rooted in trust, and at its deepest level, unconditional love.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               <strong style={{ color: '#FBF7F2', fontWeight: 600 }}>Proposed mechanism:</strong> A compelling vision provides enough
-              motivational pull to sustain engagement through uncertainty, identity destabilization, and emotional processing — enabling
-              adaptive reorganization at both the individual and collective level. What we learn becomes part of the next iteration of the
-              vision.
+              motivational pull to sustain engagement through uncertainty, identity destabilization, and emotional processing, enabling
+              adaptive reorganization at both the individual and collective level. What we learn becomes part of the next iteration of
+              the vision.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Transformation, then, is not about moving cleanly from one state to another. It is about becoming capable of moving with
-              what is emerging.
+              Transformation, then, is less about moving cleanly from one state to another than about becoming capable of moving with
+              what&rsquo;s emerging.
             </p>
           </div>
         </div>
@@ -238,12 +232,12 @@ export default function ThesisPage() {
             <div>
               <SectionHeading eyebrow="The Empire of Light Framework" title="Reimagine → Do → Unlearn → Evolve" />
               <p className="m-0 mb-4 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-                The Empire of Light Framework is an adaptive cycle — a heart model — for helping individuals and groups translate vision
+                The Empire of Light Framework is an adaptive cycle, a heart model, for helping individuals and groups translate vision
                 into reality while continuously learning and evolving.
               </p>
               <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-                Vision has to come first. You can&rsquo;t ask anyone to let go of old patterns in service of nothing. The pull of a real
-                vision is what makes unlearning possible, not the other way around.
+                Vision has to come first. You can&rsquo;t ask anyone to let go of old patterns in service of nothing; it&rsquo;s the pull
+                of a real vision that makes unlearning possible.
               </p>
             </div>
             <img
@@ -274,7 +268,7 @@ export default function ThesisPage() {
             ))}
           </div>
           <p className="mt-7 text-center text-[15px]" style={{ color: '#8C8492' }}>
-            The phases are not steps to complete. They are capacities to cultivate.
+            The phases aren&rsquo;t steps to complete so much as capacities to cultivate.
           </p>
         </div>
       </section>
@@ -324,7 +318,7 @@ export default function ThesisPage() {
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               Empire of Light proposes that organizations should intentionally cultivate collective intelligence: the ability of a group
               to perceive reality accurately, coordinate action effectively, generate novel solutions, and continuously adapt together. In
-              this model, strategy, execution, emotional regulation, learning, and creativity aren&rsquo;t separate functions. They are
+              this model, strategy, execution, emotional regulation, learning, and creativity aren&rsquo;t separate functions so much as
               parts of one adaptive system.
             </p>
           </div>
@@ -340,12 +334,12 @@ export default function ThesisPage() {
           <Eyebrow>The octopus: a symbol for Empire of Light</Eyebrow>
           <div className="flex flex-col gap-5 text-left">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Picture the Empire of Light mascot: an octopus — a living symbol of collective intelligence when it&rsquo;s working. Now
+              Picture the Empire of Light mascot: an octopus, a living symbol of collective intelligence when it&rsquo;s working. Now
               imagine an octopus whose hearts and brains aren&rsquo;t on the same page. It tries to camouflage itself and instead flashes
               through seven different colors at once, giving away exactly the confusion it&rsquo;s trying to hide.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              That&rsquo;s how most organizations run. Internal friction — the misalignment between the hearts and brains of a team — gets
+              That&rsquo;s how most organizations run. Internal friction, the misalignment between the hearts and brains of a team, gets
               in the way of external progress. Empire of Light exists to help teams become one unified octopus: many arms, one nervous
               system, moving as a whole.
             </p>
@@ -379,8 +373,8 @@ export default function ThesisPage() {
           <div className="flex flex-col gap-5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               Artificial intelligence amplifies both capability and complexity. Most organizations respond by investing primarily in
-              technology. Empire of Light proposes the opposite sequence: strengthen the human operating system first. Then technology
-              becomes an amplifier — not a source of fragmentation.
+              technology. Empire of Light proposes the opposite sequence: strengthen the human operating system first, so technology
+              becomes an amplifier rather than a source of fragmentation.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               Instead of replacing human judgment, AI becomes a partner in cultivating collective intelligence.
@@ -394,8 +388,8 @@ export default function ThesisPage() {
         <div className="mx-auto max-w-[840px]">
           <SectionHeading eyebrow="A research agenda" title="This framework is a working theory" />
           <p className="m-0 mb-6 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-            Empire of Light is not presented as a finished model. It is a working theory to be tested, refined, and potentially
-            falsified through practice and research. Open questions include:
+            Empire of Light isn&rsquo;t a finished model: it&rsquo;s a working theory to be tested, refined, and potentially falsified
+            through practice and research. Open questions include:
           </p>
           <div className="flex flex-col gap-4">
             {RESEARCH_QUESTIONS.map((q) => (
@@ -429,21 +423,22 @@ export default function ThesisPage() {
           <div className="mx-auto mb-7 flex max-w-[620px] flex-col gap-4 text-left">
             <p className="m-0 text-[15.5px] leading-[1.65] md:text-[16.5px]" style={{ color: 'rgba(251,247,242,.72)' }}>
               If individual and collective transformation share an underlying adaptive pattern, then organizations can intentionally
-              create the conditions for that pattern to occur — building practices that make vision visible, action experimental,
+              create the conditions for that pattern to occur, building practices that make vision visible, action experimental,
               friction discussable, learning safe, and adaptation continuous.
             </p>
             <p className="m-0 text-[15.5px] leading-[1.65] md:text-[16.5px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              And perhaps this is the opportunity of this particular moment. We are becoming increasingly clear about what we don&rsquo;t
-              want. The next step is not simply to fight what is broken. It is to gather, imagine, and build what we do want — together.
+              Perhaps this is the opportunity of this particular moment. We&rsquo;re becoming increasingly clear about what we
+              don&rsquo;t want. The next step is less about fighting what&rsquo;s broken than about gathering, imagining, and building
+              what we do want, together.
             </p>
           </div>
           <p className="m-0 mb-5 text-[18px] leading-[1.55] md:text-[21px] font-light" style={{ ...DISPLAY, color: 'rgba(251,247,242,.85)' }}>
-            Imagine organizations where strategy, emotional intelligence, creativity, and execution are no longer separate disciplines.
-            Where meetings generate energy instead of draining it. Where conflict becomes a source of learning rather than division.
-            Where technology amplifies human potential rather than compensating for its absence.
+            Imagine organizations where strategy, emotional intelligence, creativity, and execution are no longer separate disciplines:
+            where meetings generate energy instead of draining it, conflict becomes a source of learning rather than division, and
+            technology amplifies human potential instead of compensating for its absence.
           </p>
           <h2 className="m-0 mb-6 text-[30px] leading-[1.1] font-light md:text-[46px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
-            This is the future Empire of Light exists to build. Now.
+            This is the future Empire of Light exists to build, starting now.
           </h2>
           <div className="flex flex-wrap justify-center gap-3.5">
             <a
