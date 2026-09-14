@@ -61,27 +61,27 @@ const WHO_FOR = [
 const BEFORE_AFTER = [
   {
     before: 'Team members didn’t contribute to the vision, so people pull in different directions and aren’t as engaged.',
-    after: 'Team members are bought into the vision and move together.',
+    after: 'Team members are bought into one vision, so decisions get made faster and actually stick.',
   },
   {
     before: 'Team members are hesitant to take action; there’s a lot of planning and not enough doing.',
-    after: 'Team members take action more quickly.',
+    after: 'Small experiments ship every week, building momentum instead of stalling in planning.',
   },
   {
     before: 'Work is kept hidden or in silos.',
-    after: 'Work becomes visible, so others can build on it.',
+    after: 'Work is visible across the team, so nothing gets duplicated, blocked, or dropped.',
   },
   {
     before: 'Role and scope friction goes unspoken until it blows up.',
-    after: 'Friction is addressed proactively, building stronger relationships.',
+    after: 'Friction gets surfaced and resolved early, before it costs a deadline or a hire.',
   },
   {
     before: 'Team members are fatigued by the AI landscape.',
-    after: 'Team members are reenergized.',
+    after: 'Team members bring real energy to the work, and it shows up in the output.',
   },
   {
     before: 'The leader is exhausted from carrying the whole load.',
-    after: 'The leader is having more fun, with a team that has room to contribute meaningfully.',
+    after: 'The leader spends less time firefighting and more time on what actually moves the business.',
   },
 ]
 
@@ -123,7 +123,7 @@ const FAQS = [
   },
   {
     q: 'Can we just use the app?',
-    a: 'Not for the first cycle. Teams get a lot more out of it when we facilitate that first round, and we want your team set up well before you’re running it on your own.',
+    a: 'We recommend facilitating the first cycle together. Teams get a lot more out of it, and it sets your team up to run the app well on its own afterward.',
   },
   {
     q: 'How much time does it take?',
@@ -203,10 +203,10 @@ export default function HomePage() {
             className="m-0 mb-7 text-[38px] leading-[1.1] font-light md:text-[52px] lg:text-[64px] lg:leading-[1.06]"
             style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}
           >
-            Unlock the collective intelligence <em style={{ fontStyle: 'normal', fontWeight: 600 }}>already inside your team</em>
+            Turn your team&rsquo;s collective intelligence into <em style={{ fontStyle: 'normal', fontWeight: 600 }}>faster execution</em>
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Bring more ambitious visions to life, faster and more united.
+            Bring more ambitious visions to life faster, with more unity.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
@@ -258,7 +258,7 @@ export default function HomePage() {
             </h2>
             <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
               The Empire of Light Framework gives teams a shared vision, a way to take meaningful action, a way to work through friction,
-              and a way to keep evolving. It&rsquo;s a new rhythm for navigating rapid change together.
+              and a way to keep evolving. It&rsquo;s a new rhythm for teams that need to move fast without losing each other.
             </p>
             <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
               Read the full thesis
@@ -479,7 +479,8 @@ export default function HomePage() {
             </h2>
             <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: 'rgba(251,247,242,.72)' }}>
               Change management decks and culture surveys collect input and report it upward. This works in the opposite direction. The
-              team writes it, the team reads it, and the team decides what happens next.
+              team writes it, the team reads it, and the team decides what happens next, so what surfaces turns into action instead of a
+              report nobody reads.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -582,8 +583,8 @@ export default function HomePage() {
               <strong style={{ fontWeight: 600 }}>Why be a founding co-creator?</strong>
             </p>
             <p className="m-0 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#26222A' }}>
-              Build a team that&rsquo;s aligned, adaptable, and has real energy behind your most important goals, and help shape a
-              framework for the future of how people work together.
+              Build a team that moves faster, adapts under pressure, and brings real energy to your most important goals, and help shape
+              a framework for how ambitious teams execute together.
             </p>
           </div>
         </div>
@@ -630,7 +631,8 @@ export default function HomePage() {
               fear), and a way to evolve and celebrate together.
             </p>
             <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              Now I want to bring that to your team. For leaders, it makes running a team so much easier, more innovative, and more fun.
+              Now I want to bring that to your team. For leaders, it means faster execution with less personal strain, and a team that&rsquo;s
+              easier, more innovative, and more fun to run.
             </p>
             <Link to="/about" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
               Meet Kelly &rarr;
