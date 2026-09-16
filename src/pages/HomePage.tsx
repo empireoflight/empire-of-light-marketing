@@ -14,31 +14,16 @@ const HOW_STEPS = [
   {
     n: '01',
     title: 'Book a conversation',
-    body: 'A short call to talk through your team, where you’re stuck, and whether this is the right fit.',
+    body: 'A short call to talk through your team, where you’re stuck, and whether this is the right fit. Once it’s a match, you commit as a founding co-creator and your team gets access to the app.',
   },
   {
     n: '02',
-    title: 'We confirm fit — you invest',
-    body: 'If it’s a match, you commit as a founding co-creator and your team’s spot is secured.',
+    title: 'Vision workshop',
+    body: 'Everyone completes the vision questionnaire individually, ahead of time. Then the team comes together for a vision workshop to see where there’s alignment, and where there’s disconnect.',
   },
   {
     n: '03',
-    title: 'Your team is invited in',
-    body: 'Everyone gets access to the app and completes the vision questionnaire — async, individual reflection first. This is where the intelligence that never makes it into meetings gets written down.',
-  },
-  {
-    n: '04',
-    title: 'We run the vision workshop together',
-    body: 'Facilitated by us, using what the questionnaire surfaced. Convergence and disagreement both go on the table.',
-  },
-  {
-    n: '05',
-    title: 'The team commits to the vision',
-    body: 'One statement, tangible and emotionally resonant, that everyone agrees to. It lives at the top of the app from then on.',
-  },
-  {
-    n: '06',
-    title: 'You work the cycle, then evolve',
+    title: 'We work the cycle, then evolve',
     body: 'Experiments toward the vision, friction logged and processed, biweekly sessions with us. One full evolve cycle, then the team keeps using the app on its own.',
   },
 ]
@@ -203,7 +188,7 @@ export default function HomePage() {
             className="m-0 mb-7 text-[38px] leading-[1.1] font-light md:text-[52px] lg:text-[64px] lg:leading-[1.06]"
             style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}
           >
-            Turn your team&rsquo;s collective intelligence into <em style={{ fontStyle: 'normal', fontWeight: 600 }}>faster execution</em>
+            Unlock the collective intelligence <em style={{ fontStyle: 'normal', fontWeight: 600 }}>inside your team</em>
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
             Bring more ambitious visions to life faster, with more unity.
@@ -325,7 +310,7 @@ export default function HomePage() {
           <div className="mb-10 max-w-[720px]">
             <Eyebrow>The transformation</Eyebrow>
             <h2 className="m-0 mb-2 text-[30px] leading-[1.1] font-light md:text-[42px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              What changes for a team
+              Get your team aligned, moving, and reenergized so you can execute faster
             </h2>
           </div>
           <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#D8D2DC' }}>
@@ -377,7 +362,7 @@ export default function HomePage() {
             </p>
           </div>
           <div
-            className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border sm:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border sm:grid-cols-3"
             style={{ background: 'rgba(251,247,242,.14)', borderColor: 'rgba(251,247,242,.14)' }}
           >
             {HOW_STEPS.map((step) => (
@@ -395,7 +380,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-7 text-center text-[15px]" style={{ color: 'rgba(251,247,242,.5)' }}>
-            Step 1 is a conversation. From step 4 on, it&rsquo;s the facilitated engagement, with the app carrying everything before,
+            Step 1 is a conversation. From step 2 on, it&rsquo;s the facilitated engagement, with the app carrying everything before,
             during, and after.
           </p>
           <div className="mt-9 flex justify-center">
