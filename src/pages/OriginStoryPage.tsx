@@ -138,8 +138,8 @@ const CATEGORY_EXAMPLES: Record<string, string> = Object.fromEntries(
   }),
 )
 
-const TIMELINE_PX = 2000
-const TIMELINE_MARGIN = 90
+const TIMELINE_PX = 1800
+const TIMELINE_MARGIN = 80
 
 // Parse as local midnight, not UTC — new Date('2022-01-01') is UTC midnight, which
 // toLocaleDateString renders as the prior day in any timezone behind UTC.
@@ -252,7 +252,7 @@ export default function OriginStoryPage() {
             putting myself first, and discovered my neurodivergence. Through the lens of neurodivergence, life was easier to navigate.
             It finally made sense why I never quite fit in. I finally realized how much I was masking. Shortly after these discoveries,
             I found myself in the middle of a divorce, and shortly after that, I got laid off from my job. To add to the pile, I moved,
-            sold our Seattle house, and our au pair moved out and our beloved dog died. I lost pretty much all of my external stability and support at once. It
+            sold our Seattle house, our au pair moved out, and our beloved dog died. I lost pretty much all of my external stability and support at once. It
             was too triggering to hang out with old friends, but I was too traumatized to make new ones effectively. This was the origin
             of the Empire of Light methodology.
           </p>
@@ -365,12 +365,12 @@ export default function OriginStoryPage() {
                   )
                 })}
               </div>
-              <div className="relative h-[160px]">
+              <div className="relative h-[140px]">
                 {ART_TIMELINE.map((item, i) => (
                   <div
                     key={i}
-                    className="absolute flex h-[160px] w-[170px] items-center justify-center overflow-hidden rounded-xl border p-2"
-                    style={{ left: dateToX(item.date) - 85, background: '#FFFFFF', borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}
+                    className="absolute flex h-[140px] w-[150px] items-center justify-center overflow-hidden rounded-xl border p-2"
+                    style={{ left: dateToX(item.date) - 75, background: '#FFFFFF', borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}
                   >
                     <img src={item.src} alt="Kelly's artwork" className="max-h-full max-w-full object-contain" />
                   </div>
