@@ -251,7 +251,7 @@ export default function OriginStoryPage() {
             putting myself first, and discovered my neurodivergence. Through the lens of neurodivergence, life was easier to navigate.
             It finally made sense why I never quite fit in. I finally realized how much I was masking. Shortly after these discoveries,
             I found myself in the middle of a divorce, and shortly after that, I got laid off from my job. To add to the pile, I moved,
-            sold our Seattle house, and our au pair moved out. I lost pretty much all of my external stability and support at once. It
+            sold our Seattle house, and our au pair moved out and our beloved dog died. I lost pretty much all of my external stability and support at once. It
             was too triggering to hang out with old friends, but I was too traumatized to make new ones effectively. This was the origin
             of the Empire of Light methodology.
           </p>
