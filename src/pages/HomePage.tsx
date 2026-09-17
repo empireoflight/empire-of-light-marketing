@@ -85,19 +85,7 @@ const DIFFERENTIATORS = [
   },
 ]
 
-const TIERS = [
-  { n: 0, label: 'Ephemeral, never stored', bg: '#131114', fg: '#FBF7F2', dot: '#2E7D5B' },
-  { n: 1, label: 'Private, sealed', bg: '#26222A', fg: '#FBF7F2', dot: '#D99A22' },
-  { n: 2, label: 'AI-assisted', bg: '#EDE4FA', fg: '#131114', dot: '#8B5CF6' },
-  { n: 3, label: 'Team aggregate', bg: '#FDE3CB', fg: '#131114', dot: '#D99A22' },
-  { n: 4, label: 'Team shared', bg: '#FCD9F0', fg: '#131114', dot: '#E86FD0' },
-]
-
 const FAQS = [
-  {
-    q: 'What kinds of teams is this good for?',
-    a: 'Any team that shares real work and real decisions. Most often that’s a leadership team, a cross-functional tiger team, or a standing pod. If the group meets, decides, and depends on each other, the cycle works.',
-  },
   {
     q: 'How do we get started?',
     a: 'Book a short conversation with us. We’ll talk through your team and what you’re navigating, and if it’s a fit, walk you through the founding co-creator investment and get your team invited into the app.',
@@ -130,7 +118,7 @@ const APP_PRACTICES = [
     title: 'Everyone answers first. Then you see where you actually agree.',
     body: [
       'Each person completes the vision questionnaire on their own, so the loudest voice in the room isn’t automatically the vision. The app synthesizes the responses and flags where the team is already aligned, and where it quietly isn’t.',
-      'Both go into the workshop, and the disagreements get equal billing. That’s usually where the most useful hour gets spent.',
+      'Together, we co-create a vision that’s more ambitious than we could have envisioned alone. We turn the disconnect into an expanded view of the problem and co-create an aligned path forward.',
     ],
     shot: { src: shotVision, alt: 'The team vision screen', position: 'top', zoom: 1.15 },
     tier: { n: 2, label: 'AI-assisted', bg: '#EDE4FA', fg: '#131114', dot: '#8B5CF6' },
@@ -151,13 +139,21 @@ const APP_PRACTICES = [
     eyebrow: '03 · Team vibe check',
     title: 'A weekly read on what’s giving energy and what’s draining it',
     body: [
-      'Two questions, a few minutes, once a week: what felt energizing, and what felt heavy, confusing, or repetitive.',
+      'A few questions, a few minutes, once a week: what felt energizing, and what felt heavy, confusing, or repetitive.',
       'The evolve rollup turns those weekly answers into a pattern the team can act on for the next cycle. The team sees it directly. It isn’t collected for the leader to review privately.',
     ],
     shot: { src: shotCheckin, alt: 'Weekly vibe check', position: 'top' },
     tier: { n: 3, label: 'Team aggregate', bg: '#FDE3CB', fg: '#131114', dot: '#D99A22' },
     imageSide: 'right' as const,
   },
+]
+
+const TIERS = [
+  { n: 0, label: 'Ephemeral, never stored', bg: '#131114', fg: '#FBF7F2', dot: '#2E7D5B' },
+  { n: 1, label: 'Private, sealed', bg: '#26222A', fg: '#FBF7F2', dot: '#D99A22' },
+  { n: 2, label: 'AI-assisted', bg: '#EDE4FA', fg: '#131114', dot: '#8B5CF6' },
+  { n: 3, label: 'Team aggregate', bg: '#FDE3CB', fg: '#131114', dot: '#D99A22' },
+  { n: 4, label: 'Team shared', bg: '#FCD9F0', fg: '#131114', dot: '#E86FD0' },
 ]
 
 export default function HomePage() {
@@ -211,7 +207,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Octopus quote */}
+      {/* Why it matters: octopus quote */}
       <section className="px-6 pt-16 pb-6 md:px-8 md:pt-[88px]" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[840px] text-center">
           <div className="mb-8 flex justify-center" style={{ color: '#D99A22' }}>
@@ -233,82 +229,74 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The cycle */}
-      <section id="framework" className="px-6 pt-16 pb-10 md:px-8 md:pt-[88px] md:pb-12" style={{ background: '#F9F9F9' }}>
-        <div className="mx-auto grid max-w-[1120px] items-center gap-12 md:grid-cols-2 md:gap-[56px]">
-          <div>
-            <Eyebrow>The cycle</Eyebrow>
-            <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              Reimagine, Do, Unlearn, Evolve
-            </h2>
-            <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              The Empire of Light Framework gives teams a shared vision, a way to take meaningful action, a way to work through friction,
-              and a way to keep evolving. It&rsquo;s a new rhythm for teams that need to move fast without losing each other.
-            </p>
-            <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
-              Read the full thesis
-            </Link>
-          </div>
-          <img
-            src={heartModel}
-            alt="Empire of Light framework diagram"
-            width={750}
-            height={549}
-            className="block w-full rounded-2xl object-cover"
-            style={{ aspectRatio: '750 / 549' }}
-          />
-        </div>
-      </section>
-
-      {/* What this is */}
-      <section id="what" className="px-6 py-16 md:px-8 md:py-[88px]" style={{ background: '#FFFFFF' }}>
+      {/* Why it's different: the cycle + differentiators */}
+      <section id="different" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF' }}>
         <div className="mx-auto max-w-[1120px]">
-          <div className="mb-11 max-w-[820px]">
-            <Eyebrow>What this is</Eyebrow>
-            <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              An app your team runs weekly, and facilitation to get the first cycle right
-            </h2>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              It&rsquo;s intentionally both. Software alone doesn&rsquo;t change how a team talks to each other. A workshop alone
-              doesn&rsquo;t survive the week after it ends. So we facilitate the beginning, and the app carries the rhythm from there.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
-              <Eyebrow>The app</Eyebrow>
-              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
-                Where the vision, the friction and the energy live
-              </h3>
-              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
-                The committed vision sits at the top. Below it, the day-to-day: individual reflection, friction processing, weekly energy
-                check-ins, task and experiment tracking, and a rollup that shows the team where it can evolve next.
+          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-[56px]">
+            <div>
+              <Eyebrow>Why this is different</Eyebrow>
+              <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                Reimagine. Do. Unlearn. Evolve. Repeat.
+              </h2>
+              <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+                Most tools ask a team to report on how it&rsquo;s doing, after the fact. This one gives the team a shared vision, a way
+                to actually move on it, a way to work through the friction that shows up, and a way to keep leveling up together. A
+                rhythm the team runs itself, rather than something handed down from above.
               </p>
+              <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+                Read the full thesis &rarr;
+              </Link>
             </div>
-            <div className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
-              <Eyebrow>The facilitation</Eyebrow>
-              <h3 className="m-0 mb-3 text-[23px] font-semibold leading-[1.24]" style={{ ...DISPLAY, color: '#131114' }}>
-                We run your first cycle with you
-              </h3>
-              <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
-                A vision workshop built from what your team wrote, biweekly working sessions on progress and friction, and one full evolve cycle.
-                After that, the app is yours to keep running.
-              </p>
-            </div>
+            <img
+              src={heartModel}
+              alt="Empire of Light framework diagram"
+              width={750}
+              height={549}
+              className="block w-full rounded-2xl object-cover"
+              style={{ aspectRatio: '750 / 549' }}
+            />
           </div>
-          <div className="mt-6 rounded-[20px] px-7 py-6" style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}>
-            <p className="m-0 max-w-[820px] text-[17px] leading-[1.6]" style={{ color: '#131114' }}>
-              This is heart-centered work. We start from the assumption that everyone on the team is doing their best with what they have,
-              so nothing here is used to grade, rank, or manage anyone. That&rsquo;s what gives people room to be honest.
-            </p>
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3 md:mt-16">
+            {DIFFERENTIATORS.map((item) => (
+              <div key={item.title} className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
+                <h3 className="m-0 mb-3 text-[20px] font-semibold leading-[1.26] md:text-[21px]" style={{ ...DISPLAY, color: '#131114' }}>
+                  {item.title}
+                </h3>
+                <p className="m-0 text-[15.5px] leading-[1.62]" style={{ color: '#544D5A' }}>
+                  {item.body}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Before / After */}
-      <section className="px-6 pt-14 pb-16 md:px-8 md:pt-16 md:pb-24" style={{ background: '#FDFAF4' }}>
+      {/* Who it's for */}
+      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
+        <div className="mx-auto max-w-[1120px]">
+          <Eyebrow>Who it&rsquo;s for</Eyebrow>
+          <h2 className="m-0 mb-7 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+            Built for teams that actually do things together
+          </h2>
+          <div className="flex flex-wrap gap-3">
+            {WHO_FOR.map((item) => (
+              <div
+                key={item}
+                className="rounded-full border px-5 py-3 text-[15px] font-medium md:text-[16px]"
+                style={{ borderColor: '#D8D2DC', background: '#FFFFFF', color: '#131114' }}
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Results to expect */}
+      <section className="px-6 pt-14 pb-16 md:px-8 md:pt-16 md:pb-24" style={{ background: '#FFFFFF' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-10 max-w-[720px]">
-            <Eyebrow>The transformation</Eyebrow>
+            <Eyebrow>Results to expect</Eyebrow>
             <h2 className="m-0 mb-2 text-[30px] leading-[1.1] font-light md:text-[42px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
               Get your team aligned, moving, and reenergized so you can execute faster
             </h2>
@@ -348,17 +336,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Program details: how it works */}
       <section id="how" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-14 max-w-[720px] md:mb-16">
             <Eyebrow color="#FEE16A">How it works</Eyebrow>
-            <h2 className="m-0 mb-5 text-[32px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
-              From a conversation to a vision your team is actually moving on
-            </h2>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              It starts with a conversation. We assess fit together, and once your team is in, we run the first cycle with you. After it,
-              the app is yours to keep running.
+            <p className="m-0 text-[20px] leading-[1.45] font-light md:text-[26px]" style={{ ...DISPLAY, letterSpacing: '.01em', color: '#FBF7F2' }}>
+              Software alone doesn&rsquo;t change how a team talks to each other, and a workshop alone doesn&rsquo;t survive the week
+              after it ends. This is built to do both.
             </p>
           </div>
           <div
@@ -398,17 +383,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Inside the app */}
-      <section id="app" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
+      {/* Program details: inside the app */}
+      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-14 max-w-[760px]">
             <Eyebrow>Inside the app</Eyebrow>
             <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
               Three practices that build collaboration and trust
             </h2>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+            <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
               Each one starts with individual reflection, then becomes something the team can act on together in the same week.
             </p>
+            <p className="m-0 mb-6 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#131114' }}>
+              People tell the truth when they have the psychological safety to do so. That&rsquo;s the thread running under all three:
+              every piece of it carries its own privacy tier, made visible to you in the app before you write a word.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {TIERS.map((tier) => (
+                <div
+                  key={tier.n}
+                  className="flex items-center gap-2.5 rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]"
+                  style={{ background: tier.bg, color: tier.fg }}
+                >
+                  <span className="h-[7px] w-[7px] rounded-full" style={{ background: tier.dot }} />
+                  Tier {tier.n} &middot; {tier.label}
+                </div>
+              ))}
+            </div>
           </div>
           <div className="flex flex-col gap-16">
             {APP_PRACTICES.map((practice) => (
@@ -454,129 +455,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why this is different */}
-      <section id="different" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
+      {/* Program details: what's included + pricing */}
+      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF' }}>
         <div className="mx-auto max-w-[1120px]">
-          <div className="mb-12 max-w-[820px]">
-            <Eyebrow color="#FEE16A">Why this is different</Eyebrow>
-            <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
-              Built to be used by the team, not just measure it
-            </h2>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              Change management decks and culture surveys collect input and report it upward. This works in the opposite direction. The
-              team writes it, the team reads it, and the team decides what happens next, so what surfaces turns into action instead of a
-              report nobody reads.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-            {DIFFERENTIATORS.map((item) => (
-              <div key={item.title} className="rounded-xl border p-7" style={{ background: '#0C0A0D', borderColor: 'rgba(251,247,242,.14)' }}>
-                <h3 className="m-0 mb-3 text-[20px] font-semibold leading-[1.26] md:text-[21px]" style={{ ...DISPLAY, color: '#FBF7F2' }}>
-                  {item.title}
-                </h3>
-                <p className="m-0 text-[15.5px] leading-[1.62]" style={{ color: 'rgba(251,247,242,.72)' }}>
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The pilot */}
-      <section id="pilot" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
-        <div className="mx-auto grid max-w-[1120px] gap-12 md:grid-cols-2 md:gap-16">
-          <div>
-            <Eyebrow>What the pilot looks like</Eyebrow>
-            <h2 className="m-0 mb-7 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              A 4&ndash;6 week facilitated engagement that includes:
-            </h2>
-            <div className="flex flex-col gap-4.5">
-              {PILOT_INCLUDES.map((item) => (
-                <div key={item} className="flex items-start gap-3.5">
-                  <div className="mt-2.5 h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: '#D99A22' }} />
-                  <div className="text-[17px] leading-[1.55] md:text-[18px]" style={{ color: '#131114' }}>
-                    {item}
+          <div
+            className="grid items-center gap-10 rounded-[20px] px-6 py-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:gap-16 md:px-12 md:py-14"
+            style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}
+          >
+            <div>
+              <Eyebrow>What&rsquo;s included</Eyebrow>
+              <h2 className="m-0 mb-6 text-[26px] leading-[1.1] font-light md:text-[34px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                A 4&ndash;6 week facilitated engagement
+              </h2>
+              <div className="flex flex-col gap-4">
+                {PILOT_INCLUDES.map((item) => (
+                  <div key={item} className="flex items-start gap-3.5">
+                    <div className="mt-2.5 h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: '#131114' }} />
+                    <div className="text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
+                      {item}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <Eyebrow>Who this is for</Eyebrow>
-            <div className="grid gap-px overflow-hidden rounded-xl border" style={{ background: '#D8D2DC', borderColor: '#D8D2DC' }}>
-              {WHO_FOR.map((item) => (
-                <div key={item} className="px-6 py-5.5 text-[16px] md:text-[17px]" style={{ background: '#FFFFFF', color: '#131114' }}>
-                  {item}
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 text-[15px] leading-[1.62] md:text-[16px]" style={{ color: '#544D5A' }}>
-              This fall we&rsquo;re partnering with a small number of teams to refine and validate the framework together. Spots are limited.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Privacy tiers */}
-      <section className="px-6 pb-16 md:px-8 md:pb-24">
-        <div className="mx-auto max-w-[1120px]">
-          <div className="mb-9 max-w-[720px]">
-            <Eyebrow>Privacy tiers</Eyebrow>
-            <h2 className="m-0 mb-5 text-[26px] leading-[1.1] font-light md:text-[38px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              People tell the truth when they have the psychological safety to do so
-            </h2>
-            <p className="m-0 text-[16px] leading-[1.62] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Every data point has an assigned privacy tier, made visible to you on the app so you know exactly what other people will see.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {TIERS.map((tier) => (
-              <div
-                key={tier.n}
-                className="flex items-center gap-2.5 rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]"
-                style={{ background: tier.bg, color: tier.fg }}
-              >
-                <span className="h-[7px] w-[7px] rounded-full" style={{ background: tier.dot }} />
-                Tier {tier.n} &middot; {tier.label}
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing */}
-      <section className="px-6 pb-16 md:px-8 md:pb-24">
-        <div
-          className="mx-auto grid max-w-[1120px] items-center gap-10 rounded-[20px] px-6 py-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:px-12 md:py-14"
-          style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}
-        >
-          <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
-            <Eyebrow>Founding co-creator investment</Eyebrow>
-            <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              $1,000&ndash;$10,000
             </div>
-            <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
-              per team &middot; 4&ndash;6 weeks
+            <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
+              <Eyebrow>Founding co-creator investment</Eyebrow>
+              <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                $1,000&ndash;$10,000
+              </div>
+              <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
+                per team &middot; 4&ndash;6 weeks
+              </div>
+              <div className="mt-1 text-[13px]" style={{ color: '#544D5A' }}>
+                Sliding scale, based on team size and scope
+              </div>
+              <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
+                This fall we&rsquo;re partnering with a small number of teams to refine and validate the framework together. Spots are
+                limited.
+              </p>
             </div>
-            <div className="mt-1 text-[13px]" style={{ color: '#544D5A' }}>
-              Sliding scale, based on team size and scope
-            </div>
-          </div>
-          <div>
-            <p className="m-0 mb-2 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#26222A' }}>
-              <strong style={{ fontWeight: 600 }}>Why be a founding co-creator?</strong>
-            </p>
-            <p className="m-0 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#26222A' }}>
-              Build a team that moves faster, adapts under pressure, and brings real energy to your most important goals, and help shape
-              a framework for how ambitious teams execute together.
-            </p>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="px-6 pb-16 md:px-8 md:pb-24">
+      <section id="faq" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[840px]">
           <Eyebrow>Questions</Eyebrow>
           <div className="grid gap-px border-t border-b" style={{ background: '#D8D2DC', borderColor: '#D8D2DC' }}>
@@ -594,8 +517,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Founder note */}
-      <section id="founder" className="px-6 pb-16 md:px-8 md:pb-24">
+      {/* From the founder */}
+      <section className="px-6 pb-16 md:px-8 md:pb-24" style={{ background: '#FDFAF4' }}>
         <div
           className="mx-auto grid max-w-[840px] items-start gap-6 rounded-[20px] border p-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-8 md:p-12"
           style={{ background: '#FFFFFF', borderColor: '#D8D2DC' }}
@@ -609,19 +532,21 @@ export default function HomePage() {
             style={{ height: 180, width: 116 }}
           />
           <div>
-            <Eyebrow>A note from the founder</Eyebrow>
+            <Eyebrow>From the founder</Eyebrow>
             <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#131114' }}>
-              I&rsquo;ve seen real magic emerge on teams when the conditions are right: a good shared vision, a nimble way to work through
-              experiments and tasks, a way to process the friction that naturally comes up (I think of that as a gift, not something to
-              fear), and a way to evolve and celebrate together.
+              Empire of Light started with my own life falling apart &mdash; burnout, a divorce, a layoff all at once &mdash; and
+              rebuilding from there. I noticed a pattern in how I was transforming my life, and I&rsquo;ve since watched that same
+              pattern help teams move together better: more innovation, faster execution, less personal strain for the leader, and
+              work that feels alive again.
             </p>
-            <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              Now I want to bring that to your team. For leaders, it means faster execution with less personal strain, and a team that&rsquo;s
-              easier, more innovative, and more fun to run.
-            </p>
-            <Link to="/about" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
-              Meet Kelly &rarr;
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+                Read the origin story &rarr;
+              </Link>
+              <Link to="/about" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+                Meet Kelly &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>

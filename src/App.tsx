@@ -3,6 +3,7 @@ import { ScrollToTop } from './components/ScrollToTop'
 
 import HomePage from './pages/HomePage'
 import ThesisPage from './pages/ThesisPage'
+import OriginStoryPage from './pages/OriginStoryPage'
 import AboutPage from './pages/AboutPage'
 import AdvisoryPage from './pages/AdvisoryPage'
 import PrivacyPage from './pages/PrivacyPage'
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/thesis" element={<ThesisPage />} />
+        <Route path="/origin-story" element={<OriginStoryPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/advisory" element={<AdvisoryPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />

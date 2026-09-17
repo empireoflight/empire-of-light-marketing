@@ -88,6 +88,9 @@ export default function AboutPage() {
             Despite my best efforts to regulate myself, in 2022, I hit my own breaking point. What followed wasn&rsquo;t a rebrand. I completely
             rebuilt myself from the ground up. I cracked the code on how to navigate the matrix and quickly get to my higher self.
           </p>
+          <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+            Read the origin story &rarr;
+          </Link>
           <p className="m-0 text-[17px] leading-[1.65] md:text-[18px]" style={{ color: '#544D5A' }}>
             Today, I work at the intersection of operational rigor and deep transformation. I help teams and communities align vision, strategy,
             structure, and energy so performance and wellbeing rise together.
@@ -155,6 +158,9 @@ export default function AboutPage() {
             </a>
             <Link to="/thesis" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
               Check out the thesis
+            </Link>
+            <Link to="/origin-story" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
+              Read the origin story
             </Link>
           </div>
         </div>

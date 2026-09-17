@@ -202,6 +202,9 @@ export default function ThesisPage() {
               from insight to action. It emerged through a continual movement between imagining what could be, acting toward it,
               encountering friction, letting go of what no longer fit, and integrating what was learned.
             </p>
+            <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
+              Read the origin story &rarr;
+            </Link>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               I call this pattern Reimagine &rarr; Do &rarr; Unlearn &rarr; Evolve. This currently represents a working theory, refined
               through direct practice rather than a finished, proven model.
@@ -332,18 +335,11 @@ export default function ThesisPage() {
             <OctopusIcon size={46} />
           </div>
           <Eyebrow>The octopus: a symbol for Empire of Light</Eyebrow>
-          <div className="flex flex-col gap-5 text-left">
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Picture the Empire of Light mascot: an octopus, a living symbol of collective intelligence when it&rsquo;s working. Now
-              imagine an octopus whose hearts and brains aren&rsquo;t on the same page. It tries to camouflage itself and instead flashes
-              through seven different colors at once, giving away exactly the confusion it&rsquo;s trying to hide.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              That&rsquo;s how most organizations run. Internal friction, the misalignment between the hearts and brains of a team, gets
-              in the way of external progress. Empire of Light exists to help teams become one unified octopus: many arms, one nervous
-              system, moving as a whole.
-            </p>
-          </div>
+          <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+            Empire of Light&rsquo;s mascot is an octopus: nine brains, one body &mdash; a living symbol of collective intelligence when
+            it&rsquo;s in sync, and a dead giveaway of confusion when it&rsquo;s not. That&rsquo;s the pattern this framework exists to
+            fix: many arms, one nervous system, moving as a whole.
+          </p>
         </div>
       </section>
 
@@ -351,7 +347,7 @@ export default function ThesisPage() {
       <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-9 max-w-[720px]">
-            <SectionHeading eyebrow="Applications" title="The framework applies wherever groups are trying to create meaningful change" />
+            <SectionHeading eyebrow="Applications" title="The framework applies to any group running this cycle together" />
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               The same operating system adapts to each context:
             </p>
