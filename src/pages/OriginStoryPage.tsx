@@ -62,9 +62,9 @@ const LIFE_EVENTS: LifeEvent[] = [
   { name: 'Quit drinking', start: '2022-01-01', stage: 'do', tag: 'Medical/substance change' },
   { name: 'Start shuffle dancing', start: '2022-05-01', stage: 'do', tag: 'Somatic' },
   { name: 'Burnout moment', start: '2022-05-15', stage: 'unlearn', tag: 'Major life event' },
-  { name: 'Cleveland trip', start: '2022-08-28', stage: 'do', tag: 'Travel' },
+  { name: 'Cleveland', start: '2022-08-28', stage: 'do', tag: 'Travel' },
   { name: 'Discovered AuDHD', start: '2022-09-15', stage: 'unlearn', tag: 'Major life event' },
-  { name: 'Start Vyvanse', start: '2022-10-21', stage: 'do', tag: 'Medical/substance change' },
+  { name: 'Try Vyvanse', start: '2022-10-21', stage: 'do', tag: 'Medical/substance change' },
   { name: 'Sudden divorce', start: '2023-02-20', stage: 'unlearn', tag: 'Major life event' },
   { name: 'Whidbey Island', start: '2023-04-30', stage: 'do', tag: 'Travel' },
   { name: 'Psilocybin', start: '2023-04-30', stage: 'do', tag: 'Medical/substance change' },
@@ -124,6 +124,7 @@ const CATEGORY_EXAMPLE_OVERRIDES: Partial<Record<keyof typeof CATEGORY_COLORS, s
   Vision: ['Empire of Light vision', 'Matriarchal cohousing vision'],
   'Relationship experiment': ['Explore online dating', 'Host art nights'],
   Somatic: ['Shuffle dancing', 'Trauma Release Exercises', 'Epigenetic Core Block Clearings', 'Gateway Experience'],
+  'Create & evolve': ['Art', 'Song making', 'Experimental dubstep'],
 }
 
 // A few representative examples per category, shown in the legend instead of every logged event.
