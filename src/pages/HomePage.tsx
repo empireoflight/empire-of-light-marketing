@@ -19,7 +19,7 @@ const HOW_STEPS = [
   {
     n: '02',
     title: 'Vision workshop',
-    body: 'Everyone completes the vision questionnaire individually, ahead of time. Then the team comes together for a vision workshop to see where there’s alignment, and where there’s disconnect.',
+    body: 'Everyone completes the vision questionnaire individually, ahead of time. Then the team comes together for a vision workshop to see where there’s alignment, and where there’s disconnect. Together, we co-create a tangible, yet inspiring vision.',
   },
   {
     n: '03',
@@ -391,25 +391,9 @@ export default function HomePage() {
             <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
               Three practices that build collaboration and trust
             </h2>
-            <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
               Each one starts with individual reflection, then becomes something the team can act on together in the same week.
             </p>
-            <p className="m-0 mb-6 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#131114' }}>
-              People tell the truth when they have the psychological safety to do so. That&rsquo;s the thread running under all three:
-              every piece of it carries its own privacy tier, made visible to you in the app before you write a word.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {TIERS.map((tier) => (
-                <div
-                  key={tier.n}
-                  className="flex items-center gap-2.5 rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]"
-                  style={{ background: tier.bg, color: tier.fg }}
-                >
-                  <span className="h-[7px] w-[7px] rounded-full" style={{ background: tier.dot }} />
-                  Tier {tier.n} &middot; {tier.label}
-                </div>
-              ))}
-            </div>
           </div>
           <div className="flex flex-col gap-16">
             {APP_PRACTICES.map((practice) => (
@@ -451,6 +435,28 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-16 rounded-2xl border p-8 md:p-10" style={{ borderColor: '#D8D2DC', background: '#FFFFFF' }}>
+            <Eyebrow>Privacy tiers</Eyebrow>
+            <h3 className="m-0 mb-3 text-[22px] font-semibold leading-[1.24] md:text-[24px]" style={{ ...DISPLAY, color: '#131114' }}>
+              People tell the truth when they have the psychological safety to do so
+            </h3>
+            <p className="m-0 mb-6 max-w-[720px] text-[16px] leading-[1.6] md:text-[16.5px]" style={{ color: '#544D5A' }}>
+              Every data point above has an assigned privacy tier, made visible to you in the app so you know exactly who will see it
+              before you write a word.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {TIERS.map((tier) => (
+                <div
+                  key={tier.n}
+                  className="flex items-center gap-2.5 rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]"
+                  style={{ background: tier.bg, color: tier.fg }}
+                >
+                  <span className="h-[7px] w-[7px] rounded-full" style={{ background: tier.dot }} />
+                  Tier {tier.n} &middot; {tier.label}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
