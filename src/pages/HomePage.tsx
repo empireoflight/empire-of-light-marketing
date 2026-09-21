@@ -14,7 +14,7 @@ const HOW_STEPS = [
   {
     n: '01',
     title: 'Book a conversation',
-    body: 'A short call to talk through your team, where you’re stuck, and whether this is the right fit. Once it’s a match, you commit as a founding co-creator and your team gets access to the app.',
+    body: 'A short call to talk through your team, where you’re stuck, and whether this is the right fit. Once it’s a match, your team gets access to the app.',
   },
   {
     n: '02',
@@ -28,7 +28,7 @@ const HOW_STEPS = [
   },
 ]
 
-const PILOT_INCLUDES = [
+const WHATS_INCLUDED = [
   'A vision assessment and workshop to create genuine shared direction',
   'Biweekly working sessions focused on progress and surfacing and releasing friction',
   'Weekly async reflection prompts',
@@ -83,16 +83,20 @@ const DIFFERENTIATORS = [
     title: 'Inside the work, not beside it',
     body: 'A typical engagement survey runs twice a year and ends up as a slide. This runs weekly, built around the vision your team is already working toward, so whatever surfaces gets used that same week.',
   },
+  {
+    title: 'Built for emergence',
+    body: 'You don’t have to know the right answer at the beginning. The vision can evolve, the plan can change, and new information can change what you do next.',
+  },
 ]
 
 const FAQS = [
   {
     q: 'How do we get started?',
-    a: 'Book a short conversation with us. We’ll talk through your team and what you’re navigating, and if it’s a fit, walk you through the founding co-creator investment and get your team invited into the app.',
+    a: 'Book a short conversation with us. We’ll talk through your team and what you’re navigating, and if it’s a fit, walk you through the investment and get your team invited into the app.',
   },
   {
     q: 'Is this software or consulting?',
-    a: 'Both. We facilitate the pilot directly (the vision workshop, the biweekly sessions, one full evolve cycle), and the app carries the work between sessions and stays with your team afterward.',
+    a: 'Both. We facilitate the engagement directly (the vision workshop, the biweekly sessions, one full evolve cycle), and the app carries the work between sessions and stays with your team afterward.',
   },
   {
     q: 'Can we just use the app?',
@@ -161,7 +165,7 @@ export default function HomePage() {
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
         title="Empire of Light | Collective Intelligence Platform for Teams"
-        description="Empire of Light helps teams unlock the collective intelligence already inside them — a facilitated pilot plus app for shared vision, aligned action, and processing friction together. Book a conversation to get started."
+        description="Empire of Light helps teams unlock the collective intelligence already inside them — a facilitated engagement plus app for shared vision, aligned action, and processing friction together. Book a conversation to get started."
         path="/"
       />
       <MarketingHeader />
@@ -178,16 +182,17 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-[960px] text-center">
           <img src={logoMark} alt="" width={96} height={96} className="mx-auto mb-9 block" style={{ borderRadius: 20 }} />
           <div className="mb-7 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
-            Collective intelligence platform
+            A heart-centered team operating system
           </div>
           <h1
             className="m-0 mb-7 text-[38px] leading-[1.1] font-light md:text-[52px] lg:text-[64px] lg:leading-[1.06]"
             style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}
           >
-            Unlock the collective intelligence <em style={{ fontStyle: 'normal', fontWeight: 600 }}>inside your team</em>
+            Bring more ambitious visions to life faster, with more unity.
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Bring more ambitious visions to life faster, with more unity.
+            Empire of Light is a heart-centered approach to innovation that helps teams turn a shared vision into action, work with
+            the friction that emerges, and evolve as they learn.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
@@ -214,9 +219,9 @@ export default function HomePage() {
             <OctopusIcon size={46} />
           </div>
           <p className="m-0 mb-6 text-[22px] leading-[1.35] font-light md:text-[30px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-            An octopus has nine brains: one in its head, and one in each arm. When they&rsquo;re not in sync, it gives itself away &mdash;
-            trying to camouflage against the reef, it ends up flashing through seven different colors at once, broadcasting exactly the
-            confusion it&rsquo;s trying to hide.
+            An octopus has nine brains: one in its head, and one in each arm. When they&rsquo;re not in sync, it gives itself away.
+            Trying to camouflage against the reef, it ends up flashing through seven different colors at once, broadcasting exactly
+            the confusion it&rsquo;s trying to hide.
           </p>
           <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
             Most teams run the same way. The intelligence is there, distributed across everyone in the room, but when it&rsquo;s not
@@ -224,7 +229,8 @@ export default function HomePage() {
             direction. Everyone moves. Not always together.
           </p>
           <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-            Empire of Light is the rhythm, and the app, that helps a team get its arms working from the same signal and move as one.
+            Empire of Light is the rhythm &mdash; and the app &mdash; that helps a team get its arms working from the same signal
+            and move together toward something they actually want to create.
           </p>
         </div>
       </section>
@@ -236,12 +242,21 @@ export default function HomePage() {
             <div>
               <Eyebrow>Why this is different</Eyebrow>
               <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                Reimagine. Do. Unlearn. Evolve. Repeat.
+                A different way to run the work
               </h2>
               <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-                Most tools ask a team to report on how it&rsquo;s doing, after the fact. This one gives the team a shared vision, a way
-                to actually move on it, a way to work through the friction that shows up, and a way to keep leveling up together. A
-                rhythm the team runs itself, rather than something handed down from above.
+                Most project management systems start with a desired result and work backward from there. But when you&rsquo;re
+                creating something genuinely new, the outcome isn&rsquo;t fully within your control. Empire of Light focuses instead
+                on what you can influence: your vision, your actions, and the energy of the team. Results aren&rsquo;t ignored. They
+                feed back into the system, helping the team understand what to change and where to go next.
+              </p>
+              <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+                Reimagine. Do. Unlearn. Evolve. Repeat.
+              </p>
+              <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+                Most tools ask a team to report on how it&rsquo;s doing, after the fact. This gives the team a shared vision, a way to
+                move on it, a way to work through the friction that shows up, and a way to keep evolving together. A rhythm the team
+                runs itself, rather than something handed down from above.
               </p>
               <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
                 Read the full thesis &rarr;
@@ -256,7 +271,7 @@ export default function HomePage() {
               style={{ aspectRatio: '750 / 549' }}
             />
           </div>
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3 md:mt-16">
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-16">
             {DIFFERENTIATORS.map((item) => (
               <div key={item.title} className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
                 <h3 className="m-0 mb-3 text-[20px] font-semibold leading-[1.26] md:text-[21px]" style={{ ...DISPLAY, color: '#131114' }}>
@@ -276,7 +291,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1120px]">
           <Eyebrow>Who it&rsquo;s for</Eyebrow>
           <h2 className="m-0 mb-7 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-            Built for teams that actually do things together
+            Built for teams creating something new
           </h2>
           <div className="flex flex-wrap gap-3">
             {WHO_FOR.map((item) => (
@@ -297,9 +312,13 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-10 max-w-[720px]">
             <Eyebrow>Results to expect</Eyebrow>
-            <h2 className="m-0 mb-2 text-[30px] leading-[1.1] font-light md:text-[42px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              Get your team aligned, moving, and reenergized so you can execute faster
+            <h2 className="m-0 mb-3 text-[30px] leading-[1.1] font-light md:text-[42px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+              What changes when teams move differently
             </h2>
+            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+              Get your team aligned around a shared vision, moving on what matters, and better equipped to adapt as the work
+              unfolds.
+            </p>
           </div>
           <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#D8D2DC' }}>
             <table className="w-full min-w-[640px] border-collapse text-left">
@@ -342,8 +361,8 @@ export default function HomePage() {
           <div className="mb-14 max-w-[720px] md:mb-16">
             <Eyebrow color="#FEE16A">How it works</Eyebrow>
             <p className="m-0 text-[20px] leading-[1.45] font-light md:text-[26px]" style={{ ...DISPLAY, letterSpacing: '.01em', color: '#FBF7F2' }}>
-              Software alone doesn&rsquo;t change how a team talks to each other, and a workshop alone doesn&rsquo;t survive the week
-              after it ends. This is built to do both.
+              Software alone doesn&rsquo;t change how a team works, and a workshop alone doesn&rsquo;t survive the week after it
+              ends. This is built to do both: we help you establish the rhythm, and the app keeps it going.
             </p>
           </div>
           <div
@@ -389,7 +408,7 @@ export default function HomePage() {
           <div className="mb-14 max-w-[760px]">
             <Eyebrow>Inside the app</Eyebrow>
             <h2 className="m-0 mb-5 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              Three practices that build collaboration and trust
+              Practices that keep the team moving
             </h2>
             <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
               Each one starts with individual reflection, then becomes something the team can act on together in the same week.
@@ -474,7 +493,7 @@ export default function HomePage() {
                 A 4&ndash;6 week facilitated engagement
               </h2>
               <div className="flex flex-col gap-4">
-                {PILOT_INCLUDES.map((item) => (
+                {WHATS_INCLUDED.map((item) => (
                   <div key={item} className="flex items-start gap-3.5">
                     <div className="mt-2.5 h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: '#131114' }} />
                     <div className="text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
@@ -485,7 +504,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
-              <Eyebrow>Founding co-creator investment</Eyebrow>
+              <Eyebrow>Investment</Eyebrow>
               <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
                 $1,000&ndash;$10,000
               </div>
@@ -496,8 +515,7 @@ export default function HomePage() {
                 Sliding scale, based on team size and scope
               </div>
               <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
-                This fall we&rsquo;re partnering with a small number of teams to refine and validate the framework together. Spots are
-                limited.
+                This fall we&rsquo;re taking on a small number of teams. Spots are limited.
               </p>
             </div>
           </div>
@@ -540,10 +558,10 @@ export default function HomePage() {
           <div>
             <Eyebrow>From the founder</Eyebrow>
             <p className="m-0 mb-4 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#131114' }}>
-              Empire of Light started with my own life falling apart &mdash; burnout, a divorce, a layoff all at once &mdash; and
+              Empire of Light started with my own life falling apart &mdash; burnout, divorce, a layoff all at once &mdash; and
               rebuilding from there. I noticed a pattern in how I was transforming my life, and I&rsquo;ve since watched that same
-              pattern help teams move together better: more innovation, faster execution, less personal strain for the leader, and
-              work that feels alive again.
+              pattern help teams move together differently: more innovation, more momentum, less personal strain for the leader,
+              and work that feels alive again.
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
