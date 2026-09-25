@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import logoMark from '../assets/logo-mark.png'
 import heartModel from '../assets/landing/heart-model.webp'
-import shotVision from '../assets/landing/screenshot-vision-original.webp'
-import shotFriction from '../assets/landing/shot-friction.png'
-import shotCheckin from '../assets/landing/shot-checkin.png'
+import shotVision from '../assets/landing/screenshot-vision-v2.webp'
+import shotFriction from '../assets/landing/shot-friction-v2.webp'
+import shotCheckin from '../assets/landing/shot-checkin-v2.webp'
 import founderPhoto from '../assets/landing/founder-photo.jpg'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
@@ -124,8 +124,7 @@ const APP_PRACTICES = [
       'Each person completes the vision questionnaire on their own, so the loudest voice in the room isn’t automatically the vision. The app synthesizes the responses and flags where the team is already aligned, and where it quietly isn’t.',
       'Together, we co-create a vision that’s more ambitious than we could have envisioned alone. We turn the disconnect into an expanded view of the problem and co-create an aligned path forward.',
     ],
-    shot: { src: shotVision, alt: 'The team vision screen', position: 'top', zoom: 1.15 },
-    tier: { n: 2, label: 'AI-assisted', bg: '#EDE4FA', fg: '#131114', dot: '#8B5CF6' },
+    shot: { src: shotVision, alt: 'The team vision screen', position: 'top' },
     imageSide: 'right' as const,
   },
   {
@@ -136,7 +135,6 @@ const APP_PRACTICES = [
       'Once everyone involved has done that, the app generates a discussion guide built from all sides. The friction becomes material for an actual conversation, instead of something everyone quietly works around.',
     ],
     shot: { src: shotFriction, alt: 'Friction processing with grounding breathwork', position: 'top' },
-    tier: { n: 0, label: 'Ephemeral, never stored', bg: '#131114', fg: '#FBF7F2', dot: '#2E7D5B' },
     imageSide: 'left' as const,
   },
   {
@@ -147,7 +145,6 @@ const APP_PRACTICES = [
       'The evolve rollup turns those weekly answers into a pattern the team can act on for the next cycle. The team sees it directly. It isn’t collected for the leader to review privately.',
     ],
     shot: { src: shotCheckin, alt: 'Weekly vibe check', position: 'top' },
-    tier: { n: 3, label: 'Team aggregate', bg: '#FDE3CB', fg: '#131114', dot: '#D99A22' },
     imageSide: 'right' as const,
   },
 ]
@@ -209,6 +206,24 @@ export default function HomePage() {
               See how it works
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Watch the overview */}
+      <section id="how" className="px-6 py-16 md:px-8 md:py-20" style={{ background: '#000000' }}>
+        <div className="mx-auto max-w-[860px]">
+          <div className="mb-6 text-center text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
+            Watch the overview
+          </div>
+          <video
+            controls
+            preload="metadata"
+            poster="/video/eol-explainer-poster.jpg"
+            className="block w-full rounded-2xl"
+            style={{ boxShadow: '0 0 60px rgba(254,225,106,.18)' }}
+          >
+            <source src="/video/eol-explainer.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 
@@ -356,7 +371,7 @@ export default function HomePage() {
       </section>
 
       {/* Program details: how it works */}
-      <section id="how" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
+      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-14 max-w-[720px] md:mb-16">
             <Eyebrow color="#FEE16A">How it works</Eyebrow>
@@ -437,19 +452,8 @@ export default function HomePage() {
                       src={practice.shot.src}
                       alt={practice.shot.alt}
                       className="h-full w-full object-cover"
-                      style={{
-                        objectPosition: practice.shot.position,
-                        transform: practice.shot.zoom ? `scale(${practice.shot.zoom})` : undefined,
-                        transformOrigin: practice.shot.position,
-                      }}
+                      style={{ objectPosition: practice.shot.position }}
                     />
-                  </div>
-                  <div
-                    className="mt-3.5 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium"
-                    style={{ background: practice.tier.bg, color: practice.tier.fg }}
-                  >
-                    <span className="h-[6px] w-[6px] rounded-full" style={{ background: practice.tier.dot }} />
-                    Tier {practice.tier.n} &middot; {practice.tier.label}
                   </div>
                 </div>
               </div>
@@ -505,14 +509,11 @@ export default function HomePage() {
             </div>
             <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
               <Eyebrow>Investment</Eyebrow>
-              <div className="text-[40px] leading-none font-semibold md:text-[52px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                $1,000&ndash;$10,000
+              <div className="text-[26px] leading-[1.2] font-light md:text-[32px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                Sliding scale, based on team size and scope
               </div>
               <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
-                per team &middot; 4&ndash;6 weeks
-              </div>
-              <div className="mt-1 text-[13px]" style={{ color: '#544D5A' }}>
-                Sliding scale, based on team size and scope
+                per team
               </div>
               <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
                 This fall we&rsquo;re taking on a small number of teams. Spots are limited.
