@@ -8,53 +8,55 @@ import { BOOKING_URL, DISPLAY, Eyebrow, OctopusIcon, primaryButton, secondaryBut
 const REVOLUTIONS = [
   {
     label: 'Technological revolution',
-    body: 'Artificial intelligence is rapidly changing how work gets done, and what work is even for.',
+    body: 'Artificial intelligence is changing how work gets done, and what work even is.',
   },
   {
-    label: 'Cultural revolution',
-    body: 'People are craving community, connection, meaningful work, and a life that feels good now, not someday. More people are questioning old definitions of success and expanding their sense of what’s possible.',
+    label: 'Consciousness/cultural revolution',
+    body: 'People are craving community, connection, and a life that feels good now, not someday. People are questioning old definitions of success and expanding their sense of what is possible.',
   },
   {
     label: 'Geopolitical revolution',
-    body: 'People are increasingly questioning systems that weren’t built for the benefit of most humans. The wealth gap is growing, trust in institutions is declining, and many people are tired of working this hard for so little reward.',
+    body: 'People are realizing that a lot of our systems and structures were not built for the benefit of most people, and they are starting to demand reform.',
   },
 ]
 
 const CYCLE_STAGES = [
   {
-    n: '01',
     title: 'Reimagine',
-    subtitle: 'Clarify Vision',
-    body: 'Connect with what feels meaningful, alive, and worth creating, through presence rather than analysis. What future are we creating? Why does it matter? What values guide us? A compelling vision becomes an organizing force that aligns decisions across the whole system.',
+    body: [
+      'First you need a strong vision.',
+      'What are we creating? Why does it matter? What would be possible if we weren’t constrained by the way things have always been done?',
+      'A compelling vision gives people something to move toward. It helps a team stay connected through the uncertainty, friction, and identity shifts that come with trying something new.',
+      'You can’t ask people to let go of old patterns in service of nothing. There needs to be something worth moving toward.',
+    ],
   },
   {
-    n: '02',
     title: 'Do',
-    subtitle: 'Take Aligned Action',
-    body: 'Act before certainty. Individuals begin acting from the identity they’re becoming: experimenting, committing, building something. Small experiments generate learning while creating forward momentum. Progress emerges through cycles of action, not perfect planning.',
+    body: [
+      'Then you need to take coordinated action to move toward that vision.',
+      'This is where modern spirituality can sometimes lead people astray. It is not enough to just change your frequency. You also have to take action to make your visions come true.',
+      'In teams, that action needs to be coordinated. Act before certainty. Experiment. Build something. Try things. Learn by doing.',
+      'The goal isn’t to perfectly predict the path to the outcome. It is to start moving and see what happens.',
+    ],
   },
   {
-    n: '03',
     title: 'Unlearn',
-    subtitle: 'Integrate Friction',
-    body: 'Meet uncertainty, limitation, friction, and grief. In individuals, this can show up as fear, limiting beliefs, or emotional and somatic activation. In organizations, it can show up as conflict, misalignment, communication breakdowns, or protective behaviors. Practices like reflection, somatic regulation, facilitated dialogue, and structured sensemaking help teams metabolize friction instead of getting trapped by it.',
+    body: [
+      'As we take action, fear, doubt, and uncertainty rise to the surface. I call this shadow work. You can call it whatever you want.',
+      'In individuals, this can show up as fear, limiting beliefs, uncertainty, or dysregulation. In teams, it surfaces as friction, conflict, misalignment, communication breakdowns, politics, or protective behaviors.',
+      'We can address this stuff proactively to help both individuals and teams grow. Like feedback, shadow information is a gift if used properly. It helps us see what isn’t working, where we’re misaligned, and what we may need to let go of.',
+      'The goal isn’t to eliminate friction. It’s to become better at working with it.',
+    ],
   },
   {
-    n: '04',
     title: 'Evolve',
-    subtitle: 'Express & Evolve',
-    body: 'Integrate what has been learned. As learning accumulates, teams celebrate progress, refine their vision, and begin the next cycle from a higher level of collective capability. Creativity becomes evidence that the system has developed new capacity.',
+    body: [
+      'Finally, we use what we’ve learned to evolve. We look at the team vibe, the things that surfaced through the shadow work, and the results of our experiments. We use all of that information to improve the vision and improve the way we work together.',
+      'Results and data still matter. They tell us what happened. But they aren’t the thing we control. They are feedback that helps us decide what to try next.',
+      'The team starts the next cycle with more awareness and more capability than it had before.',
+      'That is how transformation happens. Not by following a perfect plan, but by becoming better at sensing, acting, learning, and evolving together.',
+    ],
   },
-]
-
-const SCALING_BODY = [
-  'Consider what that looks like in practice: an individual clarifying a personal vision, a leadership team clarifying a strategic vision, a startup clarifying a product vision.',
-  'This opens up a larger possibility: what if the inner work traditionally done by individuals could become a collective capability?',
-  'This is the premise of lightwork at scale.',
-  'Lightwork is, at its core, the practice of bringing awareness, intention, and love to the places where we’re operating unconsciously, so we can transform rather than simply reproduce old patterns.',
-  'At scale, that means creating the conditions for groups to do the same thing together: surface what is really happening, work through the friction that keeps people disconnected, reconnect with what matters, and channel that energy toward something they want to create.',
-  'The framework is especially well-suited to group transformation. The visions can be bigger, the actions more impactful, and the friction work is often easier to do collectively. Group dynamics surface hidden assumptions, competing mental models, and relationship patterns that don’t come to the surface as easily in individual work alone.',
-  'Empire of Light isn’t a replacement for individual therapeutic work or 1:1 therapy. It’s a practical framework for helping groups transform together while building something meaningful.',
 ]
 
 const WHY_BETTER = [
@@ -72,23 +74,34 @@ const WHY_BETTER = [
   },
 ]
 
-const APPLICATIONS = [
-  'AI transformation initiatives',
-  'Leadership teams',
-  'Product organizations',
-  'Cross-functional innovation groups',
-  'Research collaborations',
-  'Community initiatives',
-  'Regenerative business ecosystems',
-  'Incubators and interdisciplinary design teams',
+const SCALING_BODY = [
+  'An individual can clarify a personal vision, take action, encounter friction, unlearn old patterns, and evolve.',
+  'A leadership team can clarify a strategic vision, take coordinated action, encounter organizational friction, unlearn old ways of working, and evolve.',
+  'A product team can do the same thing around a product vision.',
+  'This opens up a larger possibility: what if the inner work traditionally done by individuals could become a collective capability? That is the premise of lightwork at scale.',
+  'Group dynamics surface hidden assumptions, competing mental models, and relationship patterns that don’t always come to the surface in individual work. When we learn to work with those things together, they can become a source of collective intelligence rather than a source of dysfunction.',
+  'Collective intelligence is our ability to see what’s really happening, coordinate around what matters, generate ideas together, and adapt as we learn.',
+  'This is where I think the really exciting stuff starts.',
 ]
 
-const RESEARCH_QUESTIONS = [
-  'Under what conditions does collective transformation emerge?',
-  'How can collective intelligence be measured?',
-  'What role does vision play in sustaining adaptation?',
-  'Which facilitation practices most effectively help teams metabolize friction?',
-  'How can AI support, not replace, the uniquely human capacities that enable collective transformation?',
+const APPLICATIONS_INDIVIDUAL = [
+  'AuDHD unmasking',
+  'Navigating spiritual awakening',
+  'Navigating a career or life pivot',
+  'Creating a new vision for how you want to live and work',
+]
+
+const APPLICATIONS_GROUPS = [
+  'Navigating a company pivot or leadership change',
+  'AI transformation initiatives',
+  'Cross-functional innovation teams',
+  'Product or GTM teams that need to come together around a unified vision',
+  'Interdisciplinary think tanks',
+  'Research collaborations',
+  'Community-building projects',
+  'Innovation teams working on something new together',
+  'Incubators and interdisciplinary design teams',
+  'Regenerative business ecosystems',
 ]
 
 function SectionHeading({ eyebrow, title, color }: { eyebrow: string; title: string; color?: string }) {
@@ -109,8 +122,8 @@ export default function ThesisPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
-        title="The Empire of Light Thesis | A Theory of Collective Transformation"
-        description="How shifts in individual consciousness translate into collective transformation within organizational systems — the research and framework behind Empire of Light."
+        title="The Empire of Light Thesis | A Team Operating System for Collective Transformation"
+        description="Empire of Light is a team operating system for collective transformation — the methodology behind how teams reimagine what's possible, take action, unlearn old patterns, and evolve together."
         path="/thesis"
       />
       <MarketingHeader />
@@ -132,18 +145,18 @@ export default function ThesisPage() {
             className="m-0 mb-6 text-[36px] leading-[1.1] font-light md:text-[54px] md:leading-[1.06]"
             style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}
           >
-            A Theory of Collective Transformation
+            A Team Operating System for Collective Transformation
           </h1>
           <p className="mx-auto m-0 max-w-[600px] text-[17px] leading-[1.55]" style={{ color: 'rgba(251,247,242,.72)' }}>
-            How shifts in individual consciousness translate into collective transformation within organizational systems.
+            How teams reimagine what&rsquo;s possible, take action, unlearn old patterns, and evolve together.
           </p>
         </div>
       </section>
 
-      {/* Why this matters now */}
+      {/* Why now */}
       <section className="px-6 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="Why this matters now" title="Organizations are facing a convergence of forces unlike anything in recent history" />
+          <SectionHeading eyebrow="Why now?" title="We’re experiencing a convergence of forces unlike anything in recent human history" />
           <div className="mb-8 flex flex-col gap-4.5">
             {REVOLUTIONS.map((r) => (
               <div key={r.label} className="flex items-start gap-3.5">
@@ -156,135 +169,122 @@ export default function ThesisPage() {
           </div>
           <div className="flex flex-col gap-4.5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              The pace of change is accelerating, but most organizations still operate on models designed for an old paradigm.
+              This raises a bigger question: how do we actually change collectively? How do we show up differently and make sure we
+              don&rsquo;t keep repeating the same patterns that humans tend to repeat?
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              At the same time, people have been doing a tremendous amount of their own expansion work: becoming more conscious, healing
-              old patterns, reconnecting with what matters, imagining different ways of living and working. That work matters, but
-              eventually we reach the limits of what we can transform on our own.
+              We need new ways of operating that help us reimagine what&rsquo;s possible, take action toward it, unlearn the patterns
+              that get in the way, and evolve as we learn.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
-              If we want a different future, we have to change the systems we&rsquo;re part of, and we have to change them together.
+              Empire of Light is a team operating system for collective transformation. It helps teams reimagine what&rsquo;s possible,
+              move toward it, unlearn old patterns that are getting in the way, and evolve as the team learns.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              We don&rsquo;t need to transform everything at once. We can start by creating{' '}
-              <strong style={{ color: '#131114', fontWeight: 600 }}>pockets of light</strong>: teams, organizations, and communities where
-              people work differently, with more trust, connection, creativity, meaning, and collective intelligence.
+              We don&rsquo;t have to transform everything at once. We can start by creating{' '}
+              <strong style={{ color: '#131114', fontWeight: 600 }}>pockets of light</strong>: teams, organizations, and communities
+              where people work differently, with more trust, connection, creativity, meaning, and collective intelligence.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              We create one pocket of light, then another, and then another. Over time, those pockets start to form a pattern, and
-              patterns are what eventually shift systems.
-            </p>
-            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
-              This is lightwork at scale: taking the work of individual transformation into the places where we create the future
-              together.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Transformation is a process of adaptation, not simply a problem to solve, and the next generation of organizations will
-              need an operating system that develops collective intelligence alongside strategy and execution.
+              Create one pocket of light, then another, then another. Over time, those pockets become patterns. And patterns are how
+              systems change.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The insight */}
+      {/* Why the Empire */}
       <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading
-            eyebrow="The insight"
-            title="Individual and collective transformation follow the same underlying adaptive pattern"
-            color="#FEE16A"
-          />
+          <SectionHeading eyebrow="Why the Empire?" title="A model for lightwork at scale" color="#FEE16A" />
           <div className="flex flex-col gap-5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Through four years of observing my own transformation, combined with product strategy practice and organizational
-              facilitation, I began to notice a recurring pattern: meaningful change didn&rsquo;t happen through a linear progression
-              from insight to action. It emerged through a continual movement between imagining what could be, acting toward it,
-              encountering friction, letting go of what no longer fit, and integrating what was learned.
-            </p>
-            <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
-              Read the origin story &rarr;
-            </Link>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              I call this pattern Reimagine &rarr; Do &rarr; Unlearn &rarr; Evolve. This currently represents a working theory, refined
-              through direct practice rather than a finished, proven model.
+              The Empire of Light methodology is essentially a model for lightwork at scale.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              <strong style={{ color: '#FBF7F2', fontWeight: 600 }}>Thesis:</strong> Individual and collective transformation follow the
-              same underlying adaptive pattern, moving from contraction and self-protection toward connection, creativity, and adaptive
-              action. From a fear-based operating system to one rooted in trust, and at its deepest level, unconditional love.
+              Lightwork is the practice of bringing awareness, intention, and love to the places where we&rsquo;re operating
+              unconsciously, so we can transform rather than simply reproduce old patterns.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              <strong style={{ color: '#FBF7F2', fontWeight: 600 }}>Proposed mechanism:</strong> A compelling vision provides enough
-              motivational pull to sustain engagement through uncertainty, identity destabilization, and emotional processing, enabling
-              adaptive reorganization at both the individual and collective level. What we learn becomes part of the next iteration of
-              the vision.
+              Typically, people do this on an individual level through individual expansion work. Maybe they meditate or participate in
+              other consciousness expansion practices. They work on themselves, become more conscious, heal old patterns, reconnect
+              with what matters, and expand their sense of what&rsquo;s possible.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Transformation, then, is less about moving cleanly from one state to another than about becoming capable of moving with
-              what&rsquo;s emerging.
+              That work matters. But eventually, we reach the limits of what we can transform on our own.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
+              You can change everything you can about yourself, yet the world around you may still be operating on old paradigms that
+              no longer fit.
+            </p>
+            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#FBF7F2' }}>
+              That is where lightwork at scale comes in.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
+              How awesome could the world be if we did this work together, in groups? What kind of awesome stuff could we bring into
+              the world? How much could we change things for the better?
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
+              I believe the answer is beyond our wildest dreams, especially if we learn to harness the power of our collective
+              intelligence.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
+              Our existing global paradigm largely runs on fear and scarcity, and there is a lot of fear baked deeply into our systems
+              and our ways of being. Empire of Light is a movement to shine light on these areas so we can learn and evolve.
+            </p>
+            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#FBF7F2' }}>
+              So we can build a society rooted in unconditional love, where human flourishing and personal results are not at odds.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The framework */}
-      <section id="framework" className="px-6 py-16 md:px-8 md:py-24">
-        <div className="mx-auto max-w-[1120px]">
-          <div className="mb-12 grid items-center gap-10 md:grid-cols-2 md:gap-12">
-            <div>
-              <SectionHeading eyebrow="The Empire of Light Framework" title="Reimagine → Do → Unlearn → Evolve" />
-              <p className="m-0 mb-4 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-                The Empire of Light Framework is an adaptive cycle, a heart model, for helping individuals and groups translate vision
-                into reality while continuously learning and evolving.
-              </p>
-              <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-                Vision has to come first. You can&rsquo;t ask anyone to let go of old patterns in service of nothing; it&rsquo;s the pull
-                of a real vision that makes unlearning possible.
-              </p>
-            </div>
-            <img
-              src={heartModel}
-              alt="The Empire of Light heart model — Reimagine, Do, Unlearn, Evolve"
-              width={750}
-              height={549}
-              className="block w-full rounded-2xl object-cover"
-              style={{ aspectRatio: '750 / 549' }}
-            />
+      {/* The methodology */}
+      <section className="px-6 py-16 md:px-8 md:py-24">
+        <div className="mx-auto max-w-[840px]">
+          <SectionHeading eyebrow="The Methodology" title="This methodology arose from my own transformation process" />
+          <div className="flex flex-col gap-5">
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              I&rsquo;ve documented my transformation process over the past five years as I personally moved from a more fear-based
+              existence to one more rooted in self-trust and unconditional love.
+            </p>
+            <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+              Read the origin story &rarr;
+            </Link>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              I also experimented with these concepts in the teams I managed, and I noticed that individual and group transformation
+              follow a similar pattern:
+            </p>
+            <p className="m-0 text-[22px] font-semibold leading-[1.4] md:text-[26px]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+              Reimagine &rarr; Do &rarr; Unlearn &rarr; Evolve
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              This isn&rsquo;t a linear process. These are capacities to cultivate. They can come together in different ways as people
+              and teams move through change.
+            </p>
           </div>
-          <div
-            className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border sm:grid-cols-2"
-            style={{ background: '#D8D2DC', borderColor: '#D8D2DC' }}
-          >
+          <img
+            src={heartModel}
+            alt="The Empire of Light heart model — Reimagine, Do, Unlearn, Evolve"
+            width={750}
+            height={549}
+            className="mt-10 block w-full rounded-2xl object-cover"
+            style={{ aspectRatio: '750 / 549' }}
+          />
+          <div className="mt-14 flex flex-col gap-12">
             {CYCLE_STAGES.map((stage) => (
-              <div key={stage.n} className="p-8" style={{ background: '#FFFFFF' }}>
-                <div className="mb-5 text-[13px] font-semibold tracking-[0.16em]" style={{ ...DISPLAY, color: '#A96D0F' }}>
-                  {stage.n} &middot; {stage.subtitle}
-                </div>
+              <div key={stage.title}>
                 <h3 className="m-0 mb-3 text-[22px] font-semibold tracking-[0.03em] md:text-[24px]" style={{ ...DISPLAY, color: '#131114' }}>
                   {stage.title}
                 </h3>
-                <p className="m-0 text-[15px] leading-[1.65]" style={{ color: '#544D5A' }}>
-                  {stage.body}
-                </p>
+                <div className="flex flex-col gap-4">
+                  {stage.body.map((p) => (
+                    <p key={p} className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+                      {p}
+                    </p>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
-          <p className="mt-7 text-center text-[15px]" style={{ color: '#8C8492' }}>
-            The phases aren&rsquo;t steps to complete so much as capacities to cultivate.
-          </p>
-        </div>
-      </section>
-
-      {/* Scaling / lightwork at scale */}
-      <section className="px-6 py-16 md:px-8 md:py-24">
-        <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="From individual transformation to lightwork at scale" title="The same adaptive cycle operates at multiple scales" />
-          <div className="flex flex-col gap-5">
-            {SCALING_BODY.map((p, i) => (
-              <p key={i} className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-                {p}
-              </p>
             ))}
           </div>
         </div>
@@ -309,21 +309,16 @@ export default function ThesisPage() {
         </div>
       </section>
 
-      {/* Collective intelligence as an OS */}
+      {/* From individual transformation to lightwork at scale */}
       <section className="px-6 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="Collective intelligence as an operating system" title="Strategy, execution, and adaptation aren’t separate functions" />
+          <SectionHeading eyebrow="From individual transformation to lightwork at scale" title="The same adaptive cycle operates at multiple scales" />
           <div className="flex flex-col gap-5">
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Traditional management systems are good at organizing work. They&rsquo;re much less effective at organizing attention,
-              energy, meaning, and adaptation.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              Empire of Light proposes that organizations should intentionally cultivate collective intelligence: the ability of a group
-              to perceive reality accurately, coordinate action effectively, generate novel solutions, and continuously adapt together. In
-              this model, strategy, execution, emotional regulation, learning, and creativity aren&rsquo;t separate functions so much as
-              parts of one adaptive system.
-            </p>
+            {SCALING_BODY.map((p, i) => (
+              <p key={i} className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+                {p}
+              </p>
+            ))}
           </div>
         </div>
       </section>
@@ -347,63 +342,88 @@ export default function ThesisPage() {
       <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[1120px]">
           <div className="mb-9 max-w-[720px]">
-            <SectionHeading eyebrow="Applications" title="The framework applies to any group running this cycle together" />
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              The same operating system adapts to each context:
-            </p>
+            <SectionHeading eyebrow="Applications" title="This methodology can work with individuals and groups" />
           </div>
-          <div className="flex flex-wrap gap-3">
-            {APPLICATIONS.map((item) => (
-              <div key={item} className="rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]" style={{ background: '#FFFFFF', border: '1px solid #D8D2DC', color: '#131114' }}>
-                {item}
-              </div>
-            ))}
+          <div className="mb-9">
+            <div className="mb-3.5 text-[13px] font-semibold uppercase tracking-[0.14em]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+              For individuals
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {APPLICATIONS_INDIVIDUAL.map((item) => (
+                <div key={item} className="rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]" style={{ background: '#FFFFFF', border: '1px solid #D8D2DC', color: '#131114' }}>
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
+          <div className="mb-9">
+            <div className="mb-3.5 text-[13px] font-semibold uppercase tracking-[0.14em]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+              For groups
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {APPLICATIONS_GROUPS.map((item) => (
+                <div key={item} className="rounded-full px-5.5 py-3 text-[14px] font-medium md:text-[15px]" style={{ background: '#FFFFFF', border: '1px solid #D8D2DC', color: '#131114' }}>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <p className="m-0 max-w-[720px] text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+            The framework adapts to the context. The underlying pattern stays the same.
+          </p>
         </div>
       </section>
 
-      {/* AI era */}
+      {/* Why this matters for the AI era */}
       <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#000000' }}>
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="A human operating system for the AI era" title="Strengthen the human system first. Then technology amplifies it." color="#FEE16A" />
+          <SectionHeading eyebrow="Why this matters for the AI era" title="Strengthen the human system first. Then technology can amplify it." color="#FEE16A" />
           <div className="flex flex-col gap-5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Artificial intelligence amplifies both capability and complexity. Most organizations respond by investing primarily in
-              technology. Empire of Light proposes the opposite sequence: strengthen the human operating system first, so technology
-              becomes an amplifier rather than a source of fragmentation.
+              AI is going to amplify whatever human systems we already have.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
-              Instead of replacing human judgment, AI becomes a partner in cultivating collective intelligence.
+              If our teams are fragmented, fearful, and misaligned, AI can amplify that. If our teams are connected, creative, and
+              capable of learning together, AI can amplify that too.
+            </p>
+            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#FBF7F2' }}>
+              The opportunity isn&rsquo;t just to build better AI. It&rsquo;s to build better human systems for working with it.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
+              Empire of Light is a human operating system for the AI era, starting with the teams and groups that are actually
+              building the future.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Research agenda */}
+      {/* A working theory */}
       <section className="px-6 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="A research agenda" title="This framework is a working theory" />
-          <p className="m-0 mb-6 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-            Empire of Light isn&rsquo;t a finished model: it&rsquo;s a working theory to be tested, refined, and potentially falsified
-            through practice and research. Open questions include:
-          </p>
-          <div className="flex flex-col gap-4">
-            {RESEARCH_QUESTIONS.map((q) => (
-              <div key={q} className="flex items-start gap-3.5">
-                <div className="mt-2.5 h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: '#D99A22' }} />
-                <div className="text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#131114' }}>
-                  {q}
-                </div>
-              </div>
-            ))}
+          <SectionHeading eyebrow="A working theory" title="This is a working theory, not a finished model" />
+          <div className="flex flex-col gap-5">
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              I don&rsquo;t think Empire of Light is a finished model.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              It is a working theory that has emerged from my own transformation, my experience bringing products and teams to life,
+              and my experiments with these ideas in groups.
+            </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              The point isn&rsquo;t to prove that this is the way transformation works.
+            </p>
+            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
+              The point is to see what happens when we intentionally create the conditions for people and teams to transform
+              together.
+            </p>
+            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
+              Then learn from what happens. Then evolve the model.
+            </p>
           </div>
-          <p className="m-0 mt-6 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-            Empire of Light is an invitation to investigate these questions through practice.
-          </p>
         </div>
       </section>
 
-      {/* The invitation + CTA */}
+      {/* Join us */}
       <section className="relative overflow-hidden px-6 py-20 md:px-8 md:py-[112px]" style={{ background: '#000000' }}>
         <div
           className="pointer-events-none absolute inset-0"
@@ -412,29 +432,21 @@ export default function ThesisPage() {
             opacity: 0.45,
           }}
         />
-        <div className="relative mx-auto max-w-[760px] text-center">
+        <div className="relative mx-auto max-w-[680px] text-center">
           <div className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
-            The invitation
+            Join us
           </div>
-          <div className="mx-auto mb-7 flex max-w-[620px] flex-col gap-4 text-left">
+          <div className="mx-auto mb-7 flex max-w-[560px] flex-col gap-4 text-left">
             <p className="m-0 text-[15.5px] leading-[1.65] md:text-[16.5px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              If individual and collective transformation share an underlying adaptive pattern, then organizations can intentionally
-              create the conditions for that pattern to occur, building practices that make vision visible, action experimental,
-              friction discussable, learning safe, and adaptation continuous.
+              The future won&rsquo;t be built for us. We have to build it. Empire of Light is an operating system that can help us
+              get started.
             </p>
             <p className="m-0 text-[15.5px] leading-[1.65] md:text-[16.5px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-              Perhaps this is the opportunity of this particular moment. We&rsquo;re becoming increasingly clear about what we
-              don&rsquo;t want. The next step is less about fighting what&rsquo;s broken than about gathering, imagining, and building
-              what we do want, together.
+              The empire is not here to dominate. It is here to illuminate the path forward.
             </p>
           </div>
-          <p className="m-0 mb-5 text-[18px] leading-[1.55] md:text-[21px] font-light" style={{ ...DISPLAY, color: 'rgba(251,247,242,.85)' }}>
-            Imagine organizations where strategy, emotional intelligence, creativity, and execution are no longer separate disciplines:
-            where meetings generate energy instead of draining it, conflict becomes a source of learning rather than division, and
-            technology amplifies human potential instead of compensating for its absence.
-          </p>
-          <h2 className="m-0 mb-6 text-[30px] leading-[1.1] font-light md:text-[46px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
-            This is the future Empire of Light exists to build, starting now.
+          <h2 className="m-0 mb-9 text-[34px] leading-[1.1] font-light md:text-[52px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}>
+            Join us.
           </h2>
           <div className="flex flex-wrap justify-center gap-3.5">
             <a
@@ -447,8 +459,11 @@ export default function ThesisPage() {
             >
               Book a conversation
             </a>
-            <Link to="/about" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
-              Meet Kelly
+            <Link to="/" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
+              Learn about our product
+            </Link>
+            <Link to="/origin-story" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
+              Read the origin story
             </Link>
           </div>
         </div>
