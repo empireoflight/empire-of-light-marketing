@@ -36,7 +36,7 @@ const CYCLE_STAGES = [
       'Then you need to take coordinated action to move toward that vision.',
       'This is where modern spirituality can sometimes lead people astray. It is not enough to just change your frequency. You also have to take action to make your visions come true.',
       'In teams, that action needs to be coordinated. Act before certainty. Experiment. Build something. Try things. Learn by doing.',
-      'The goal isn’t to perfectly predict the path to the outcome. It is to start moving and see what happens.',
+      'We no longer need to perfectly predict the outcome before we move. In this model, we start moving and see what happens.',
     ],
   },
   {
@@ -45,7 +45,7 @@ const CYCLE_STAGES = [
       'As we take action, fear, doubt, and uncertainty rise to the surface. I call this shadow work. You can call it whatever you want.',
       'In individuals, this can show up as fear, limiting beliefs, uncertainty, or dysregulation. In teams, it surfaces as friction, conflict, misalignment, communication breakdowns, politics, or protective behaviors.',
       'We can address this stuff proactively to help both individuals and teams grow. Like feedback, shadow information is a gift if used properly. It helps us see what isn’t working, where we’re misaligned, and what we may need to let go of.',
-      'The goal isn’t to eliminate friction. It’s to become better at working with it.',
+      'The goal is to become better at working with friction so it can help the team learn and grow.',
     ],
   },
   {
@@ -54,7 +54,6 @@ const CYCLE_STAGES = [
       'Finally, we use what we’ve learned to evolve. We look at the team vibe, the things that surfaced through the shadow work, and the results of our experiments. We use all of that information to improve the vision and improve the way we work together.',
       'Results and data still matter. They tell us what happened. But they aren’t the thing we control. They are feedback that helps us decide what to try next.',
       'The team starts the next cycle with more awareness and more capability than it had before.',
-      'That is how transformation happens. Not by following a perfect plan, but by becoming better at sensing, acting, learning, and evolving together.',
     ],
   },
 ]
@@ -81,7 +80,7 @@ const SCALING_BODY = [
   'This opens up a larger possibility: what if the inner work traditionally done by individuals could become a collective capability? That is the premise of lightwork at scale.',
   'Group dynamics surface hidden assumptions, competing mental models, and relationship patterns that don’t always come to the surface in individual work. When we learn to work with those things together, they can become a source of collective intelligence rather than a source of dysfunction.',
   'Collective intelligence is our ability to see what’s really happening, coordinate around what matters, generate ideas together, and adapt as we learn.',
-  'This is where I think the really exciting stuff starts.',
+  'Once we unlock collective intelligence, we can create some really cool stuff.',
 ]
 
 const APPLICATIONS_INDIVIDUAL = [
@@ -259,8 +258,8 @@ export default function ThesisPage() {
               Reimagine &rarr; Do &rarr; Unlearn &rarr; Evolve
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              This isn&rsquo;t a linear process. These are capacities to cultivate. They can come together in different ways as people
-              and teams move through change.
+              This process is not linear. These are capabilities to cultivate, and they can come together in different ways as
+              people and teams move through change.
             </p>
           </div>
           <img
@@ -386,9 +385,6 @@ export default function ThesisPage() {
               If our teams are fragmented, fearful, and misaligned, AI can amplify that. If our teams are connected, creative, and
               capable of learning together, AI can amplify that too.
             </p>
-            <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#FBF7F2' }}>
-              The opportunity isn&rsquo;t just to build better AI. It&rsquo;s to build better human systems for working with it.
-            </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: 'rgba(251,247,242,.75)' }}>
               Empire of Light is a human operating system for the AI era, starting with the teams and groups that are actually
               building the future.
@@ -400,17 +396,11 @@ export default function ThesisPage() {
       {/* A working theory */}
       <section className="px-6 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[840px]">
-          <SectionHeading eyebrow="A working theory" title="This is a working theory, not a finished model" />
+          <SectionHeading eyebrow="A working theory" title="This is a working theory" />
           <div className="flex flex-col gap-5">
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              I don&rsquo;t think Empire of Light is a finished model.
-            </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               It is a working theory that has emerged from my own transformation, my experience bringing products and teams to life,
               and my experiments with these ideas in groups.
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              The point isn&rsquo;t to prove that this is the way transformation works.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
               The point is to see what happens when we intentionally create the conditions for people and teams to transform
