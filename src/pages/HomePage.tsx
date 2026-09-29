@@ -84,10 +84,6 @@ const DIFFERENTIATORS = [
     title: 'Inside the work, not beside it',
     body: 'A typical engagement survey runs twice a year and ends up as a slide. This runs weekly, built around the vision your team is already working toward, so whatever surfaces gets used that same week.',
   },
-  {
-    title: 'Built for emergence',
-    body: 'You don’t have to know the right answer at the beginning. The vision can evolve, the plan can change, and new information can change what you do next.',
-  },
 ]
 
 const FAQS = [
@@ -106,10 +102,6 @@ const FAQS = [
   {
     q: 'How much time does it take?',
     a: 'One workshop, a biweekly session, and a weekly async prompt that takes minutes. The rest happens inside work you’re already doing.',
-  },
-  {
-    q: 'Who sees what our team writes?',
-    a: 'We use different privacy tiers depending on the type of information being collected. Some isn’t saved anywhere, some is only for you, some is synthesized to the team level with AI, and some is shown verbatim to your team. This is all made explicit in the app.',
   },
   {
     q: 'What size team works best?',
@@ -249,11 +241,6 @@ export default function HomePage() {
             Trying to camouflage against the reef, it ends up flashing through seven different colors at once, broadcasting exactly
             the confusion it&rsquo;s trying to hide.
           </p>
-          <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-            Most teams run the same way. The intelligence is there, distributed across everyone in the room, but when it&rsquo;s not
-            aligned, the internal friction leaks out anyway: mixed signals, stalled decisions, work that doesn&rsquo;t add up to one
-            direction. Everyone moves. Not always together.
-          </p>
           <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
             Empire of Light is the rhythm &mdash; and the app &mdash; that helps a team get its arms working from the same signal
             and move together toward something they actually want to create.
@@ -297,7 +284,7 @@ export default function HomePage() {
               style={{ aspectRatio: '750 / 549' }}
             />
           </div>
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mt-16">
+          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-3 md:mt-16">
             {DIFFERENTIATORS.map((item) => (
               <div key={item.title} className="rounded-xl border p-7" style={{ borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}>
                 <h3 className="m-0 mb-3 text-[20px] font-semibold leading-[1.26] md:text-[21px]" style={{ ...DISPLAY, color: '#131114' }}>

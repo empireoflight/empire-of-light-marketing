@@ -1,12 +1,5 @@
 import { Link } from 'react-router-dom'
 import founderPhoto from '../assets/origin-story/founder-photo-origin.jpg'
-import art1 from '../assets/origin-story/art-1.jpg'
-import art2 from '../assets/origin-story/art-2.jpg'
-import art3 from '../assets/origin-story/art-3.jpg'
-import art4 from '../assets/origin-story/art-4.jpg'
-import art5 from '../assets/origin-story/art-5.jpg'
-import art6 from '../assets/origin-story/art-6.jpg'
-import art7 from '../assets/origin-story/art-7.jpg'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
@@ -19,24 +12,7 @@ const QUESTIONS = [
   'If trust and unconditional love were the defaults, not fear and scarcity.',
 ]
 
-const ART_TIMELINE = [
-  { src: art1, date: '2023-02-01' },
-  { src: art2, date: '2023-08-01' },
-  { src: art3, date: '2024-02-01' },
-  { src: art4, date: '2024-09-01' },
-  { src: art5, date: '2025-04-01' },
-  { src: art6, date: '2026-01-01' },
-  { src: art7, date: '2026-06-01' },
-]
-
 type StageKey = 'reimagine' | 'do' | 'unlearn' | 'evolve'
-
-const STAGES: { key: StageKey; label: string }[] = [
-  { key: 'reimagine', label: 'Reimagine — Vision' },
-  { key: 'do', label: 'Do — Take Action' },
-  { key: 'unlearn', label: 'Unlearn — Shadow & Integration' },
-  { key: 'evolve', label: 'Evolve — Create & Evolve' },
-]
 
 const CATEGORY_COLORS: Record<string, string> = {
   Vision: '#D99A22',
@@ -138,67 +114,6 @@ const CATEGORY_EXAMPLES: Record<string, string> = Object.fromEntries(
   }),
 )
 
-const TIMELINE_PX = 1800
-const TIMELINE_MARGIN = 80
-
-// Parse as local midnight, not UTC — new Date('2022-01-01') is UTC midnight, which
-// toLocaleDateString renders as the prior day in any timezone behind UTC.
-function parseLocalDate(iso: string) {
-  return new Date(`${iso}T00:00:00`)
-}
-
-const TIMELINE_START_MS = parseLocalDate('2022-01-01').getTime()
-const TIMELINE_END_MS = parseLocalDate('2026-08-11').getTime()
-const YEARS = [2022, 2023, 2024, 2025, 2026]
-
-function dateToX(iso: string) {
-  const t = parseLocalDate(iso).getTime()
-  const clamped = Math.min(Math.max(t, TIMELINE_START_MS), TIMELINE_END_MS)
-  const fraction = (clamped - TIMELINE_START_MS) / (TIMELINE_END_MS - TIMELINE_START_MS)
-  return TIMELINE_MARGIN + fraction * (TIMELINE_PX - 2 * TIMELINE_MARGIN)
-}
-
-function formatDate(iso: string) {
-  return parseLocalDate(iso).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
-}
-
-function eventTitle(e: LifeEvent) {
-  const dateLabel = e.end ? `${formatDate(e.start)} – ${formatDate(e.end)}` : formatDate(e.start)
-  return `${e.tag} — ${dateLabel}`
-}
-
-interface PositionedEvent extends LifeEvent {
-  x1: number
-  x2: number
-  lane: number
-}
-
-// Greedy interval packing: ranged events stack into as few lanes as they need; point events share one row.
-function layoutStage(stage: StageKey): { events: PositionedEvent[]; barLanes: number } {
-  const withX = LIFE_EVENTS.filter((e) => e.stage === stage)
-    .map((e) => ({ ...e, x1: dateToX(e.start), x2: e.end ? dateToX(e.end) : dateToX(e.start) }))
-    .sort((a, b) => a.x1 - b.x1)
-
-  const laneEnds: number[] = []
-  const events: PositionedEvent[] = []
-  const minGap = 6
-  for (const e of withX) {
-    if (!e.end) {
-      events.push({ ...e, lane: -1 })
-      continue
-    }
-    let lane = laneEnds.findIndex((end) => end + minGap <= e.x1)
-    if (lane === -1) {
-      lane = laneEnds.length
-      laneEnds.push(e.x2)
-    } else {
-      laneEnds[lane] = e.x2
-    }
-    events.push({ ...e, lane })
-  }
-  return { events, barLanes: laneEnds.length }
-}
-
 export default function OriginStoryPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
@@ -297,86 +212,25 @@ export default function OriginStoryPage() {
             a little messy and non-linear. The key is that the visions helped me stabilize and push through the big shadow waves as
             I tried new things.
           </p>
-          <div className="overflow-x-auto pb-2">
-            <div className="relative" style={{ width: TIMELINE_PX }}>
-              <div className="pointer-events-none absolute inset-x-0 top-5 bottom-0">
-                {YEARS.map((y) => (
-                  <div
-                    key={y}
-                    className="absolute top-0 bottom-0 w-px"
-                    style={{ left: dateToX(`${y}-01-01`), background: '#E4DFCE' }}
-                  />
-                ))}
-              </div>
-              <div className="relative mb-3 h-5">
-                {YEARS.map((y) => (
-                  <div
-                    key={y}
-                    className="absolute text-[11px] font-semibold uppercase tracking-[0.12em]"
-                    style={{ ...DISPLAY, left: dateToX(`${y}-01-01`) + 6, color: '#A96D0F' }}
-                  >
-                    {y}
-                  </div>
-                ))}
-              </div>
-              <div className="relative mb-6 flex flex-col gap-2">
-                {STAGES.map((stage) => {
-                  const { events, barLanes } = layoutStage(stage.key)
-                  const blockHeight = 22 + barLanes * 8 + 10
-                  return (
-                    <div key={stage.key} className="relative" style={{ height: blockHeight }}>
-                      <div
-                        className="absolute left-0 top-0 z-10 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em]"
-                        style={{ ...DISPLAY, background: '#FDFAF4', color: '#131114', border: '1px solid #D8D2DC' }}
-                      >
-                        {stage.label}
-                      </div>
-                      {events.map((e, i) =>
-                        e.lane >= 0 ? (
-                          <div
-                            key={i}
-                            title={eventTitle(e)}
-                            className="absolute rounded-full"
-                            style={{
-                              left: e.x1,
-                              width: Math.max(e.x2 - e.x1, 4),
-                              top: 22 + e.lane * 8,
-                              height: 5,
-                              background: CATEGORY_COLORS[e.tag],
-                              opacity: 0.8,
-                            }}
-                          />
-                        ) : (
-                          <div
-                            key={i}
-                            title={eventTitle(e)}
-                            className="absolute rounded-full"
-                            style={{
-                              left: e.x1 - 2.5,
-                              top: 22 + barLanes * 8 + 3,
-                              width: 5,
-                              height: 5,
-                              background: CATEGORY_COLORS[e.tag],
-                            }}
-                          />
-                        ),
-                      )}
-                    </div>
-                  )
-                })}
-              </div>
-              <div className="relative h-[140px]">
-                {ART_TIMELINE.map((item, i) => (
-                  <div
-                    key={i}
-                    className="absolute flex h-[140px] w-[150px] items-center justify-center overflow-hidden rounded-xl border p-2"
-                    style={{ left: dateToX(item.date) - 75, background: '#FFFFFF', borderColor: '#D8D2DC', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}
-                  >
-                    <img src={item.src} alt="Kelly's artwork" className="max-h-full max-w-full object-contain" />
-                  </div>
-                ))}
-              </div>
+          <div className="flex flex-col gap-2">
+            <div className="overflow-x-auto rounded-xl border" style={{ borderColor: '#D8D2DC', background: '#FFFFFF' }}>
+              <a
+                href="/science-of-consciousness/assets/timeline-chart-full.png"
+                target="_blank"
+                rel="noreferrer"
+                className="block cursor-zoom-in"
+                style={{ minWidth: 900 }}
+              >
+                <img
+                  src="/science-of-consciousness/assets/timeline-chart.png"
+                  alt="Timeline 2022–2026: four lanes (Reimagine, Do, Unlearn, Evolve) with bars and markers for each practice category and artwork thumbnails along the Evolve lane"
+                  className="block w-full"
+                />
+              </a>
             </div>
+            <span className="text-[14px]" style={{ color: '#8C8492' }}>
+              Open the image for full resolution and a category legend.
+            </span>
           </div>
           <div className="mt-6 flex flex-col gap-2">
             {Object.entries(CATEGORY_COLORS).map(([label, color]) => (
@@ -391,6 +245,13 @@ export default function OriginStoryPage() {
               </div>
             ))}
           </div>
+          <a
+            href="/science-of-consciousness/#art"
+            className="mt-8 inline-block text-[14px] font-semibold uppercase tracking-[0.1em]"
+            style={DISPLAY}
+          >
+            See more art on the 2026 Science of Consciousness Poster Page &rarr;
+          </a>
         </div>
       </section>
 
@@ -406,27 +267,6 @@ export default function OriginStoryPage() {
           <p className="m-0 text-[17px] leading-[1.75] md:text-[18px]" style={{ color: '#544D5A' }}>
             I continued to refine the methodology, which is how we got to this iteration of Empire of Light.
           </p>
-        </div>
-      </section>
-
-      {/* Why now */}
-      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
-        <div className="mx-auto max-w-[720px]">
-          <Eyebrow>Why this matters now</Eyebrow>
-          <div className="flex flex-col gap-5">
-            <p className="m-0 text-[17px] leading-[1.75] md:text-[18px]" style={{ color: '#131114' }}>
-              We are in the era of emergence, and we need a new way of leading teams that fosters collective intelligence. One that
-              promotes autonomy, yet unity. Clarity and tactical action blended with vision and love.
-            </p>
-            <p className="m-0 text-[17px] leading-[1.75] md:text-[18px]" style={{ color: '#544D5A' }}>
-              The old business and team management playbooks were focused on fear as a motivator, but those aren&rsquo;t working as well
-              anymore. People are waking up. People are starving for community, connection, belonging, and work that matters.
-            </p>
-            <p className="m-0 text-[17px] leading-[1.75] md:text-[18px]" style={{ color: '#544D5A' }}>
-              This is a model for lightwork at scale. To help individuals or groups transmute fear into creation. It&rsquo;s a model
-              transitioning a team from the old fear-based ways of operating to a heart, unconditional-love-based OS.
-            </p>
-          </div>
         </div>
       </section>
 
