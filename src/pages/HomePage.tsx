@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { track } from '@vercel/analytics'
 import logoMark from '../assets/logo-mark.png'
 import heartModel from '../assets/landing/heart-model.webp'
 import shotVision from '../assets/landing/screenshot-vision-v2.webp'
@@ -166,6 +167,16 @@ export default function HomePage() {
         path="/"
       />
       <MarketingHeader />
+
+      {/* Announcement: Science of Consciousness poster */}
+      <a
+        href="/science-of-consciousness/"
+        onClick={() => track('soc_poster_banner_click', { location: 'home' })}
+        className="block px-6 py-3 text-center text-[14px] font-semibold md:text-[15px]"
+        style={{ ...DISPLAY, background: '#EDE4FA', color: '#131114' }}
+      >
+        Check out the 2026 Science of Consciousness Poster &mdash; see the art bigger! &rarr;
+      </a>
 
       {/* Hero */}
       <section className="relative overflow-hidden px-6 py-24 md:px-8 md:py-[120px]" style={{ background: '#000000' }}>
