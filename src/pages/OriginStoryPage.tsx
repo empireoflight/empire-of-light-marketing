@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import founderPhoto from '../assets/origin-story/founder-photo-origin.jpg'
 import { MarketingHeader } from '../components/MarketingHeader'
@@ -23,6 +24,34 @@ const CATEGORY_COLORS: Record<string, string> = {
   'Type of therapy': '#3D7EBF',
   Somatic: '#C1663D',
   'Create & evolve': '#6B9B3F',
+}
+
+// Matches the swatch styling on the poster page's category legend exactly, so both pages read the same.
+const CATEGORY_SWATCHES: Record<keyof typeof CATEGORY_COLORS, CSSProperties> = {
+  Vision: { background: '#FEE16A' },
+  'Major life event': { background: 'radial-gradient(circle, #131114 0 28%, #FFFFFF 30% 52%, #131114 55%)' },
+  Travel: {
+    border: '2px solid #FFC0E2',
+    background: 'radial-gradient(circle, rgba(19,17,20,.55) 1.6px, transparent 2.1px) 0 0 / 6px 6px, #FFC0E2',
+  },
+  'Medical/substance change': { background: '#FFFFFF', border: '3px solid #544D5A' },
+  'Relationship experiment': {
+    border: '2px solid #A83B90',
+    background: 'repeating-linear-gradient(90deg, rgba(255,255,255,.85) 0 2.5px, #A83B90 2.5px 6px)',
+  },
+  'Type of therapy': {
+    border: '2px solid #A96D0F',
+    background: 'repeating-linear-gradient(0deg, rgba(255,255,255,.85) 0 2px, #A96D0F 2px 5px)',
+  },
+  Somatic: {
+    border: '2px solid #F5C64B',
+    background: 'repeating-linear-gradient(45deg, rgba(19,17,20,.55) 0 2.5px, #F5C64B 2.5px 6px)',
+  },
+  'Create & evolve': {
+    border: '2px solid #E86FD0',
+    background:
+      'repeating-linear-gradient(45deg, rgba(19,17,20,.55) 0 1.5px, transparent 1.5px 5px), repeating-linear-gradient(-45deg, rgba(19,17,20,.55) 0 1.5px, transparent 1.5px 5px), #E86FD0',
+  },
 }
 
 interface LifeEvent {
@@ -232,10 +261,10 @@ export default function OriginStoryPage() {
               Open the image for full resolution and a category legend.
             </span>
           </div>
-          <div className="mt-6 flex flex-col gap-2">
-            {Object.entries(CATEGORY_COLORS).map(([label, color]) => (
-              <div key={label} className="flex items-baseline gap-2">
-                <span className="h-[8px] w-[8px] flex-none translate-y-[1px] rounded-full" style={{ background: color }} />
+          <div className="mt-6 flex flex-col gap-2.5">
+            {Object.keys(CATEGORY_COLORS).map((label) => (
+              <div key={label} className="flex items-baseline gap-2.5">
+                <span className="h-[14px] w-[14px] flex-none translate-y-[2px] rounded-full" style={CATEGORY_SWATCHES[label]} />
                 <span className="text-[13px]" style={{ color: '#131114' }}>
                   {label}
                 </span>
