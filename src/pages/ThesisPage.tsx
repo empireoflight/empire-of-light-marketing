@@ -128,25 +128,26 @@ export default function ThesisPage() {
       <MarketingHeader />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-6 py-20 md:px-8 md:py-[104px]" style={{ background: '#000000' }}>
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: 'radial-gradient(120% 100% at 50% 100%, #FFF6AD 0%, rgba(254,225,106,.55) 28%, rgba(0,0,0,0) 72%)',
-            opacity: 0.5,
-          }}
-        />
-        <div className="relative mx-auto max-w-[840px] text-center">
-          <div className="mb-6 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
+      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FAF6EE' }}>
+        <div className="mx-auto max-w-[960px]">
+          <div className="mb-5 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#7A4F0E' }}>
             Empire of Light Thesis
           </div>
           <h1
-            className="m-0 mb-6 text-[36px] leading-[1.1] font-light md:text-[54px] md:leading-[1.06]"
-            style={{ ...DISPLAY, letterSpacing: '.02em', color: '#FBF7F2' }}
+            className="m-0 mb-7 text-[38px] leading-[1.1] font-light md:text-[56px] md:leading-[1.08] lg:text-[68px] lg:leading-[1.05]"
+            style={{ ...DISPLAY, letterSpacing: '-.01em', color: '#141013' }}
           >
-            A Team Operating System for Collective Transformation
+            A Team Operating System for{' '}
+            <span
+              style={{
+                fontStyle: 'italic',
+                background: 'linear-gradient(90deg, #FFE98A, #F8C9B4 40%, #F2B0D8 70%, #E99AF0) no-repeat 0 82% / 100% 18px',
+              }}
+            >
+              Collective Transformation
+            </span>
           </h1>
-          <p className="mx-auto m-0 max-w-[600px] text-[17px] leading-[1.55]" style={{ color: 'rgba(251,247,242,.72)' }}>
+          <p className="m-0 max-w-[600px] text-[18px] leading-[1.55] md:text-[20px]" style={{ color: '#4A4038' }}>
             How teams reimagine what&rsquo;s possible, take action, unlearn old patterns, and evolve together.
           </p>
         </div>
