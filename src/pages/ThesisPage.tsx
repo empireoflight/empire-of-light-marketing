@@ -169,15 +169,11 @@ export default function ThesisPage() {
           <div className="flex flex-col gap-4.5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               This raises a bigger question: how do we actually change collectively? How do we show up differently and make sure we
-              don&rsquo;t keep repeating the same patterns that humans tend to repeat?
-            </p>
-            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              We need new ways of operating that help us reimagine what&rsquo;s possible, take action toward it, unlearn the patterns
-              that get in the way, and evolve as we learn.
+              don&rsquo;t keep repeating the same patterns that humans tend to repeat? We need new ways of operating.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>
-              Empire of Light is a team operating system for collective transformation. It helps teams reimagine what&rsquo;s possible,
-              move toward it, unlearn old patterns that are getting in the way, and evolve as the team learns.
+              Empire of Light is a team operating system designed for collective transformation. It helps teams reimagine
+              what&rsquo;s possible, move toward it, unlearn old patterns that are getting in the way, and evolve as the team learns.
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               We don&rsquo;t have to transform everything at once. We can start by creating{' '}
