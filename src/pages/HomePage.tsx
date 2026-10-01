@@ -192,7 +192,7 @@ export default function HomePage() {
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
             Empire of Light is a heart-centered approach to innovation that helps teams turn a shared vision into action, work with
-            the friction that emerges, and evolve as they learn.
+            the friction that emerges, and evolve as they learn. Unlock the collective intelligence already on your team.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
@@ -242,8 +242,8 @@ export default function HomePage() {
             the confusion it&rsquo;s trying to hide.
           </p>
           <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-            Empire of Light is the rhythm &mdash; and the app &mdash; that helps a team get its arms working from the same signal
-            and move together toward something they actually want to create.
+            Empire of Light is the rhythm &mdash; and the app &mdash; that helps a team tap into its collective intelligence, get its
+            arms working from the same signal, and move together toward something they actually want to create.
           </p>
         </div>
       </section>
@@ -255,13 +255,13 @@ export default function HomePage() {
             <div>
               <Eyebrow>Why this is different</Eyebrow>
               <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                A different way to run the work
+                A different way to create together
               </h2>
               <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
                 Most project management systems start with a desired result and work backward from there. But when you&rsquo;re
                 creating something genuinely new, the outcome isn&rsquo;t fully within your control. Empire of Light focuses instead
-                on what you can influence: your vision, your actions, and the energy of the team. Results aren&rsquo;t ignored. They
-                feed back into the system, helping the team understand what to change and where to go next.
+                on what you can influence: your vision, your actions, and the collective intelligence of the team. Results
+                aren&rsquo;t ignored. They feed back into the system, helping the team understand what to change and where to go next.
               </p>
               <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4]" style={{ ...DISPLAY, color: '#A96D0F' }}>
                 Reimagine. Do. Unlearn. Evolve. Repeat.
@@ -269,7 +269,7 @@ export default function HomePage() {
               <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
                 Most tools ask a team to report on how it&rsquo;s doing, after the fact. This gives the team a shared vision, a way to
                 move on it, a way to work through the friction that shows up, and a way to keep evolving together. A rhythm the team
-                runs itself, rather than something handed down from above.
+                owns, rather than something handed down from above.
               </p>
               <Link to="/thesis" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
                 Read the full thesis &rarr;
