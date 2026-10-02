@@ -15,6 +15,9 @@
   html, body { margin: 0; padding: 0; background: #FFFFFF; }
   a { color: #A83B90; text-decoration: none; }
   a:hover { color: #131114; }
+  @media (max-width: 600px) {
+    .eol-nav { gap: 4px 14px !important; font-size: 11px !important; letter-spacing: .1em !important; justify-content: flex-end; }
+  }
 </style>
 </helmet>
 <div style="font-family: 'Work Sans', system-ui, sans-serif; color: #131114; background: #FFFFFF; min-height: 100vh;">
@@ -25,9 +28,10 @@
         <img src="assets/logo-mark.png" alt="" style="width: 28px; height: 28px; display: block; border-radius: 7px;">
         <span style="font-family: 'Josefin Sans', sans-serif; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; font-weight: 600;">Empire of Light</span>
       </a>
-      <nav style="display: flex; gap: 24px; flex-wrap: wrap; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: .16em; text-transform: uppercase;">
+      <nav class="eol-nav" style="display: flex; gap: 24px; flex-wrap: wrap; font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: .16em; text-transform: uppercase;">
         <a href="#pattern" style="color: rgba(19,17,20,.68);">The pattern</a>
         <a href="#team" style="color: rgba(19,17,20,.68);">In a team</a>
+        <a href="#timeline" style="color: rgba(19,17,20,.68);">Timeline</a>
         <a href="#art" style="color: rgba(19,17,20,.68);">The art</a>
       </nav>
     </div>
@@ -145,7 +149,7 @@
     </div>
   </section>
 
-  <section id="art" style="padding: 112px 24px; scroll-margin-top: 62px;">
+  <section id="timeline" style="padding: 112px 24px; scroll-margin-top: 62px;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
       <div style="display: flex; flex-direction: column; gap: 14px; max-width: 840px;">
         <span style="font-family: 'Josefin Sans', sans-serif; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #A96D0F; font-weight: 600;">Longitudinal evidence</span>
@@ -213,7 +217,7 @@
           </div>
         </div>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div id="art" style="display: flex; flex-direction: column; gap: 24px; scroll-margin-top: 90px;">
         <div style="display: flex; align-items: center; gap: 20px;">
           <span style="font-family: 'Josefin Sans', sans-serif; font-size: 28px; letter-spacing: .08em; font-weight: 300;">Bonus art! 🙂</span>
           <span style="height: 1px; background: #D8D2DC; flex: 1;"></span>
