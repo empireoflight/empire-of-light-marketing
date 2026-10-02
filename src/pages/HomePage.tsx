@@ -38,10 +38,13 @@ const WHATS_INCLUDED = [
 
 const WHO_FOR = [
   'AI transformation initiatives',
-  'Leadership teams',
-  'Product organizations',
-  'Cross-functional tiger teams and standing pods',
-  'Mission-driven organizations navigating meaningful change',
+  'Company pivots and leadership changes',
+  'Product and GTM teams',
+  'Cross-functional innovation teams',
+  'Think tanks and research collaborations',
+  'Incubators and interdisciplinary design teams',
+  'Community-building projects',
+  'Regenerative business ecosystems',
 ]
 
 const BEFORE_AFTER = [
