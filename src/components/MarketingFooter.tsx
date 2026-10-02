@@ -20,7 +20,7 @@ export function MarketingFooter() {
               Contact
             </Link>
             <a href="/science-of-consciousness/" className="text-[14px]" style={{ color: '#FEE16A' }}>
-              2026 Poster
+              2026 TSC Poster
             </a>
             <Link to="/privacy" className="text-[14px]" style={{ color: 'rgba(251,247,242,.45)' }}>
               Privacy Policy
