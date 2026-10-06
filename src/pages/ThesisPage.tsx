@@ -169,7 +169,8 @@ export default function ThesisPage() {
           </div>
           <div className="flex flex-col gap-4.5">
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
-              This raises a bigger question: how do we actually change collectively? How do we show up differently and make sure we
+              People are tired, but no one is going to save us. We have to be the change. This raises a bigger question: how do we
+              actually change collectively? How do we show up differently and make sure we
               don&rsquo;t keep repeating the same patterns that humans tend to repeat? We need new ways of operating.
             </p>
             <p className="m-0 text-[16px] font-semibold leading-[1.7] md:text-[17px]" style={{ color: '#131114' }}>

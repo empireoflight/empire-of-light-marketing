@@ -242,7 +242,7 @@ export default function HomePage() {
           <p className="m-0 mb-6 text-[22px] leading-[1.35] font-light md:text-[30px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
             An octopus has nine brains: one in its head, and one in each arm. When they&rsquo;re not in sync, it gives itself away.
             Trying to camouflage against the reef, it ends up flashing through seven different colors at once, broadcasting exactly
-            the confusion it&rsquo;s trying to hide.
+            the confusion it&rsquo;s trying to hide. This is how most teams operate.
           </p>
           <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
             Empire of Light is the rhythm &mdash; and the app &mdash; that helps a team tap into its collective intelligence, get its

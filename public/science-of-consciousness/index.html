@@ -358,5 +358,17 @@ class Component extends DCLogic {
   }
 }
 </script>
+<script>
+(function () {
+  var id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  function go() { var el = document.getElementById(id); if (el) el.scrollIntoView(); return !!el; }
+  var tries = 0;
+  var timer = setInterval(function () {
+    if (go() || ++tries > 80) clearInterval(timer);
+  }, 100);
+  window.addEventListener('load', function () { setTimeout(go, 300); });
+})();
+</script>
 </body>
 </html>
