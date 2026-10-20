@@ -9,6 +9,7 @@ import AdvisoryPage from './pages/AdvisoryPage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
 import LetsChatPage from './pages/LetsChatPage'
+import EventOfferPage from './pages/EventOfferPage'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/lets-chat" element={<LetsChatPage />} />
+        <Route path="/event" element={<EventOfferPage />} />
+        <Route path="/event/:slug" element={<EventOfferPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
