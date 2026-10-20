@@ -500,9 +500,6 @@ export default function HomePage() {
               <div className="text-[26px] leading-[1.2] font-light md:text-[32px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
                 Sliding scale, based on team size and scope
               </div>
-              <div className="mt-3 text-[15px]" style={{ color: '#544D5A' }}>
-                per team
-              </div>
               <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
                 We&rsquo;re taking on a small number of teams. Spots are limited.
               </p>
