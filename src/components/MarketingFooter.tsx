@@ -6,9 +6,9 @@ export function MarketingFooter() {
     <footer className="border-t px-6 py-8 md:px-8" style={{ background: '#000000', borderColor: 'rgba(251,247,242,.12)' }}>
       <div className="mx-auto flex max-w-[1120px] flex-col gap-6">
         <div className="flex flex-wrap items-center justify-between gap-5">
-          <span className="text-[13px] font-semibold uppercase tracking-[0.14em]" style={{ ...DISPLAY, color: 'rgba(251,247,242,.6)' }}>
+          <Link to="/" className="text-[13px] font-semibold uppercase tracking-[0.14em]" style={{ ...DISPLAY, color: 'rgba(251,247,242,.6)' }}>
             Empire of Light
-          </span>
+          </Link>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <Link to="/thesis" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Thesis

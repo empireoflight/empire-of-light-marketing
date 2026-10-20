@@ -337,6 +337,12 @@ export default function OriginStoryPage() {
           <p className="mt-6 text-[14px]" style={{ color: 'rgba(251,247,242,.5)' }}>
             Read the thesis for more on the methodology, how it can be applied, and where it works.
           </p>
+          <p className="mt-3 text-[14px]" style={{ color: 'rgba(251,247,242,.5)' }}>
+            Want to experience the cycle yourself?{' '}
+            <Link to="/lets-chat" style={{ color: '#FEE16A' }}>
+              Ask about the Group Unmasking Cohort &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 

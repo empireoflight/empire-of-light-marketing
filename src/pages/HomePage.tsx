@@ -20,20 +20,13 @@ const HOW_STEPS = [
   {
     n: '02',
     title: 'Vision workshop',
-    body: 'Everyone completes the vision questionnaire individually, ahead of time. Then the team comes together for a vision workshop to see where there’s alignment, and where there’s disconnect. Together, we co-create a tangible, yet inspiring vision.',
+    body: 'A kickoff session prepares your team. Everyone reflects individually using the Empire of Light framework, then the team comes together for a facilitated workshop to see where there’s alignment, where there’s disconnect, and to co-create a tangible, inspiring vision. A follow-up commitment session turns that vision into action.',
   },
   {
     n: '03',
     title: 'We work the cycle, then evolve',
-    body: 'Experiments toward the vision, friction logged and processed, biweekly sessions with us. One full evolve cycle, then the team keeps using the app on its own.',
+    body: 'Teams that want to keep going continue into a 4–6 week facilitated engagement: experiments toward the vision, friction logged and processed, biweekly working sessions with us, and weekly async reflection prompts. One full evolve cycle, then the team keeps using the app on its own.',
   },
-]
-
-const WHATS_INCLUDED = [
-  'A vision assessment and workshop to create genuine shared direction',
-  'Biweekly working sessions focused on progress and surfacing and releasing friction',
-  'Weekly async reflection prompts',
-  'An app to track it all',
 ]
 
 const WHO_FOR = [
@@ -163,15 +156,15 @@ export default function HomePage() {
       />
       <MarketingHeader />
 
-      {/* Announcement: Science of Consciousness poster */}
-      <a
-        href="/science-of-consciousness/"
-        onClick={() => track('soc_poster_banner_click', { location: 'home' })}
+      {/* Announcement: AI Week event offer */}
+      <Link
+        to="/event/ai-week"
+        onClick={() => track('event_banner_click', { location: 'home', event: 'ai-week' })}
         className="block px-6 py-3 text-center text-[14px] font-semibold md:text-[15px]"
         style={{ ...DISPLAY, background: '#EDE4FA', color: '#131114' }}
       >
-        Check out the 2026 Science of Consciousness Poster &mdash; see the art bigger! &rarr;
-      </a>
+        At AI Week? Get 20% off a Group Unmasking Cohort or Team Vision Setting Workshop &rarr;
+      </Link>
 
       {/* Hero */}
       <section className="relative overflow-hidden px-6 py-24 md:px-8 md:py-[120px]" style={{ background: '#000000' }}>
@@ -194,8 +187,8 @@ export default function HomePage() {
             Bring more ambitious visions to life faster, with more unity.
           </h1>
           <p className="mx-auto mb-10 max-w-[640px] text-[18px] leading-[1.5] md:text-[21px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Empire of Light is a heart-centered approach to innovation that helps teams turn a shared vision into action, work with
-            the friction that emerges, and evolve as they learn. Unlock the collective intelligence already on your team.
+            Empire of Light helps teams develop a shared vision, move towards it, navigate the friction that emerges, and evolve as
+            they learn. Unlock the collective intelligence already on your team.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
             <a
@@ -400,8 +393,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-7 text-center text-[15px]" style={{ color: 'rgba(251,247,242,.5)' }}>
-            Step 1 is a conversation. From step 2 on, it&rsquo;s the facilitated engagement, with the app carrying everything before,
-            during, and after.
+            Some teams stop after the vision workshop; others continue into the full engagement. Either way, the app carries the
+            work before, during, and after.
           </p>
           <div className="mt-9 flex justify-center">
             <a
@@ -493,20 +486,14 @@ export default function HomePage() {
             style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}
           >
             <div>
-              <Eyebrow>What&rsquo;s included</Eyebrow>
+              <Eyebrow>Where to start</Eyebrow>
               <h2 className="m-0 mb-6 text-[26px] leading-[1.1] font-light md:text-[34px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                A 4&ndash;6 week facilitated engagement
+                Start with a vision workshop
               </h2>
-              <div className="flex flex-col gap-4">
-                {WHATS_INCLUDED.map((item) => (
-                  <div key={item} className="flex items-start gap-3.5">
-                    <div className="mt-2.5 h-[7px] w-[7px] shrink-0 rounded-full" style={{ background: '#131114' }} />
-                    <div className="text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
-                      {item}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <p className="m-0 text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
+                Some teams stop after the workshop. Others continue into a 4&ndash;6 week facilitated engagement. The app is included
+                either way.
+              </p>
             </div>
             <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
               <Eyebrow>Investment</Eyebrow>
@@ -517,7 +504,7 @@ export default function HomePage() {
                 per team
               </div>
               <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
-                This fall we&rsquo;re taking on a small number of teams. Spots are limited.
+                We&rsquo;re taking on a small number of teams. Spots are limited.
               </p>
             </div>
           </div>
@@ -571,6 +558,9 @@ export default function HomePage() {
               </Link>
               <Link to="/about" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
                 Meet Kelly &rarr;
+              </Link>
+              <Link to="/lets-chat" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+                Ask about the Unmasking Cohort &rarr;
               </Link>
             </div>
           </div>
