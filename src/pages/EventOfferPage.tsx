@@ -17,6 +17,11 @@ const EVENTS: Record<string, string> = {
   'the-commwell': 'The Commwell',
 }
 
+// Per-event price overrides, keyed by event slug. Events not listed here use the prices in OFFERS.
+const PRICE_OVERRIDES: Record<string, Partial<Record<OfferId, { regular: string; sale: string }>>> = {
+  'ai-week': { workshop: { regular: '$5,000', sale: '$4,000' } },
+}
+
 const OFFERS: {
   id: OfferId
   audience: string
@@ -102,6 +107,7 @@ export default function EventOfferPage() {
   const { slug } = useParams()
   const eventName = slug ? EVENTS[slug] : undefined
   const attendees = eventName ? `${eventName} attendees` : 'event attendees'
+  const offers = OFFERS.map((o) => ({ ...o, ...(slug ? PRICE_OVERRIDES[slug]?.[o.id] : undefined) }))
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
   const [offer, setOffer] = useState<OfferId | ''>('')
   const [status, setStatus] = useState<Status>('idle')
@@ -179,7 +185,7 @@ export default function EventOfferPage() {
       {/* Offers */}
       <section id="offers" className="px-6 py-16 md:px-8 md:py-24" style={{ scrollMarginTop: 60 }}>
         <div className="mx-auto flex max-w-[1120px] flex-col gap-10">
-          {OFFERS.map((o) => (
+          {offers.map((o) => (
             <div
               key={o.id}
               className="grid gap-10 rounded-[20px] border p-6 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:gap-14 md:p-12"
@@ -278,7 +284,7 @@ export default function EventOfferPage() {
                   Which offer are you interested in?
                 </legend>
                 <div className="grid gap-3 sm:grid-cols-2">
-                  {OFFERS.map((o) => {
+                  {offers.map((o) => {
                     const selected = offer === o.id
                     return (
                       <label
