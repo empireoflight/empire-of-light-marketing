@@ -12,7 +12,7 @@ const PATHS = [
   {
     eyebrow: 'For teams and groups',
     title: 'Team Program',
-    body: 'A different way of running a team. Start with a vision workshop to get your team reenergized, aligned and moving in the same direction. For corporate teams, co-housing and community-building projects, and interdisciplinary groups.',
+    body: 'What if we ran teams from a place of unconditional love and focused on shifting the hive mind of the team so they can move faster, together, towards a common goal? For corporate teams, co-housing and community-building projects, and interdisciplinary groups.',
     cta: 'Explore the Team Program',
     to: '/teams',
   },
@@ -89,43 +89,44 @@ export default function HomePage() {
 
       {/* The heart model: where it came from, and why it works for groups */}
       <section id="different" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF' }}>
-        <div className="mx-auto grid max-w-[1120px] items-center gap-12 md:grid-cols-2 md:gap-[56px]">
-          <div>
-            <Eyebrow>Why this is different</Eyebrow>
-            <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-              A different way to create together
-            </h2>
-            <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              Most goal setting and project management systems start with a desired result and work backward from there. But when you&rsquo;re
-              creating something genuinely new, the outcome isn&rsquo;t fully within your control. Empire of Light focuses instead
-              on what you can influence: your vision, your actions, and the collective intelligence of the group. Results
-              aren&rsquo;t ignored. They feed back into the system, helping you understand what to change and where to go next.
-            </p>
-            <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4]" style={{ ...DISPLAY, color: '#A96D0F' }}>
-              Reimagine. Do. Unlearn. Evolve. Repeat.
-            </p>
-            <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-              This cycle came out of my own personal transformation. It turns out to work just as well for teams and groups, which
-              is why there are two ways in.
-            </p>
+        <div className="mx-auto max-w-[1120px]">
+          <Eyebrow>Why this is different</Eyebrow>
+          <h2 className="m-0 mb-10 max-w-[900px] text-[34px] leading-[1.1] font-light md:mb-12 md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+            Focus on what we can control and let the rest emerge
+          </h2>
+          <div className="grid items-center gap-12 md:grid-cols-2 md:gap-[56px]">
+            <div>
+              <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+                When you&rsquo;re creating something genuinely new, the outcome isn&rsquo;t fully within your control. Empire of Light
+                focuses instead on what you can influence: your vision, your actions, and the collective intelligence of the group. Results
+                aren&rsquo;t ignored. They feed back into the system, helping you understand what to change and where to go next.
+              </p>
+              <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+                Reimagine. Do. Unlearn. Evolve. Repeat.
+              </p>
+              <p className="m-0 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
+                This cycle came out of my own personal transformation. It turns out to work just as well for teams and groups, which
+                is why there are two ways in.
+              </p>
+            </div>
+            <img
+              src={heartModel}
+              alt="Empire of Light framework diagram"
+              width={750}
+              height={549}
+              className="block w-full rounded-2xl object-cover"
+              style={{ aspectRatio: '750 / 549' }}
+            />
           </div>
-          <img
-            src={heartModel}
-            alt="Empire of Light framework diagram"
-            width={750}
-            height={549}
-            className="block w-full rounded-2xl object-cover"
-            style={{ aspectRatio: '750 / 549' }}
-          />
         </div>
       </section>
 
       {/* The two paths */}
       <section id="paths" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4' }}>
         <div className="mx-auto max-w-[1120px]">
-          <Eyebrow>Start here</Eyebrow>
+          <Eyebrow>Choose your path</Eyebrow>
           <h2 className="m-0 mb-10 text-[30px] leading-[1.1] font-light md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-            Choose your path
+            Unlock the future of your dreams
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {PATHS.map((path) => (

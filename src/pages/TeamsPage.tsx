@@ -235,23 +235,23 @@ export default function TeamsPage() {
       {/* Why it's different: the cycle + differentiators */}
       <section id="different" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF' }}>
         <div className="mx-auto max-w-[1120px]">
+          <Eyebrow>Why this is different</Eyebrow>
+          <h2 className="m-0 mb-10 max-w-[900px] text-[34px] leading-[1.1] font-light md:mb-12 md:text-[44px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+            What if we made a project management system rooted in unconditional love?
+          </h2>
           <div className="grid items-center gap-12 md:grid-cols-2 md:gap-[56px]">
             <div>
-              <Eyebrow>Why this is different</Eyebrow>
-              <h2 className="m-0 mb-6 text-[34px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                A different way to run a team
-              </h2>
               <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-                Most goal setting and project management systems start with a desired result and work backward from there. But when you&rsquo;re
-                creating something genuinely new, the outcome isn&rsquo;t fully within your control. Empire of Light focuses instead
-                on what you can influence: your vision, your actions, and the collective intelligence of the team. Results
-                aren&rsquo;t ignored. They feed back into the system, helping the team understand what to change and where to go next.
+                Most teams run on fear. Get the results or else. Ship this thing. This is so limiting when it comes to creating value
+                for customers and creating a good environment for your team. Empire of Light focuses on making the whole team
+                organism better. Results aren&rsquo;t ignored. They feed back into the system, helping the team understand what to
+                change and where to go next.
               </p>
               <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4]" style={{ ...DISPLAY, color: '#A96D0F' }}>
                 Reimagine. Do. Unlearn. Evolve. Repeat.
               </p>
               <p className="m-0 mb-5 text-[17px] leading-[1.62] md:text-[18px]" style={{ color: '#544D5A' }}>
-                The same cycle that carried me through my own transformation works for teams. Most tools ask a team to report on how it&rsquo;s doing, after the fact. This gives the team a shared vision, a way to
+                Most tools ask a team to report on how it&rsquo;s doing, after the fact. This gives the team a shared vision, a way to
                 move on it, a way to work through the friction that shows up, and a way to keep evolving together. A rhythm the team
                 owns, rather than something handed down from above.
               </p>
