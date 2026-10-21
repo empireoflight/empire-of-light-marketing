@@ -10,8 +10,17 @@ export function MarketingFooter() {
             Empire of Light
           </Link>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Link to="/teams" className="text-[14px]" style={{ color: '#FEE16A' }}>
+              Team Program
+            </Link>
+            <Link to="/unmasking-cohort" className="text-[14px]" style={{ color: '#FEE16A' }}>
+              Unmasking Cohort
+            </Link>
             <Link to="/thesis" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Thesis
+            </Link>
+            <Link to="/living-proof" className="text-[14px]" style={{ color: '#FEE16A' }}>
+              Living Proof
             </Link>
             <Link to="/about" className="text-[14px]" style={{ color: '#FEE16A' }}>
               About

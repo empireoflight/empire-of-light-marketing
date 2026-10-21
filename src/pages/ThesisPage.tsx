@@ -245,8 +245,8 @@ export default function ThesisPage() {
               I&rsquo;ve documented my transformation process over the past five years as I personally moved from a more fear-based
               existence to one more rooted in self-trust and unconditional love.
             </p>
-            <Link to="/origin-story" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
-              Read the origin story &rarr;
+            <Link to="/living-proof" className="text-[14px] font-semibold uppercase tracking-[0.1em]" style={DISPLAY}>
+              See the living proof &rarr;
             </Link>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               I also experimented with these concepts in the teams I managed, and I noticed that individual and group transformation
@@ -447,11 +447,11 @@ export default function ThesisPage() {
             >
               Book a conversation
             </a>
-            <Link to="/" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
-              Learn about our product
+            <Link to="/teams" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
+              Explore the Team Program
             </Link>
-            <Link to="/origin-story" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
-              Read the origin story
+            <Link to="/living-proof" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
+              See the living proof
             </Link>
           </div>
         </div>

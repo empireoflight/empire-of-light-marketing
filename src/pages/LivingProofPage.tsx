@@ -143,13 +143,31 @@ const CATEGORY_EXAMPLES: Record<string, string> = Object.fromEntries(
   }),
 )
 
-export default function OriginStoryPage() {
+// Each piece of proof gets a card below the story. Add new entries here as the proof grows.
+const MORE_PROOF = [
+  {
+    eyebrow: 'Poster',
+    title: '2026 Science of Consciousness Poster',
+    body: 'The heart-centered pattern, how the same cycle works for a team, and five years of timeline and art, laid out as a poster.',
+    to: '/science-of-consciousness/',
+    cta: 'View the poster',
+  },
+  {
+    eyebrow: 'Art',
+    title: 'The art, newest first',
+    body: 'Every piece I made while moving through the cycle. The art got bigger and bolder with each rep.',
+    to: '/science-of-consciousness/#art',
+    cta: 'See the art',
+  },
+]
+
+export default function LivingProofPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
-        title="The Origin Story | Empire of Light"
-        description="How a personal breakdown and rebuild became the Empire of Light methodology — and how it grew from one person's transformation into a framework for teams."
-        path="/origin-story"
+        title="Living Proof | Empire of Light"
+        description="How a personal breakdown and rebuild became the Empire of Light methodology, and the growing body of proof that it works: the timeline, the art, and the teams."
+        path="/living-proof"
       />
       <MarketingHeader />
 
@@ -165,13 +183,13 @@ export default function OriginStoryPage() {
             style={{ width: 180, height: 236 }}
           />
           <div>
-            <Eyebrow>Origin Story</Eyebrow>
+            <Eyebrow>Living Proof</Eyebrow>
             <h1 className="m-0 mb-5 text-[30px] leading-[1.15] font-light md:text-[44px] md:leading-[1.1]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
               This all started when my life fell apart.
             </h1>
             <p className="m-0 text-[17px] leading-[1.6] md:text-[18px]" style={{ color: '#544D5A' }}>
-              How a personal breakdown and rebuild became a methodology, and how that methodology grew into a way for teams to work
-              together.
+              Empire of Light grew out of a pattern I lived through, tested on myself, and then watched work for teams. This page is
+              where I keep the proof, and it grows as I do.
             </p>
           </div>
         </div>
@@ -274,13 +292,6 @@ export default function OriginStoryPage() {
               </div>
             ))}
           </div>
-          <a
-            href="/science-of-consciousness/#art"
-            className="mt-8 inline-block text-[14px] font-semibold uppercase tracking-[0.1em]"
-            style={DISPLAY}
-          >
-            See more art on the 2026 Science of Consciousness Poster Page &rarr;
-          </a>
         </div>
       </section>
 
@@ -296,6 +307,34 @@ export default function OriginStoryPage() {
           <p className="m-0 text-[17px] leading-[1.75] md:text-[18px]" style={{ color: '#544D5A' }}>
             I continued to refine the methodology, which is how we got to this iteration of Empire of Light.
           </p>
+        </div>
+      </section>
+
+      {/* More proof */}
+      <section className="px-6 pb-16 md:px-8 md:pb-24">
+        <div className="mx-auto max-w-[1120px]">
+          <Eyebrow>More proof</Eyebrow>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {MORE_PROOF.map((item) => (
+              <a
+                key={item.title}
+                href={item.to}
+                className="flex flex-col rounded-2xl border p-8"
+                style={{ borderColor: '#D8D2DC', background: '#FFFFFF', boxShadow: '0 1px 2px rgba(19,17,20,.06)' }}
+              >
+                <Eyebrow>{item.eyebrow}</Eyebrow>
+                <h3 className="m-0 mb-3 text-[22px] leading-[1.2] font-light md:text-[26px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                  {item.title}
+                </h3>
+                <p className="m-0 mb-6 text-[16px] leading-[1.6]" style={{ color: '#544D5A' }}>
+                  {item.body}
+                </p>
+                <span className="mt-auto text-[14px] font-semibold uppercase tracking-[0.1em]" style={{ ...DISPLAY, color: '#A96D0F' }}>
+                  {item.cta} &rarr;
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -324,7 +363,7 @@ export default function OriginStoryPage() {
               href={BOOKING_URL}
               target="_blank"
               rel="noreferrer"
-              onClick={() => trackBooking('origin_story_cta')}
+              onClick={() => trackBooking('living_proof_cta')}
               className="rounded-lg px-8 py-4 text-[15px] font-semibold"
               style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}
             >
@@ -339,8 +378,8 @@ export default function OriginStoryPage() {
           </p>
           <p className="mt-3 text-[14px]" style={{ color: 'rgba(251,247,242,.5)' }}>
             Want to experience the cycle yourself?{' '}
-            <Link to="/lets-chat" style={{ color: '#FEE16A' }}>
-              Ask about the Group Unmasking Cohort &rarr;
+            <Link to="/unmasking-cohort" style={{ color: '#FEE16A' }}>
+              Explore the Group Unmasking Cohort &rarr;
             </Link>
           </p>
         </div>

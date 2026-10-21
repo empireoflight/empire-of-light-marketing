@@ -1,8 +1,19 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logoMark from '../assets/logo-mark.png'
 import { BOOKING_URL, DISPLAY, HEADER_GRADIENT, navLink, navLinkStyle, primaryButton, trackBooking } from './shared'
 
+const NAV_LINKS = [
+  { to: '/teams', label: 'Team Program' },
+  { to: '/unmasking-cohort', label: 'Unmasking Cohort' },
+  { to: '/thesis', label: 'Thesis' },
+  { to: '/living-proof', label: 'Living Proof' },
+  { to: '/about', label: 'About' },
+]
+
 export function MarketingHeader() {
+  const [open, setOpen] = useState(false)
+
   return (
     <header
       className="sticky top-0 z-20 border-b"
@@ -15,13 +26,12 @@ export function MarketingHeader() {
             Empire of Light
           </span>
         </Link>
-        <nav className="ml-auto hidden items-center gap-7 md:flex">
-          <Link to="/thesis" className={navLink} style={navLinkStyle}>
-            Thesis
-          </Link>
-          <Link to="/about" className={navLink} style={navLinkStyle}>
-            About
-          </Link>
+        <nav className="ml-auto hidden items-center gap-7 lg:flex">
+          {NAV_LINKS.map((link) => (
+            <Link key={link.to} to={link.to} className={navLink} style={navLinkStyle}>
+              {link.label}
+            </Link>
+          ))}
           <a
             href={BOOKING_URL}
             target="_blank"
@@ -33,17 +43,44 @@ export function MarketingHeader() {
             Book a conversation
           </a>
         </nav>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noreferrer"
-          onClick={() => trackBooking('header_mobile')}
-          className="ml-auto rounded-lg px-4 py-2 text-[13px] font-semibold md:hidden"
-          style={primaryButton()}
-        >
-          Book a conversation
-        </a>
+        <div className="ml-auto flex items-center gap-3 lg:hidden">
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => trackBooking('header_mobile')}
+            className="rounded-lg px-4 py-2 text-[13px] font-semibold"
+            style={primaryButton()}
+          >
+            Book a conversation
+          </a>
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            className="rounded-lg border px-3.5 py-2 text-[13px] font-semibold"
+            style={{ ...DISPLAY, borderColor: 'rgba(19,17,20,.32)', color: '#131114' }}
+          >
+            {open ? 'Close' : 'Menu'}
+          </button>
+        </div>
       </div>
+      {open && (
+        <nav id="mobile-nav" className="flex flex-col border-t px-6 py-2 lg:hidden" style={{ borderColor: 'rgba(19,17,20,.12)' }}>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              onClick={() => setOpen(false)}
+              className="py-3 text-[16px] font-medium"
+              style={{ ...DISPLAY, color: '#131114' }}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   )
 }

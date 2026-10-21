@@ -1,3 +1,4 @@
 {
+  "redirects": [{ "source": "/origin-story", "destination": "/living-proof", "permanent": true }],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
