@@ -17,7 +17,7 @@ const HOW_STEPS = [
   },
   {
     n: '02',
-    title: 'Vision workshop',
+    title: 'Team Shared Vision Program',
     body: 'A kickoff session prepares your team. Everyone reflects individually using the Empire of Light framework, then the team comes together for a facilitated workshop to see where there’s alignment, where there’s disconnect, and to co-create a tangible, inspiring vision. A follow-up commitment session turns that vision into action.',
   },
   {
@@ -87,7 +87,7 @@ const FAQS = [
   },
   {
     q: 'Is this software or consulting?',
-    a: 'Both. We facilitate the engagement directly (the vision workshop, the biweekly sessions, one full evolve cycle), and the app carries the work between sessions and stays with your team afterward.',
+    a: 'Both. We facilitate the engagement directly (the Team Shared Vision Program, the biweekly sessions, one full evolve cycle), and the app carries the work between sessions and stays with your team afterward.',
   },
   {
     q: 'Can we just use the app?',
@@ -381,7 +381,7 @@ export default function TeamsPage() {
             ))}
           </div>
           <p className="mt-7 text-center text-[15px]" style={{ color: 'rgba(251,247,242,.5)' }}>
-            Some teams stop after the vision workshop; others continue into the full engagement. Either way, the app carries the
+            Some teams stop after the Team Shared Vision Program; others continue into the full engagement. Either way, the app carries the
             work before, during, and after.
           </p>
           <div className="mt-9 flex justify-center">
@@ -476,10 +476,10 @@ export default function TeamsPage() {
             <div>
               <Eyebrow>Where to start</Eyebrow>
               <h2 className="m-0 mb-6 text-[26px] leading-[1.1] font-light md:text-[34px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                Start with a vision workshop
+                Start with the Team Shared Vision Program
               </h2>
               <p className="m-0 text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
-                Some teams stop after the workshop. Others continue into a 4&ndash;6 week facilitated engagement. The app is included
+                Some teams stop after the program. Others continue into a 4&ndash;6 week facilitated engagement. The app is included
                 either way.
               </p>
             </div>

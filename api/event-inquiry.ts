@@ -6,7 +6,7 @@ const TO_ADDRESS = 'kelly@empireoflightcollective.com'
 
 const OFFERS: Record<string, string> = {
   cohort: 'Group Unmasking Cohort',
-  workshop: 'Team Vision Setting Workshop',
+  workshop: 'Team Shared Vision Program',
 }
 
 function escapeHtml(str: string): string {

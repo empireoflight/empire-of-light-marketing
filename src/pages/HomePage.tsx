@@ -42,7 +42,7 @@ export default function HomePage() {
         className="block px-6 py-3 text-center text-[14px] font-semibold md:text-[15px]"
         style={{ ...DISPLAY, background: '#EDE4FA', color: '#131114' }}
       >
-        At AI Week? Get 20% off a Group Unmasking Cohort or Team Vision Setting Workshop &rarr;
+        At AI Week? Get 20% off a Group Unmasking Cohort or Team Shared Vision Program &rarr;
       </Link>
 
       {/* Hero */}

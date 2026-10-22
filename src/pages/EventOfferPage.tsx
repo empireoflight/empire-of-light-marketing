@@ -63,7 +63,7 @@ const OFFERS: {
   {
     id: 'workshop',
     audience: 'For teams',
-    title: 'Team Vision Setting Workshop',
+    title: 'Team Shared Vision Program',
     lead: 'Most teams struggle because they never got on the same page in the first place.',
     body: [
       'Whether you’re starting a new project or looking to reenergize an existing team, our vision-setting process helps your team get aligned on what you’re building and why it matters.',
@@ -142,7 +142,7 @@ export default function EventOfferPage() {
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
         title="Event Offer: 20% Off | Empire of Light"
-        description={`A special offer for ${attendees}: 20% off a Group Unmasking Cohort or a Team Vision Setting Workshop.`}
+        description={`A special offer for ${attendees}: 20% off a Group Unmasking Cohort or a Team Shared Vision Program.`}
         path={slug ? `/event/${slug}` : '/event'}
         noindex
       />
@@ -168,7 +168,7 @@ export default function EventOfferPage() {
             20% off for {attendees}
           </h1>
           <p className="mx-auto mb-9 max-w-[620px] text-[17px] leading-[1.55] md:text-[19px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Choose a Group Unmasking Cohort for yourself or a Team Vision Setting Workshop for your team. Both include access to the
+            Choose a Group Unmasking Cohort for yourself or a Team Shared Vision Program for your team. Both include access to the
             Empire of Light app and methodology.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
