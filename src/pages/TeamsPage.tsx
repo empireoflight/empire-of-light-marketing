@@ -548,8 +548,8 @@ export default function TeamsPage() {
           </div>
           <p className="mt-6 text-[14px]" style={{ color: 'rgba(251,247,242,.5)' }}>
             Looking for something for yourself?{' '}
-            <Link to="/unmasking-cohort" style={{ color: '#FEE16A' }}>
-              Explore the Unmasking Cohort &rarr;
+            <Link to="/now-what-cohort" style={{ color: '#FEE16A' }}>
+              Explore the Now What? Cohort &rarr;
             </Link>
             {' '}&middot;{' '}
             <Link to="/living-proof" style={{ color: '#FEE16A' }}>

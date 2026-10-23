@@ -13,8 +13,8 @@ export function MarketingFooter() {
             <Link to="/teams" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Team Program
             </Link>
-            <Link to="/unmasking-cohort" className="text-[14px]" style={{ color: '#FEE16A' }}>
-              Unmasking Cohort
+            <Link to="/now-what-cohort" className="text-[14px]" style={{ color: '#FEE16A' }}>
+              Now What? Cohort
             </Link>
             <Link to="/thesis" className="text-[14px]" style={{ color: '#FEE16A' }}>
               Thesis

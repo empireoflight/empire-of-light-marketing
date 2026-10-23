@@ -27,13 +27,13 @@ const CYCLE = [
   { stage: 'Evolve', body: 'Learn from what happened, and let your vision grow with you.' },
 ]
 
-export default function UnmaskingCohortPage() {
+export default function NowWhatCohortPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
-        title="Group Unmasking Cohort | Empire of Light"
+        title="Now What? Cohort | Empire of Light"
         description="A six-week group experience for people navigating a major life change. Explore a vision for what's next, experiment with living into it, and work through the friction together."
-        path="/unmasking-cohort"
+        path="/now-what-cohort"
       />
       <MarketingHeader />
 
@@ -48,7 +48,7 @@ export default function UnmaskingCohortPage() {
         />
         <div className="relative mx-auto max-w-[900px] text-center">
           <div className="mb-7 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#FEE16A' }}>
-            Group Unmasking Cohort
+            Now What? Cohort
           </div>
           <h1
             className="m-0 mb-7 text-[36px] leading-[1.1] font-light md:text-[50px] lg:text-[60px] lg:leading-[1.06]"

@@ -1,4 +1,7 @@
 {
-  "redirects": [{ "source": "/origin-story", "destination": "/living-proof", "permanent": true }],
+  "redirects": [
+    { "source": "/origin-story", "destination": "/living-proof", "permanent": true },
+    { "source": "/unmasking-cohort", "destination": "/now-what-cohort", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

@@ -5,7 +5,7 @@ import { BOOKING_URL, DISPLAY, HEADER_GRADIENT, navLink, navLinkStyle, primaryBu
 
 const NAV_LINKS = [
   { to: '/teams', label: 'Team Program' },
-  { to: '/unmasking-cohort', label: 'Unmasking Cohort' },
+  { to: '/now-what-cohort', label: 'Now What? Cohort' },
   { to: '/thesis', label: 'Thesis' },
   { to: '/living-proof', label: 'Living Proof' },
   { to: '/about', label: 'About' },

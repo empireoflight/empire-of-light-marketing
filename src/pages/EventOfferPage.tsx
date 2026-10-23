@@ -38,12 +38,12 @@ const OFFERS: {
   {
     id: 'cohort',
     audience: 'For individuals',
-    title: 'Group Unmasking Cohort',
+    title: 'Now What? Cohort',
     lead: 'You know this life ain’t it. But you’re not quite sure what comes next.',
     body: [
       'Maybe you discovered later in life that you’re neurodivergent. Maybe your marriage ended. Maybe something happened that made you realize the life you’ve been living doesn’t feel like yours anymore.',
       'Whatever brought you here, you know something needs to change. But figuring out who you are, what you actually want, and how to get there can feel overwhelming when everything you’ve known is being called into question.',
-      'That’s where the Empire of Light Unmasking Cohort comes in.',
+      'That’s where the Empire of Light Now What? Cohort comes in.',
       'Together, we’ll explore our visions for what’s next, experiment with ways to start living into those visions now, navigate the friction that comes with trying something new, and evolve our visions as we learn about ourselves and each other.',
       'You don’t have to figure it all out before you begin. We’ll create space to explore, try things, get curious about what comes up, and discover new possibilities together.',
       'If you’re ready to stop trying to make a life that doesn’t fit work, and start discovering what does, this group is for you.',
@@ -142,7 +142,7 @@ export default function EventOfferPage() {
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
         title="Event Offer: 20% Off | Empire of Light"
-        description={`A special offer for ${attendees}: 20% off a Group Unmasking Cohort or a Hivemindset Vision Program.`}
+        description={`A special offer for ${attendees}: 20% off a Now What? Cohort or a Hivemindset Vision Program.`}
         path={slug ? `/event/${slug}` : '/event'}
         noindex
       />
@@ -168,7 +168,7 @@ export default function EventOfferPage() {
             20% off for {attendees}
           </h1>
           <p className="mx-auto mb-9 max-w-[620px] text-[17px] leading-[1.55] md:text-[19px]" style={{ color: 'rgba(251,247,242,.78)' }}>
-            Choose a Group Unmasking Cohort for yourself or a Hivemindset Vision Program for your team. Both include access to the
+            Choose a Now What? Cohort for yourself or a Hivemindset Vision Program for your team. Both include access to the
             Empire of Light app and methodology.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">

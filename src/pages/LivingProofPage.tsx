@@ -378,8 +378,8 @@ export default function LivingProofPage() {
           </p>
           <p className="mt-3 text-[14px]" style={{ color: 'rgba(251,247,242,.5)' }}>
             Want to experience the cycle yourself?{' '}
-            <Link to="/unmasking-cohort" style={{ color: '#FEE16A' }}>
-              Explore the Group Unmasking Cohort &rarr;
+            <Link to="/now-what-cohort" style={{ color: '#FEE16A' }}>
+              Explore the Now What? Cohort &rarr;
             </Link>
           </p>
         </div>

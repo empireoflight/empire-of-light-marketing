@@ -18,10 +18,10 @@ const PATHS = [
   },
   {
     eyebrow: 'For individuals',
-    title: 'Unmasking Cohort',
+    title: 'Now What? Cohort',
     body: 'A six-week group experience for people in the middle of a big life change: a late neurodivergence discovery, the end of a marriage, a life that no longer feels like yours. Explore a vision for what’s next, try it on, and work through what comes up, together.',
-    cta: 'Explore the Unmasking Cohort',
-    to: '/unmasking-cohort',
+    cta: 'Explore the Now What? Cohort',
+    to: '/now-what-cohort',
   },
 ]
 
@@ -30,7 +30,7 @@ export default function HomePage() {
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
       <Seo
         title="Empire of Light | A Heart-Centered Operating System for Collective Intelligence"
-        description="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Unmasking Cohorts."
+        description="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Now What? Cohorts."
         path="/"
       />
       <MarketingHeader />
@@ -42,7 +42,7 @@ export default function HomePage() {
         className="block px-6 py-3 text-center text-[14px] font-semibold md:text-[15px]"
         style={{ ...DISPLAY, background: '#EDE4FA', color: '#131114' }}
       >
-        At AI Week? Get 20% off a Group Unmasking Cohort or Team Hivemindset Vision Program &rarr;
+        At AI Week? Get 20% off a Now What? Cohort or Team Hivemindset Vision Program &rarr;
       </Link>
 
       {/* Hero */}

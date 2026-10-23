@@ -5,7 +5,7 @@ const FROM_ADDRESS = 'Empire of Light <notifications@app.empireoflightcollective
 const TO_ADDRESS = 'kelly@empireoflightcollective.com'
 
 const OFFERS: Record<string, string> = {
-  cohort: 'Group Unmasking Cohort',
+  cohort: 'Now What? Cohort',
   workshop: 'Hivemindset Vision Program',
 }
 
