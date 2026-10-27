@@ -1,7 +1,8 @@
 {
   "redirects": [
     { "source": "/origin-story", "destination": "/living-proof", "permanent": true },
-    { "source": "/unmasking-cohort", "destination": "/now-what-cohort", "permanent": true }
+    { "source": "/unmasking-cohort", "destination": "/now-what-cohort", "permanent": true },
+    { "source": "/better-ai-processes-worksheet.pdf", "destination": "/better-ai-processes-free-worksheet.pdf", "permanent": true }
   ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
