@@ -479,17 +479,18 @@ export default function TeamsPage() {
                 Start with the Hivemindset Vision Program
               </h2>
               <p className="m-0 text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
-                Some teams stop after the program. Others continue into a 4&ndash;6 week facilitated engagement. The app is included
-                either way.
+                Some teams just need the vision program. Others continue into the rest of the Empire of Light cycle. The app is
+                included either way.
               </p>
             </div>
             <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
               <Eyebrow>Investment</Eyebrow>
-              <div className="text-[26px] leading-[1.2] font-light md:text-[32px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
-                Sliding scale, based on team size and scope
+              <div className="text-[32px] leading-[1.2] font-light md:text-[40px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                $5,000 per team
               </div>
               <p className="mt-6 text-[14px] leading-[1.55]" style={{ color: '#544D5A' }}>
-                We&rsquo;re taking on a small number of teams. Spots are limited.
+                If you&rsquo;re part of an early-stage startup, a community-oriented team, or another group working with a different
+                budget, reach out anyway. We can explore whether there&rsquo;s an approach that makes sense for your team.
               </p>
             </div>
           </div>

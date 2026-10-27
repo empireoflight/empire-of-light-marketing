@@ -162,14 +162,22 @@ export default function NowWhatCohortPage() {
                 Six weeks, together
               </h2>
             </div>
-            <ul className="m-0 flex list-none flex-col gap-3 rounded-[20px] p-8 md:p-10" style={{ background: '#FFFFFF' }}>
-              {INCLUDES.map((item) => (
-                <li key={item} className="flex gap-3 text-[16px] leading-[1.5]" style={{ color: '#131114' }}>
-                  <span className="mt-[9px] h-[7px] w-[7px] flex-none rounded-full" style={{ background: '#D99A22' }} />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <div className="rounded-[20px] p-8 md:p-10" style={{ background: '#FFFFFF' }}>
+              <ul className="m-0 flex list-none flex-col gap-3 p-0">
+                {INCLUDES.map((item) => (
+                  <li key={item} className="flex gap-3 text-[16px] leading-[1.5]" style={{ color: '#131114' }}>
+                    <span className="mt-[9px] h-[7px] w-[7px] flex-none rounded-full" style={{ background: '#D99A22' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 border-t pt-7" style={{ borderColor: '#EDE9EF' }}>
+                <Eyebrow>Investment</Eyebrow>
+                <div className="text-[32px] leading-[1.2] font-light md:text-[40px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+                  $495 <span className="text-[16px] md:text-[18px]" style={{ color: '#544D5A' }}>per person</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
