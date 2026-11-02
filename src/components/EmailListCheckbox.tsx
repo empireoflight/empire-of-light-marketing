@@ -1,7 +1,18 @@
 /** Opt-in checkbox for the email list. The forms start it checked; visitors can untick it. */
-export function EmailListCheckbox({ id, checked, onChange }: { id: string; checked: boolean; onChange: (checked: boolean) => void }) {
+export function EmailListCheckbox({
+  id,
+  checked,
+  onChange,
+  tone = 'light',
+}: {
+  id: string
+  checked: boolean
+  onChange: (checked: boolean) => void
+  /** "dark" for use on dark backgrounds. */
+  tone?: 'light' | 'dark'
+}) {
   return (
-    <label htmlFor={id} className="flex cursor-pointer items-start gap-3 text-[14px] leading-[1.5]" style={{ color: '#544D5A' }}>
+    <label htmlFor={id} className="flex cursor-pointer items-start gap-3 text-[14px] leading-[1.5]" style={{ color: tone === 'dark' ? 'rgba(251,247,242,.78)' : '#544D5A' }}>
       <input
         id={id}
         type="checkbox"

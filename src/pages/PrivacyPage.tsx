@@ -152,6 +152,12 @@ export default function PrivacyPage() {
               conversation” link, any name, email, or details you provide are collected by Google Calendar’s scheduling tool, not by us
               directly.
             </p>
+            <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
+              <strong style={{ fontWeight: 600, color: '#131114' }}>Information from our forms and games.</strong> If you send a message,
+              sign up for an event, or play the holiday game, we collect the name, email, and message you give us. If you claim a sticker or
+              print, we also collect the mailing address you enter, and we use it only to send your item. If you leave the email list box
+              ticked, we add your name and email to our mailing list, and you can unsubscribe from any email.
+            </p>
           </div>
         </div>
       </section>

@@ -34,6 +34,12 @@ export const SEO_PAGES: Record<string, PageSeo> = {
       'Do you dread the holidays? Join the free Empire of Light Holiday Edition: a kickoff call, a Reimagine → Do workshop, weekly drop-ins, and a January reflection. Reimagine your holiday traditions.',
     image: '/og-holiday.png',
   },
+  '/holiday-game': {
+    title: 'Holiday Lights Game | Empire of Light',
+    description: 'Light up the board and see which holiday offer from Empire of Light is waiting for you.',
+    image: '/og-holiday.png',
+    noindex: true,
+  },
   '/thesis': {
     title: 'The Empire of Light Thesis | A Team Operating System for Collective Transformation',
     description:

@@ -35,3 +35,22 @@ body {
     animation: none !important;
   }
 }
+
+/* Holiday lights game: offer pegs pulse once the board settles. */
+@keyframes eol-peg-pulse {
+  0%,
+  100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.35);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eol-peg-halo {
+    animation: none !important;
+  }
+}

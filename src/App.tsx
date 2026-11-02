@@ -12,6 +12,7 @@ import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
 import LetsChatPage from './pages/LetsChatPage'
 import EventOfferPage from './pages/EventOfferPage'
+import HolidayGamePage from './pages/HolidayGamePage'
 import HolidayPage from './pages/HolidayPage'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/lets-chat" element={<LetsChatPage />} />
         <Route path="/holiday" element={<HolidayPage />} />
+        <Route path="/holiday-game" element={<HolidayGamePage />} />
         <Route path="/event" element={<EventOfferPage />} />
         <Route path="/event/:slug" element={<EventOfferPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
