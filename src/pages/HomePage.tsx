@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
-import { track } from '@vercel/analytics'
 import logoMark from '../assets/logo-mark.png'
 import heartModel from '../assets/landing/heart-model.webp'
 import founderPhoto from '../assets/landing/founder-photo.jpg'
+import { HolidayBanner } from '../components/HolidayBanner'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
+import { Snowfall } from '../components/Snowfall'
 import { BOOKING_URL, DISPLAY, Eyebrow, OctopusIcon, primaryButton, secondaryButtonOnDark, trackBooking } from '../components/shared'
 
 const PATHS = [
@@ -35,15 +36,9 @@ export default function HomePage() {
       />
       <MarketingHeader />
 
-      {/* Announcement: AI Week event offer */}
-      <Link
-        to="/event/ai-week"
-        onClick={() => track('event_banner_click', { location: 'home', event: 'ai-week' })}
-        className="block px-6 py-3 text-center text-[14px] font-semibold md:text-[15px]"
-        style={{ ...DISPLAY, background: '#EDE4FA', color: '#131114' }}
-      >
-        At AI Week? Get 20% off a Now What? Cohort or Team Hivemindset Vision Program &rarr;
-      </Link>
+      {/* Seasonal: Holiday Edition announcement + snow. The AI Week banner this replaced is still available at /event/ai-week. */}
+      <Snowfall />
+      <HolidayBanner />
 
       {/* Hero */}
       <section className="relative overflow-hidden px-6 py-24 md:px-8 md:py-[120px]" style={{ background: '#000000' }}>

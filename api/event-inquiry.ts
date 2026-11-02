@@ -7,6 +7,7 @@ const TO_ADDRESS = 'kelly@empireoflightcollective.com'
 const OFFERS: Record<string, string> = {
   cohort: 'Now What? Cohort',
   workshop: 'Hivemindset Vision Program',
+  holiday: 'Holiday Edition (free)',
 }
 
 const RESEND_CONTACTS_URL = 'https://api.resend.com/contacts'
@@ -127,7 +128,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       to: TO_ADDRESS,
       reply_to: email,
       subject: isProgram
-        ? `Inquiry — ${offerLabel} — ${oneLine(name)}`
+        ? `${offer === 'holiday' ? 'Sign-up' : 'Inquiry'} — ${offerLabel} — ${oneLine(name)}`
         : `Event offer inquiry — ${eventLabel ? `${eventLabel} — ` : ''}${offerLabel} — ${oneLine(name)}`,
       html,
     }),

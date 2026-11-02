@@ -4,3 +4,34 @@
 body {
   margin: 0;
 }
+
+/* Seasonal: Holiday Edition snowfall + blinking banner bulbs. Remove with the Snowfall component and HolidayBanner after the holidays. */
+@keyframes eol-snow-fall {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(var(--eol-drift, 40px), 108vh, 0) rotate(360deg);
+  }
+}
+
+@keyframes eol-bulb-blink {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1.15);
+  }
+  50% {
+    opacity: 0.35;
+    filter: brightness(0.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eol-snowflake {
+    display: none;
+  }
+  .eol-bulb {
+    animation: none !important;
+  }
+}

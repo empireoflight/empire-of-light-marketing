@@ -27,16 +27,29 @@ const labelStyle = {
 
 interface InquiryFormProps {
   /** Which offer this page is about. Sent to /api/event-inquiry, which turns it into the offer name in the email. */
-  offer: 'cohort' | 'workshop'
+  offer: 'cohort' | 'workshop' | 'holiday'
   /** Human-readable page name that shows up in Kelly's notification email, e.g. "Now What? Cohort page". */
   page: string
   heading: string
   intro: string
   messageLabel: string
+  /** Anchor id for the section, so buttons elsewhere on the page can scroll here. Defaults to "inquire". */
+  id?: string
+  submitLabel?: string
+  successMessage?: string
 }
 
 /** Lead-capture form for the program pages: same fields and style as the event offer page, with the offer fixed by the page. */
-export function InquiryForm({ offer, page, heading, intro, messageLabel }: InquiryFormProps) {
+export function InquiryForm({
+  offer,
+  page,
+  heading,
+  intro,
+  messageLabel,
+  id = 'inquire',
+  submitLabel = 'Send inquiry',
+  successMessage = 'Thanks — your note is on its way. I’ll be in touch soon with details.',
+}: InquiryFormProps) {
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
   const [subscribe, setSubscribe] = useState(true)
   const [status, setStatus] = useState<Status>('idle')
@@ -68,7 +81,7 @@ export function InquiryForm({ offer, page, heading, intro, messageLabel }: Inqui
   }
 
   return (
-    <section id="inquire" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4', scrollMarginTop: 60 }}>
+    <section id={id} className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FDFAF4', scrollMarginTop: 60 }}>
       <div className="mx-auto max-w-[640px]">
         <Eyebrow>Get in touch</Eyebrow>
         <h2 className="m-0 mb-4 text-[30px] leading-[1.1] font-light md:text-[40px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
@@ -81,7 +94,7 @@ export function InquiryForm({ offer, page, heading, intro, messageLabel }: Inqui
         {status === 'success' ? (
           <div className="rounded-2xl border p-6" style={{ background: '#FFFFFF', borderColor: '#D8D2DC' }}>
             <p className="m-0 text-[16px] leading-[1.6]" style={{ color: '#131114' }}>
-              Thanks — your note is on its way. I’ll be in touch soon with details.
+              {successMessage}
             </p>
           </div>
         ) : (
@@ -129,7 +142,7 @@ export function InquiryForm({ offer, page, heading, intro, messageLabel }: Inqui
               className="rounded-lg px-8 py-4 text-[15px] font-semibold disabled:opacity-60"
               style={primaryButton()}
             >
-              {status === 'submitting' ? 'Sending…' : 'Send inquiry'}
+              {status === 'submitting' ? 'Sending…' : submitLabel}
             </button>
           </form>
         )}
