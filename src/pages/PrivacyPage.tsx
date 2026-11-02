@@ -37,7 +37,7 @@ const TIERS = [
 const PROVIDERS = [
   { name: 'Supabase', purpose: 'Database, authentication, and file storage. This is where your account and Tier 1–4 content live.' },
   { name: 'Anthropic', purpose: 'Powers the AI synthesis used for Tier 2 content — pattern-finding only, never used to make Tier 0/1 content readable to anyone else.' },
-  { name: 'Resend', purpose: 'Sends transactional email — invites, reminders, and notifications about your team’s sessions.' },
+  { name: 'Resend', purpose: 'Sends transactional email — invites, reminders, and notifications about your team’s sessions. If you tick the email list box on a contact form, Resend also stores your name and email so we can send you occasional updates.' },
   { name: 'Vercel', purpose: 'Hosts this site and the app, and provides Vercel Analytics/Speed Insights — cookieless, aggregated traffic and performance data. No cross-site tracking, no ad targeting.' },
   { name: 'Google Calendar', purpose: 'Powers the “Book a conversation” scheduling link. Any name/email/details you provide there are handled under Google’s privacy policy, not ours.' },
   { name: 'Substack', purpose: 'If you subscribe to our newsletter, Substack handles that subscription under its own privacy policy.' },

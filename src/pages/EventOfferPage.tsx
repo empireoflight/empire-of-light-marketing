@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { ChangeEvent, FormEvent } from 'react'
 import { useParams } from 'react-router-dom'
 import { track } from '@vercel/analytics'
+import { EmailListCheckbox } from '../components/EmailListCheckbox'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
@@ -110,6 +111,7 @@ export default function EventOfferPage() {
   const offers = OFFERS.map((o) => ({ ...o, ...(slug ? PRICE_OVERRIDES[slug]?.[o.id] : undefined) }))
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
   const [offer, setOffer] = useState<OfferId | ''>('')
+  const [subscribe, setSubscribe] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 
@@ -124,7 +126,7 @@ export default function EventOfferPage() {
       const res = await fetch('/api/event-inquiry', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ ...form, offer, event: eventName ?? '' }),
+        body: JSON.stringify({ ...form, offer, subscribe, event: eventName ?? '' }),
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
@@ -335,6 +337,7 @@ export default function EventOfferPage() {
                 </label>
                 <textarea id="event-message" rows={4} style={{ ...inputStyle, resize: 'vertical' }} value={form.message} onChange={set('message')} />
               </div>
+              <EmailListCheckbox id="event-subscribe" checked={subscribe} onChange={setSubscribe} />
               {/* Honeypot — hidden from real visitors, bots tend to fill every field they find. */}
               <div style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }} aria-hidden="true">
                 <label htmlFor="event-company">Company</label>

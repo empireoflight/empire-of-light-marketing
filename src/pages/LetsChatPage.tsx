@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { EmailListCheckbox } from '../components/EmailListCheckbox'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
@@ -27,6 +28,7 @@ const labelStyle = {
 
 export default function LetsChatPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
+  const [subscribe, setSubscribe] = useState(false)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 
@@ -41,7 +43,7 @@ export default function LetsChatPage() {
       const res = await fetch('/api/lets-chat', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, subscribe }),
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({}))
@@ -99,6 +101,7 @@ export default function LetsChatPage() {
                 </label>
                 <textarea id="message" required rows={5} style={{ ...inputStyle, resize: 'vertical' }} value={form.message} onChange={set('message')} />
               </div>
+              <EmailListCheckbox id="subscribe" checked={subscribe} onChange={setSubscribe} />
               {/* Honeypot — hidden from real visitors, bots tend to fill every field they find. */}
               <div style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }} aria-hidden="true">
                 <label htmlFor="company">Company</label>

@@ -1,4 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
+import { addToEmailList, emailListLine } from './_email-list'
+import type { EmailListResult } from './_email-list'
 
 // Same pattern as the product app's supabase/functions/_shared/email/resend.ts —
 // reads RESEND_API_KEY server-side, sends via Resend's REST API directly (no SDK).
@@ -17,10 +19,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return
   }
 
-  const { name, email, message, company } = (req.body ?? {}) as {
+  const { name, email, message, subscribe, company } = (req.body ?? {}) as {
     name?: string
     email?: string
     message?: string
+    subscribe?: boolean // opted in to the email list via the checkbox
     company?: string // honeypot — hidden from real visitors via CSS; bots tend to fill every field
   }
 
@@ -46,9 +49,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return
   }
 
+  const wantsList = subscribe === true
+  const listResult: EmailListResult | null = wantsList ? await addToEmailList(apiKey, name, email) : null
   const html = `
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+    ${emailListLine(wantsList, listResult)}
     <p><strong>Message:</strong></p>
     <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
   `.trim()
