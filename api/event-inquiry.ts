@@ -61,11 +61,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return
   }
 
-  const { name, email, offer, event, message, subscribe, company } = (req.body ?? {}) as {
+  const { name, email, offer, event, source, page, message, subscribe, company } = (req.body ?? {}) as {
     name?: string
     email?: string
     offer?: string
     event?: string // which event page the visitor came from, e.g. "AI Week"; empty on the generic page
+    source?: string // "program" when sent from a program page (Team Program / Now What? Cohort) rather than an event offer page
+    page?: string // human-readable name of the program page, e.g. "Now What? Cohort page"
     message?: string
     subscribe?: boolean // opted in to the email list via the checkbox
     company?: string // honeypot — hidden from real visitors via CSS; bots tend to fill every field
@@ -100,11 +102,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const offerLabel = OFFERS[offer]
   const oneLine = (s: string) => s.replace(/\s+/g, ' ').trim()
   const eventLabel = typeof event === 'string' ? oneLine(event).slice(0, 80) : ''
+  const isProgram = source === 'program'
+  const pageLabel = typeof page === 'string' ? oneLine(page).slice(0, 80) : ''
   const wantsList = subscribe === true
   const listResult: EmailListResult | null = wantsList ? await addToEmailList(apiKey, name, email) : null
   const html = `
-    <p><strong>Event:</strong> ${eventLabel ? escapeHtml(eventLabel) : '<em>(general event page)</em>'}</p>
-    <p><strong>Offer:</strong> ${escapeHtml(offerLabel)} (event offer, 20% off)</p>
+    ${
+      isProgram
+        ? `<p><strong>Interested in:</strong> ${escapeHtml(offerLabel)}</p>\n    <p><strong>Page:</strong> ${pageLabel ? escapeHtml(pageLabel) : '<em>(unknown)</em>'}</p>`
+        : `<p><strong>Event:</strong> ${eventLabel ? escapeHtml(eventLabel) : '<em>(general event page)</em>'}</p>\n    <p><strong>Offer:</strong> ${escapeHtml(offerLabel)} (event offer, 20% off)</p>`
+    }
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
     <p><strong>Email:</strong> ${escapeHtml(email)}</p>
     ${emailListLine(wantsList, listResult)}
@@ -119,7 +126,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       from: FROM_ADDRESS,
       to: TO_ADDRESS,
       reply_to: email,
-      subject: `Event offer inquiry — ${eventLabel ? `${eventLabel} — ` : ''}${offerLabel} — ${oneLine(name)}`,
+      subject: isProgram
+        ? `Inquiry — ${offerLabel} — ${oneLine(name)}`
+        : `Event offer inquiry — ${eventLabel ? `${eventLabel} — ` : ''}${offerLabel} — ${oneLine(name)}`,
       html,
     }),
   })

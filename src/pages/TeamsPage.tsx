@@ -5,6 +5,7 @@ import shotVision from '../assets/landing/screenshot-vision-v2.webp'
 import shotFriction from '../assets/landing/shot-friction-v2.webp'
 import shotCheckin from '../assets/landing/shot-checkin-v2.webp'
 import { MarketingHeader } from '../components/MarketingHeader'
+import { InquiryForm } from '../components/InquiryForm'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
 import { BOOKING_URL, DISPLAY, Eyebrow, OctopusIcon, primaryButton, secondaryButtonOnDark, trackBooking } from '../components/shared'
@@ -12,8 +13,8 @@ import { BOOKING_URL, DISPLAY, Eyebrow, OctopusIcon, primaryButton, secondaryBut
 const HOW_STEPS = [
   {
     n: '01',
-    title: 'Book a conversation',
-    body: 'A short call to talk through your team, where you’re stuck, and whether this is the right fit. Once it’s a match, your team gets access to the app.',
+    title: 'Get in touch',
+    body: 'Send an inquiry or book a short call to talk through your team, where you’re stuck, and whether this is the right fit. Once it’s a match, your team gets access to the app.',
   },
   {
     n: '02',
@@ -25,6 +26,19 @@ const HOW_STEPS = [
     title: 'We work the cycle, then evolve',
     body: 'Teams that want to keep going continue into a 4–6 week facilitated engagement: experiments toward the vision, friction logged and processed, biweekly working sessions with us, and weekly async reflection prompts. One full evolve cycle, then the team keeps using the app on its own.',
   },
+]
+
+const PROGRAM_BODY = [
+  'Whether you’re starting a new project or looking to reenergize an existing team, our vision-setting process helps your team get aligned on what you’re building and why it matters.',
+  'Reflect individually with our innovative framework, come together for a facilitated vision session, and move forward with a shared vision and commitment to action. The whole process takes about four weeks.',
+]
+
+const PROGRAM_INCLUDES = [
+  'A kickoff session to prepare your team',
+  'Individual reflection using the Empire of Light framework',
+  'A facilitated vision-setting workshop',
+  'A follow-up vision commitment session to turn your shared vision into action',
+  'Access to the Empire of Light app, so reflection can continue between sessions',
 ]
 
 const WHO_FOR = [
@@ -83,7 +97,7 @@ const DIFFERENTIATORS = [
 const FAQS = [
   {
     q: 'How do we get started?',
-    a: 'Book a short conversation with us. We’ll talk through your team and what you’re navigating, and if it’s a fit, walk you through the investment and get your team invited into the app.',
+    a: 'Send an inquiry or book a short conversation with us. We’ll talk through your team and what you’re navigating, and if it’s a fit, walk you through the investment and get your team invited into the app.',
   },
   {
     q: 'Is this software or consulting?',
@@ -179,18 +193,18 @@ export default function TeamsPage() {
             they learn. Unlock the collective intelligence already on your team.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
+            <a href="#inquire" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
+              Send an inquiry
+            </a>
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noreferrer"
               onClick={() => trackBooking('hero')}
               className="rounded-lg px-8 py-4 text-[15px] font-semibold"
-              style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}
+              style={secondaryButtonOnDark}
             >
               Book a conversation
-            </a>
-            <a href="#how" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
-              See how it works
             </a>
           </div>
         </div>
@@ -385,15 +399,8 @@ export default function TeamsPage() {
             work before, during, and after.
           </p>
           <div className="mt-9 flex justify-center">
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => trackBooking('how_it_works')}
-              className="rounded-lg px-8 py-4 text-[15px] font-semibold"
-              style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}
-            >
-              Book a conversation
+            <a href="#inquire" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
+              Send an inquiry
             </a>
           </div>
         </div>
@@ -467,23 +474,43 @@ export default function TeamsPage() {
       </section>
 
       {/* Program details: what's included + pricing */}
-      <section className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF' }}>
+      <section id="program" className="px-6 py-16 md:px-8 md:py-24" style={{ background: '#FFFFFF', scrollMarginTop: 60 }}>
         <div className="mx-auto max-w-[1120px]">
           <div
-            className="grid items-center gap-10 rounded-[20px] px-6 py-12 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:gap-16 md:px-12 md:py-14"
+            className="grid gap-10 rounded-[20px] px-6 py-12 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-14 md:px-12 md:py-14"
             style={{ background: 'linear-gradient(90deg,#FFF6AD 0%,#FFD0D3 50%,#FFA9F8 100%)' }}
           >
             <div>
               <Eyebrow>Where to start</Eyebrow>
-              <h2 className="m-0 mb-6 text-[26px] leading-[1.1] font-light md:text-[34px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
+              <h2 className="m-0 mb-6 text-[28px] leading-[1.1] font-light md:text-[38px] md:leading-[1.06]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
                 Start with the Hivemindset Vision Program
               </h2>
-              <p className="m-0 text-[16px] leading-[1.55] md:text-[17px]" style={{ color: '#131114' }}>
-                Some teams just need the vision program. Others continue into the rest of the Empire of Light cycle. The app is
-                included either way.
+              <p className="m-0 mb-5 text-[19px] font-semibold leading-[1.4] md:text-[21px]" style={{ ...DISPLAY, color: '#131114' }}>
+                Most teams struggle because they never got on the same page in the first place.
+              </p>
+              {PROGRAM_BODY.map((para) => (
+                <p key={para} className="m-0 mb-4 text-[16px] leading-[1.6] md:text-[17px]" style={{ color: '#131114' }}>
+                  {para}
+                </p>
+              ))}
+              <div className="mt-8 mb-4 text-[13px] font-semibold uppercase tracking-[0.16em]" style={{ ...DISPLAY, color: '#131114' }}>
+                Includes
+              </div>
+              <ul className="m-0 flex list-none flex-col gap-3 p-0">
+                {PROGRAM_INCLUDES.map((item) => (
+                  <li key={item} className="flex items-start gap-3.5">
+                    <span className="mt-2.5 h-[7px] w-[7px] flex-none rounded-full" style={{ background: '#131114' }} />
+                    <span className="text-[16px] leading-[1.55]" style={{ color: '#131114' }}>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="m-0 mt-6 text-[16px] font-semibold leading-[1.6] md:text-[17px]" style={{ color: '#131114' }}>
+                Walk away with a shared vision, clearer priorities, and a team ready to move forward together.
               </p>
             </div>
-            <div className="rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
+            <div className="self-start rounded-[20px] px-8 py-10 text-center" style={{ background: '#FFFFFF' }}>
               <Eyebrow>Investment</Eyebrow>
               <div className="text-[32px] leading-[1.2] font-light md:text-[40px]" style={{ ...DISPLAY, letterSpacing: '.02em', color: '#131114' }}>
                 $5,000 per team
@@ -492,6 +519,13 @@ export default function TeamsPage() {
                 If you&rsquo;re part of an early-stage startup, a community-oriented team, or another group working with a different
                 budget, reach out anyway. We can explore whether there&rsquo;s an approach that makes sense for your team.
               </p>
+              <p className="mt-5 mb-0 border-t pt-5 text-[14px] leading-[1.55]" style={{ borderColor: '#EDE9EF', color: '#544D5A' }}>
+                Some teams just need the vision program. Others continue into the rest of the Empire of Light cycle. The app is
+                included either way.
+              </p>
+              <a href="#inquire" className="mt-6 block rounded-lg px-6 py-4 text-[15px] font-semibold" style={primaryButton()}>
+                Send an inquiry
+              </a>
             </div>
           </div>
         </div>
@@ -533,16 +567,19 @@ export default function TeamsPage() {
             Start with the vision your team hasn&rsquo;t said out loud yet
           </h2>
           <p className="mx-auto mb-9 max-w-[560px] text-[17px] leading-[1.55] md:text-[19px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-            Book a conversation, and we&rsquo;ll take it from there.
+            Send an inquiry or book a conversation, and we&rsquo;ll take it from there.
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
+            <a href="#inquire" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
+              Send an inquiry
+            </a>
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noreferrer"
               onClick={() => trackBooking('final_cta')}
               className="rounded-lg px-8 py-4 text-[15px] font-semibold"
-              style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}
+              style={secondaryButtonOnDark}
             >
               Book a conversation
             </a>
@@ -559,6 +596,14 @@ export default function TeamsPage() {
           </p>
         </div>
       </section>
+
+      <InquiryForm
+        offer="workshop"
+        page="Team Program page"
+        heading="Interested? Send me a note"
+        intro="Tell me a little about your team and I’ll reach out with details on the Hivemindset Vision Program."
+        messageLabel="Tell me about your team and what you’re hoping for (optional)"
+      />
 
       <MarketingFooter />
     </div>

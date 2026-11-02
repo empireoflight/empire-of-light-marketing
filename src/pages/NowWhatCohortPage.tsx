@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import heartModel from '../assets/landing/heart-model.webp'
 import { MarketingHeader } from '../components/MarketingHeader'
+import { InquiryForm } from '../components/InquiryForm'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
 import { BOOKING_URL, DISPLAY, Eyebrow, primaryButton, secondaryButtonOnDark, trackBooking } from '../components/shared'
@@ -11,8 +12,12 @@ const TRANSITIONS = [
   'Another major life transition',
 ]
 
+const FACTS = ['Next cohort starts in January', 'Fridays at 11am Pacific, online', 'Small group, under 10 people']
+
 const INCLUDES = [
-  'A six-week group experience',
+  'A six-week group experience, starting in January',
+  'Live online sessions every Friday at 11am Pacific',
+  'A small group, kept under 10 people',
   'Guided vision-setting and individual reflection',
   'Experiments to help you bring your vision into everyday life',
   'Space to explore the friction, patterns, and discoveries that emerge',
@@ -60,12 +65,30 @@ export default function NowWhatCohortPage() {
             A group experience for figuring out who you actually are and what you actually want, and for starting to live into it,
             with other people doing the same.
           </p>
+          <div className="mx-auto mb-10 flex max-w-[760px] flex-wrap justify-center gap-2.5">
+            {FACTS.map((fact) => (
+              <span
+                key={fact}
+                className="rounded-full border px-4 py-2 text-[14px] font-medium"
+                style={{ borderColor: 'rgba(251,247,242,.32)', color: 'rgba(251,247,242,.9)' }}
+              >
+                {fact}
+              </span>
+            ))}
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-3.5">
-            <Link to="/lets-chat" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
-              Ask about the next cohort
-            </Link>
-            <a href="#how" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={secondaryButtonOnDark}>
-              See how it works
+            <a href="#inquire" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
+              Send an inquiry
+            </a>
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => trackBooking('cohort_hero')}
+              className="rounded-lg px-8 py-4 text-[15px] font-semibold"
+              style={secondaryButtonOnDark}
+            >
+              Book a conversation
             </a>
           </div>
         </div>
@@ -196,12 +219,12 @@ export default function NowWhatCohortPage() {
             If you&rsquo;re ready to stop forcing a life that doesn&rsquo;t fit, and start discovering what does
           </h2>
           <p className="mx-auto mb-9 max-w-[560px] text-[17px] leading-[1.55] md:text-[19px]" style={{ color: 'rgba(251,247,242,.72)' }}>
-            This group is for you. Tell us a little about where you are, and we&rsquo;ll share details on the next cohort.
+            This group is for you. Tell us a little about where you are, and we&rsquo;ll share details on the January cohort.
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
-            <Link to="/lets-chat" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
-              Ask about the next cohort
-            </Link>
+            <a href="#inquire" className="rounded-lg px-8 py-4 text-[15px] font-semibold" style={primaryButton({ boxShadow: '0 0 40px rgba(254,225,106,.28)' })}>
+              Send an inquiry
+            </a>
             <a
               href={BOOKING_URL}
               target="_blank"
@@ -225,6 +248,14 @@ export default function NowWhatCohortPage() {
           </p>
         </div>
       </section>
+
+      <InquiryForm
+        offer="cohort"
+        page="Now What? Cohort page"
+        heading="Interested? Send me a note"
+        intro="Tell me a little about where you are and I’ll send details on the January cohort."
+        messageLabel="Anything you’d like me to know? (optional)"
+      />
 
       <MarketingFooter />
     </div>

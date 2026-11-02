@@ -52,6 +52,8 @@ const OFFERS: {
     includesLabel: 'What’s included',
     includes: [
       'A six-week group experience kicking off in January',
+      'Live online sessions every Friday at 11am Pacific',
+      'A small group, kept under 10 people',
       'Guided vision-setting and individual reflection',
       'Experiments to help you bring your vision into everyday life',
       'Space to explore the friction, patterns, and discoveries that emerge',
