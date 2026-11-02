@@ -6,17 +6,12 @@ import { EmailListCheckbox } from '../components/EmailListCheckbox'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { Seo } from '../components/Seo'
+import { EVENTS } from '../events'
+import { eventSeo } from '../seoPages'
 import { DISPLAY, Eyebrow, primaryButton, secondaryButtonOnDark } from '../components/shared'
 
 type OfferId = 'cohort' | 'workshop'
 type Status = 'idle' | 'submitting' | 'success' | 'error'
-
-// One page, one URL per event: /event/<slug>. To add an event, add a line here.
-// Any other slug (and plain /event) shows the generic "event attendees" version.
-const EVENTS: Record<string, string> = {
-  'ai-week': 'AI Week',
-  'the-commwell': 'The Commwell',
-}
 
 // Per-event price overrides, keyed by event slug. Events not listed here use the prices in OFFERS.
 const PRICE_OVERRIDES: Record<string, Partial<Record<OfferId, { regular: string; sale: string }>>> = {
@@ -144,12 +139,7 @@ export default function EventOfferPage() {
 
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Event Offer: 20% Off | Empire of Light"
-        description={`A special offer for ${attendees}: 20% off a Now What? Cohort or a Hivemindset Vision Program.`}
-        path={slug ? `/event/${slug}` : '/event'}
-        noindex
-      />
+      <Seo path={slug ? `/event/${slug}` : '/event'} {...eventSeo(eventName)} />
       <MarketingHeader />
 
       {/* Hero */}

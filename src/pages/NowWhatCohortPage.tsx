@@ -35,11 +35,7 @@ const CYCLE = [
 export default function NowWhatCohortPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Now What? Cohort | Empire of Light"
-        description="A six-week group experience for people navigating a major life change. Explore a vision for what's next, experiment with living into it, and work through the friction together."
-        path="/now-what-cohort"
-      />
+      <Seo path="/now-what-cohort" />
       <MarketingHeader />
 
       {/* Hero */}

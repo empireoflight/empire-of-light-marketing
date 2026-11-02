@@ -12,11 +12,7 @@ const BUSINESS_NAME = 'Empire of Light LLC'
 export default function TermsPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Terms of Service | Empire of Light"
-        description="The terms that govern your use of empireoflightcollective.com, including how the founding co-creator pilot engagement works."
-        path="/terms"
-      />
+      <Seo path="/terms" />
       <MarketingHeader />
 
       {/* Hero */}

@@ -120,11 +120,7 @@ function SectionHeading({ eyebrow, title, color }: { eyebrow: string; title: str
 export default function ThesisPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="The Empire of Light Thesis | A Team Operating System for Collective Transformation"
-        description="Empire of Light is a team operating system for collective transformation — the methodology behind how teams reimagine what's possible, take action, unlearn old patterns, and evolve together."
-        path="/thesis"
-      />
+      <Seo path="/thesis" />
       <MarketingHeader />
 
       {/* Hero */}

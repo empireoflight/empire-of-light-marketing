@@ -58,11 +58,7 @@ export default function LetsChatPage() {
 
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Let's Chat | Empire of Light"
-        description="Send a quick note and Kelly will get back to you."
-        path="/lets-chat"
-      />
+      <Seo path="/lets-chat" />
       <MarketingHeader />
 
       <section className="px-6 py-16 md:px-8 md:py-24">

@@ -11,22 +11,23 @@
     />
 
     <!--
-      These are defaults for the initial HTML paint and for crawlers that
-      don't execute JS. Each route overrides them client-side via the <Seo>
-      component (see src/components/Seo.tsx) once React mounts.
+      Defaults (the home page's tags). At build time vite.config.ts writes a copy of this
+      file per page with that page's own tags, taken from src/seoPages.ts, so link previews
+      that don't run JS still show the right title/description/image. The <Seo> component
+      (src/components/Seo.tsx) keeps them in sync client-side once React mounts.
     -->
-    <title>Empire of Light | Collective Intelligence Platform for Teams</title>
+    <title>Empire of Light | A Heart-Centered Operating System for Collective Intelligence</title>
     <meta
       name="description"
-      content="Empire of Light helps teams unlock the collective intelligence already inside them — a facilitated pilot plus app for shared vision, aligned action, and processing friction together. Book a conversation to get started."
+      content="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Now What? Cohorts."
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.empireoflightcollective.com/" />
 
-    <meta property="og:title" content="Empire of Light | Collective Intelligence Platform for Teams" />
+    <meta property="og:title" content="Empire of Light | A Heart-Centered Operating System for Collective Intelligence" />
     <meta
       property="og:description"
-      content="Empire of Light helps teams unlock the collective intelligence already inside them — a facilitated pilot plus app for shared vision, aligned action, and processing friction together."
+      content="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Now What? Cohorts."
     />
     <meta property="og:url" content="https://www.empireoflightcollective.com/" />
     <meta property="og:type" content="website" />
@@ -34,10 +35,10 @@
     <meta property="og:image" content="https://www.empireoflightcollective.com/og-image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Empire of Light | Collective Intelligence Platform for Teams" />
+    <meta name="twitter:title" content="Empire of Light | A Heart-Centered Operating System for Collective Intelligence" />
     <meta
       name="twitter:description"
-      content="Empire of Light helps teams unlock the collective intelligence already inside them — a facilitated pilot plus app for shared vision, aligned action, and processing friction together."
+      content="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Now What? Cohorts."
     />
     <meta name="twitter:image" content="https://www.empireoflightcollective.com/og-image.png" />
   </head>

@@ -97,11 +97,7 @@ function LightString() {
 export default function HolidayPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Holiday Edition (Free) | Empire of Light"
-        description="Do you dread the holidays? Join the free Empire of Light Holiday Edition: a kickoff call, a Reimagine → Do workshop, weekly drop-ins, and a January reflection. Reimagine your holiday traditions."
-        path="/holiday"
-      />
+      <Seo path="/holiday" />
       <MarketingHeader />
 
       {/* Hero */}

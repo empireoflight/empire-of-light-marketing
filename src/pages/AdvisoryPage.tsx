@@ -30,11 +30,7 @@ const MODES = [
 export default function AdvisoryPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Product + Transformation Leadership | Empire of Light"
-        description="Fractional vision, strategy, and execution advisory for leaders and teams navigating AI transformation and complex organizational change."
-        path="/advisory"
-      />
+      <Seo path="/advisory" />
       <MarketingHeader />
 
       {/* Hero */}

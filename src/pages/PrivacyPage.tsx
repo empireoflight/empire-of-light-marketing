@@ -46,11 +46,7 @@ const PROVIDERS = [
 export default function PrivacyPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Privacy Policy | Empire of Light"
-        description="How Empire of Light collects, stores, and protects your data — including a full breakdown of the app's five-tier privacy system."
-        path="/privacy"
-      />
+      <Seo path="/privacy" />
       <MarketingHeader />
 
       {/* Hero */}

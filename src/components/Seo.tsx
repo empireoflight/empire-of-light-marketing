@@ -1,16 +1,17 @@
 import { useEffect } from 'react'
+import { SEO_PAGES } from '../seoPages'
 
 const MARKETING_ORIGIN = 'https://www.empireoflightcollective.com'
 const APP_ORIGIN = 'https://app.empireoflightcollective.com'
 const SITE_NAME = 'Empire of Light'
-// The OG image only lives on the marketing site's origin — app-subdomain
-// pages (login/signup/invite) reuse it via the absolute marketing URL.
-const DEFAULT_OG_IMAGE = `${MARKETING_ORIGIN}/og-image.png`
 
 type SeoProps = {
-  title: string
-  description: string
   path: string
+  /** Defaults to the entry for `path` in SEO_PAGES (src/seoPages.ts), which is also what the build bakes into each page's HTML. */
+  title?: string
+  description?: string
+  /** Path to a 1200x630 share image under the site root. Defaults to the entry's image, then /og-image.png. */
+  image?: string
   noindex?: boolean
   /** Which deployment this page lives on — marketing site (www) or the app (app.*). Defaults to marketing. */
   origin?: 'marketing' | 'app'
@@ -37,13 +38,17 @@ function setLink(rel: string, href: string) {
 }
 
 /**
- * Sets document title, meta description/robots, canonical link, and Open
- * Graph/Twitter tags on route change. This is a client-side SPA (no SSR), so
- * these updates land after React mounts — fine for Google/Bing (they render
- * JS), but link-preview bots that don't execute JS will fall back to the
- * defaults baked into index.html instead of a page's specific title/description.
+ * Sets document title, meta description/robots, canonical link, and Open Graph/Twitter tags on route change.
+ * These client-side updates cover Google/Bing and the browser tab. Link-preview bots (iMessage, Slack, LinkedIn...)
+ * don't run JS, so the Vite build also writes each page's HTML with the same tags already in place (see vite.config.ts).
  */
-export function Seo({ title, description, path, noindex = false, origin = 'marketing' }: SeoProps) {
+export function Seo({ path, title: titleProp, description: descriptionProp, image, noindex: noindexProp, origin = 'marketing' }: SeoProps) {
+  const page = SEO_PAGES[path]
+  const title = titleProp ?? page?.title ?? SITE_NAME
+  const description = descriptionProp ?? page?.description ?? ''
+  const noindex = noindexProp ?? page?.noindex ?? false
+  const imageUrl = `${MARKETING_ORIGIN}${image ?? page?.image ?? '/og-image.png'}`
+
   useEffect(() => {
     document.title = title
     setMetaByAttr('name', 'description', description)
@@ -57,13 +62,13 @@ export function Seo({ title, description, path, noindex = false, origin = 'marke
     setMetaByAttr('property', 'og:url', url)
     setMetaByAttr('property', 'og:type', 'website')
     setMetaByAttr('property', 'og:site_name', SITE_NAME)
-    setMetaByAttr('property', 'og:image', DEFAULT_OG_IMAGE)
+    setMetaByAttr('property', 'og:image', imageUrl)
 
     setMetaByAttr('name', 'twitter:card', 'summary_large_image')
     setMetaByAttr('name', 'twitter:title', title)
     setMetaByAttr('name', 'twitter:description', description)
-    setMetaByAttr('name', 'twitter:image', DEFAULT_OG_IMAGE)
-  }, [title, description, path, noindex, origin])
+    setMetaByAttr('name', 'twitter:image', imageUrl)
+  }, [title, description, path, noindex, origin, imageUrl])
 
   return null
 }

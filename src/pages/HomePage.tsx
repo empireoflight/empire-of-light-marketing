@@ -29,11 +29,7 @@ const PATHS = [
 export default function HomePage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Empire of Light | A Heart-Centered Operating System for Collective Intelligence"
-        description="Empire of Light helps people and teams bring more ambitious visions to life faster, with more unity. A heart-centered operating system and collective intelligence platform for teams and Now What? Cohorts."
-        path="/"
-      />
+      <Seo path="/" />
       <MarketingHeader />
 
       {/* Seasonal: Holiday Edition announcement + snow. The AI Week banner this replaced is still available at /event/ai-week. */}

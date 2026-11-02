@@ -20,11 +20,7 @@ const BRINGS = [
 export default function AboutPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="About Kelly Woznicki | Empire of Light"
-        description="Meet Kelly Woznicki — 15+ years leading product and UX, now building Empire of Light to help teams align vision, strategy, structure, and energy."
-        path="/about"
-      />
+      <Seo path="/about" />
       <MarketingHeader />
 
       {/* Hero */}

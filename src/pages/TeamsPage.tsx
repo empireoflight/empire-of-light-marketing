@@ -161,11 +161,7 @@ const TIERS = [
 export default function TeamsPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Team Program | Empire of Light"
-        description="A different way of running a team. Empire of Light helps teams unlock the collective intelligence already inside them: a facilitated engagement plus app for shared vision, aligned action, and processing friction together."
-        path="/teams"
-      />
+      <Seo path="/teams" />
       <MarketingHeader />
 
       {/* Hero */}

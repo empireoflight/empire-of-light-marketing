@@ -164,11 +164,7 @@ const MORE_PROOF = [
 export default function LivingProofPage() {
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#FDFAF4', color: '#131114', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
-      <Seo
-        title="Living Proof | Empire of Light"
-        description="How a personal breakdown and rebuild became the Empire of Light methodology, and the growing body of proof that it works: the timeline, the art, and the teams."
-        path="/living-proof"
-      />
+      <Seo path="/living-proof" />
       <MarketingHeader />
 
       {/* Hero */}
