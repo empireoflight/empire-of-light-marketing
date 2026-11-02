@@ -124,8 +124,27 @@ const PEGS: { x: number; y: number; color: string }[] = [
   { x: 425, y: 140, color: WHITE },
 ]
 
-const CYCLE_MS = 6500
-const TICK_MS = 170
+// Each peg is a short acrylic cylinder seen a little off-axis: a pale flat cap in front of a deeper-colored body that trails off at
+// its own angle (mostly downward), like the pegs on the real board. Deterministic, so the board looks the same on every visit.
+const pegNoise = (i: number, salt: number) => {
+  const x = Math.sin(i * 12.9898 + salt * 78.233) * 43758.5453
+  return x - Math.floor(x)
+}
+const PEG_TILT = PEGS.map((_, i) => {
+  const angle = ((35 + pegNoise(i, 1) * 110) * Math.PI) / 180
+  const length = 3 + pegNoise(i, 2) * 3.4
+  return { dx: Math.cos(angle) * length, dy: Math.sin(angle) * length }
+})
+
+/** The four offer pegs come from four different color families, so each offer has its own recognizable peg. */
+const OFFER_COLOR_GROUPS = [[GREEN], [TEAL], [ORANGE], [AMBER, WHITE]]
+function pickOfferPegs(): number[] {
+  const groups = pickRandom(OFFER_COLOR_GROUPS, OFFER_COLOR_GROUPS.length)
+  return groups.map((colors) => pickRandom(PEGS.map((_, i) => i).filter((i) => colors.includes(PEGS[i].color)), 1)[0])
+}
+
+const CYCLE_MS = 8500
+const TICK_MS = 320
 
 const inputStyle: CSSProperties = {
   width: '100%',
@@ -186,19 +205,15 @@ export default function HolidayGamePage() {
 
   const startRound = () => {
     const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
-    const chosen = pickRandom(
-      PEGS.map((_, i) => i),
-      OFFERS.length,
-    )
     setSelected(null)
-    setOfferPegs(chosen)
+    setOfferPegs(pickOfferPegs())
     if (reduceMotion) {
       setPhase('ready')
       return
     }
     setPhase('cycling')
     const tick = window.setInterval(() => {
-      setLit(new Set(pickRandom(PEGS.map((_, i) => i), 5 + Math.floor(Math.random() * 5))))
+      setLit(new Set(pickRandom(PEGS.map((_, i) => i), 4 + Math.floor(Math.random() * 4))))
     }, TICK_MS)
     const done = window.setTimeout(() => {
       window.clearInterval(tick)
@@ -230,6 +245,8 @@ export default function HolidayGamePage() {
 
   const chosenOffer = OFFERS.find((o) => o.id === selected) ?? null
   const ended = Date.now() > GAME_ENDS
+  // the card takes the color of the peg that opened it
+  const accent = chosenOffer ? PEGS[offerPegs[OFFERS.findIndex((o) => o.id === chosenOffer.id)]]?.color ?? '#FEE16A' : '#FEE16A'
 
   return (
     <div style={{ width: '100%', overflowX: 'hidden', background: '#0B0A12', color: '#FBF7F2', fontFamily: "'Work Sans', system-ui, sans-serif" }}>
@@ -295,7 +312,7 @@ export default function HolidayGamePage() {
           {phase === 'ready' && (
             <div className="mx-auto mt-10 max-w-[680px] text-left">
               {chosenOffer ? (
-                <OfferCard key={chosenOffer.id} offer={chosenOffer} email={email} subscribe={subscribe} />
+                <OfferCard key={chosenOffer.id} offer={{ ...chosenOffer, color: accent }} email={email} subscribe={subscribe} />
               ) : (
                 <p className="m-0 text-center text-[15px]" style={{ color: 'rgba(251,247,242,.55)' }}>
                   Four pegs are glowing. Find them.
@@ -376,9 +393,13 @@ function Board({
         const offer = offerByPeg.get(i)
         const isOfferPeg = phase === 'ready' && offer
         const isLit = phase === 'cycling' && lit.has(i)
-        const color = isOfferPeg ? offer.color : peg.color
         const active = isOfferPeg && selected === offer.id
         const glowing = isLit || isOfferPeg
+        const { dx, dy } = PEG_TILT[i]
+        const r = isOfferPeg ? 8.2 : 6.6
+        const k = isOfferPeg ? 1.15 : 1
+        // pegs keep their own color: dim when off, full color when lit
+        const dim = glowing ? 1 : 0.5
         return (
           <g
             key={i}
@@ -401,22 +422,28 @@ function Board({
                 }
               : { 'aria-hidden': true })}
           >
-            {glowing && (
-              <circle
-                className="eol-peg-halo"
-                r={isOfferPeg ? 17 : 13}
-                fill={color}
-                filter="url(#peg-glow)"
-                style={{
-                  transformBox: 'fill-box',
-                  transformOrigin: 'center',
-                  animation: isOfferPeg ? `eol-peg-pulse ${1.6 + (i % 3) * 0.3}s ease-in-out infinite` : undefined,
-                  opacity: isOfferPeg ? undefined : 0.9,
-                }}
-              />
-            )}
-            <circle r={isOfferPeg ? 9.5 : 6.5} fill={glowing ? color : 'rgba(255,255,255,.16)'} stroke={active ? '#FFFFFF' : 'rgba(255,255,255,.28)'} strokeWidth={active ? 2.5 : 1} />
-            <circle cx={-2} cy={-2.5} r={isOfferPeg ? 2.8 : 2} fill="#FFFFFF" opacity={glowing ? 0.7 : 0.35} />
+            <circle
+              className="eol-peg-halo"
+              r={isOfferPeg ? 17 : 13}
+              fill={peg.color}
+              filter="url(#peg-glow)"
+              style={{
+                transformBox: 'fill-box',
+                transformOrigin: 'center',
+                animation: isOfferPeg ? `eol-peg-pulse ${1.6 + (i % 3) * 0.3}s ease-in-out infinite` : undefined,
+                opacity: isOfferPeg ? undefined : isLit ? 0.9 : 0,
+                transition: 'opacity .45s ease',
+              }}
+            />
+            <g opacity={dim} style={{ transition: 'opacity .45s ease' }}>
+              {/* body: the cylinder trailing back from the cap */}
+              <line x1={0} y1={0} x2={dx * k} y2={dy * k} stroke={peg.color} strokeWidth={r * 2} strokeLinecap="round" />
+              <line x1={0} y1={0} x2={dx * k} y2={dy * k} stroke="#000000" strokeOpacity={0.22} strokeWidth={r * 2} strokeLinecap="round" />
+              {/* cap: the pale flat end facing us */}
+              <circle r={r} fill={peg.color} stroke={active ? '#FFFFFF' : 'none'} strokeWidth={active ? 2.5 : 0} />
+              <circle r={r * 0.82} fill="#FFFFFF" fillOpacity={0.34} />
+              <circle cx={-r * 0.3} cy={-r * 0.32} r={r * 0.26} fill="#FFFFFF" fillOpacity={0.5} />
+            </g>
             {isOfferPeg && <circle r={28} fill="transparent" />}
           </g>
         )
