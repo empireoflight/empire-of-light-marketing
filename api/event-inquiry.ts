@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { addToEmailList, emailListLine } from './_email-list'
-import type { EmailListResult } from './_email-list'
+import { addToEmailList, emailListLine } from './_email-list.js'
+import type { EmailListResult } from './_email-list.js'
 
 const RESEND_API_URL = 'https://api.resend.com/emails'
 const FROM_ADDRESS = 'Empire of Light <notifications@app.empireoflightcollective.com>'

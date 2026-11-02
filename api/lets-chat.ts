@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { addToEmailList, emailListLine } from './_email-list'
-import type { EmailListResult } from './_email-list'
+import { addToEmailList, emailListLine } from './_email-list.js'
+import type { EmailListResult } from './_email-list.js'
 
 // Same pattern as the product app's supabase/functions/_shared/email/resend.ts —
 // reads RESEND_API_KEY server-side, sends via Resend's REST API directly (no SDK).
