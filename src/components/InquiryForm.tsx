@@ -38,7 +38,7 @@ interface InquiryFormProps {
 /** Lead-capture form for the program pages: same fields and style as the event offer page, with the offer fixed by the page. */
 export function InquiryForm({ offer, page, heading, intro, messageLabel }: InquiryFormProps) {
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
-  const [subscribe, setSubscribe] = useState(false)
+  const [subscribe, setSubscribe] = useState(true)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 

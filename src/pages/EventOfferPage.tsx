@@ -113,7 +113,7 @@ export default function EventOfferPage() {
   const offers = OFFERS.map((o) => ({ ...o, ...(slug ? PRICE_OVERRIDES[slug]?.[o.id] : undefined) }))
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
   const [offer, setOffer] = useState<OfferId | ''>('')
-  const [subscribe, setSubscribe] = useState(false)
+  const [subscribe, setSubscribe] = useState(true)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 

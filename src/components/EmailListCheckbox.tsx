@@ -1,4 +1,4 @@
-/** Opt-in checkbox for the email list. Unchecked by default; consent has to be an active choice. */
+/** Opt-in checkbox for the email list. The forms start it checked; visitors can untick it. */
 export function EmailListCheckbox({ id, checked, onChange }: { id: string; checked: boolean; onChange: (checked: boolean) => void }) {
   return (
     <label htmlFor={id} className="flex cursor-pointer items-start gap-3 text-[14px] leading-[1.5]" style={{ color: '#544D5A' }}>

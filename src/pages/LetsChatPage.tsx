@@ -28,7 +28,7 @@ const labelStyle = {
 
 export default function LetsChatPage() {
   const [form, setForm] = useState({ name: '', email: '', message: '', company: '' })
-  const [subscribe, setSubscribe] = useState(false)
+  const [subscribe, setSubscribe] = useState(true)
   const [status, setStatus] = useState<Status>('idle')
   const [error, setError] = useState('')
 
