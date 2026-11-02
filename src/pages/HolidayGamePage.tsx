@@ -9,7 +9,7 @@ import { EmailListCheckbox } from '../components/EmailListCheckbox'
 import { MarketingFooter } from '../components/MarketingFooter'
 import { MarketingHeader } from '../components/MarketingHeader'
 import { Seo } from '../components/Seo'
-import { DISPLAY, Eyebrow, primaryButton } from '../components/shared'
+import { DISPLAY, primaryButton } from '../components/shared'
 
 type Phase = 'gate' | 'cycling' | 'ready'
 type OfferId = 'holiday' | 'cohort' | 'team' | 'referral'
@@ -238,7 +238,6 @@ export default function HolidayGamePage() {
 
       <section className="px-6 pt-14 pb-20 md:px-8 md:pt-20 md:pb-28">
         <div className="mx-auto max-w-[900px] text-center">
-          <Eyebrow color="#FEE16A">Holiday Edition &middot; Game</Eyebrow>
           <h1 className="m-0 mb-5 text-[36px] leading-[1.08] font-light md:text-[56px]" style={{ ...DISPLAY, letterSpacing: '.02em' }}>
             Light up your holiday surprise
           </h1>
@@ -246,9 +245,9 @@ export default function HolidayGamePage() {
             {ended
               ? 'The holiday game has ended. Thanks for playing!'
               : phase === 'gate'
-              ? 'Enter your email to play. Watch the lights choose, then tap or hover a glowing peg to see what’s waiting for you. Offers are good through December 31.'
+              ? 'Enter your email to play. Watch the lights, then tap or hover a glowing peg to see what’s waiting for you. Offers are good through December 31.'
               : phase === 'cycling'
-                ? 'The lights are choosing…'
+                ? 'Enjoy the light show'
                 : 'Tap or hover a glowing peg to see what’s inside.'}
           </p>
 
