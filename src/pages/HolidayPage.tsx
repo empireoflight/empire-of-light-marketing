@@ -156,7 +156,8 @@ export default function HolidayPage() {
             When was the last time you allowed yourself to reimagine your holiday traditions?
           </p>
           <p className="m-0 mb-4 text-[17px] leading-[1.65] md:text-[18px]" style={{ color: '#544D5A' }}>
-            Come join our Empire of Light Holiday Edition! It&rsquo;s free, and donations will be accepted at the end.
+            Maybe you want to rethink everything. Maybe you just want to show up a little differently. This is an opportunity to reflect on what you want and take small steps to make some of
+            that happen this year. We&rsquo;ll navigate the holidays together, with a compass.
           </p>
         </div>
       </section>
@@ -219,7 +220,7 @@ export default function HolidayPage() {
         offer="holiday"
         page="Holiday Edition page"
         heading="Join the Holiday Edition"
-        intro="It’s free. Sign up and I’ll send the details for the kickoff call."
+        intro="Sign up and I’ll send the details for the kickoff call."
         messageLabel="Anything you’d like me to know? (optional)"
         submitLabel="Sign me up"
         successMessage="You’re in! Thanks for signing up. I’ll send details for the kickoff call soon."
