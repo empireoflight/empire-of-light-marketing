@@ -143,7 +143,7 @@ function pickOfferPegs(): number[] {
   return groups.map((colors) => pickRandom(PEGS.map((_, i) => i).filter((i) => colors.includes(PEGS[i].color)), 1)[0])
 }
 
-const CYCLE_MS = 8500
+const CYCLE_MS = 6000
 const TICK_MS = 320
 
 const inputStyle: CSSProperties = {
@@ -256,16 +256,16 @@ export default function HolidayGamePage() {
       <section className="px-6 pt-14 pb-20 md:px-8 md:pt-20 md:pb-28">
         <div className="mx-auto max-w-[900px] text-center">
           <h1 className="m-0 mb-5 text-[36px] leading-[1.08] font-light md:text-[56px]" style={{ ...DISPLAY, letterSpacing: '.02em' }}>
-            Light up your holiday surprise
+            A little holiday magic awaits
           </h1>
           <p className="mx-auto mb-10 max-w-[560px] text-[17px] leading-[1.55] md:text-[19px]" style={{ color: 'rgba(251,247,242,.75)' }}>
             {ended
               ? 'The holiday game has ended. Thanks for playing!'
               : phase === 'gate'
-              ? 'Enter your email to play. Watch the lights, then tap or hover a glowing peg to see what’s waiting for you. Offers are good through December 31.'
+              ? 'Enter your email to see what’s in store. Enjoy the lights, then tap or hover over a glowing peg to reveal your holiday surprise. Offers are good through December 31.'
               : phase === 'cycling'
-                ? 'Enjoy the light show'
-                : 'Tap or hover a glowing peg to see what’s inside.'}
+                ? 'Enjoy the show...'
+                : 'Tap or hover over a glowing peg to reveal your holiday surprise.'}
           </p>
 
           <Board phase={phase} lit={lit} offerByPeg={offerByPeg} selected={selected} onSelect={select} />
