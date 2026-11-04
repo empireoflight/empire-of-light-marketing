@@ -705,7 +705,7 @@ function ReferralForm({ offer, email }: { offer: Offer; email: string }) {
         </div>
       </div>
       <p className="m-0 text-[13px] leading-[1.5]" style={{ color: 'rgba(251,247,242,.55)' }}>
-        I’ll send your friend one email, with you and me copied so we can all talk. They won’t be added to any list.
+        I’ll send your friend one email, with you copied. They won’t be added to any list.
       </p>
 
       {status === 'error' && (
