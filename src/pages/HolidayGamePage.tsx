@@ -22,6 +22,8 @@ interface Offer {
   /** Shown as a small tag on the offer card. */
   perk?: string
   price?: string
+  /** Fine print under the offer: when the sticker or art is mailed. */
+  note?: string
   color: string
   /** Offers with a sticker open the claim form. */
   sticker?: boolean
@@ -44,8 +46,9 @@ const OFFERS: Offer[] = [
     id: 'cohort',
     title: '20% off the January Now What? Cohort',
     body: 'Great if you’re experiencing some kind of quantum crumble or life shift and you want to figure out what’s next.',
-    perk: 'Free sticker included',
+    perk: 'Free sticker with sign-up',
     price: '$495 → $396 per person',
+    note: 'Your sticker is mailed once you sign up and pay for the program.',
     color: '#4FD1D9',
     sticker: true,
     cta: { label: 'See the cohort', to: '/now-what-cohort' },
@@ -54,8 +57,9 @@ const OFFERS: Offer[] = [
     id: 'team',
     title: '30% off the Team Hivemindset Vision Program',
     body: 'Great if your team is losing momentum or going in a new direction, and you really want them to blast off in the new year. Think of this as your insurance policy, but with heart.',
-    perk: 'Free sticker included',
+    perk: 'Free sticker with sign-up',
     price: '$5,000 → $3,500 per team',
+    note: 'Your sticker is mailed once your team signs up and pays for the program.',
     color: '#FFB347',
     sticker: true,
     cta: { label: 'See the program', to: '/teams' },
@@ -63,8 +67,9 @@ const OFFERS: Offer[] = [
   {
     id: 'referral',
     title: 'Free art when you refer a friend or team',
-    body: 'Refer a friend or team to any program, and when they sign up, I’ll send you a sticker and a print of your choice.',
+    body: 'Refer a friend or team to any program, and when they sign up and pay, I’ll mail you a sticker and a print of your choice.',
     perk: 'Sticker + print',
+    note: 'Your sticker and print are mailed once your friend or team signs up and pays for a program.',
     color: '#FF7AC8',
     referral: true,
     cta: { label: 'See the programs', to: '/teams' },
@@ -474,8 +479,13 @@ function OfferCard({ offer, email, subscribe }: { offer: Offer; email: string; s
         {offer.body}
       </p>
       {offer.price && (
-        <p className="m-0 mb-5 text-[15px] font-medium" style={{ color: offer.color }}>
+        <p className="m-0 mb-3 text-[15px] font-medium" style={{ color: offer.color }}>
           {offer.price}
+        </p>
+      )}
+      {offer.note && (
+        <p className="m-0 mb-5 text-[14px] leading-[1.5]" style={{ color: 'rgba(251,247,242,.6)' }}>
+          {offer.note}
         </p>
       )}
 
@@ -507,7 +517,7 @@ function OfferCard({ offer, email, subscribe }: { offer: Offer; email: string; s
 
 function ClaimForm({ offer, email, subscribe }: { offer: Offer; email: string; subscribe: boolean }) {
   const [sticker, setSticker] = useState('')
-  const [form, setForm] = useState({ name: '', email, line1: '', line2: '', city: '', region: '', postal: '', country: '' })
+  const [form, setForm] = useState({ name: '', email })
   const [status, setStatus] = useState<ClaimStatus>('idle')
   const [error, setError] = useState('')
   const set = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) => setForm((f) => ({ ...f, [field]: e.target.value }))
@@ -529,7 +539,6 @@ function ClaimForm({ offer, email, subscribe }: { offer: Offer; email: string; s
         subscribe,
         name: form.name,
         email: form.email,
-        address: { line1: form.line1, line2: form.line2, city: form.city, region: form.region, postal: form.postal, country: form.country },
       })
       track('holiday_game_claim', { offer: offer.id, sticker })
       setStatus('success')
@@ -542,7 +551,7 @@ function ClaimForm({ offer, email, subscribe }: { offer: Offer; email: string; s
   if (status === 'success') {
     return (
       <p className="m-0 mt-5 text-[16px] leading-[1.6]" style={{ color: '#FBF7F2' }}>
-        You’re all set! Thanks for playing. I’ll be in touch by email soon, and your sticker is on its way.
+        You’re all set! Thanks for playing. I’ve noted your discount and I’ll apply it when you sign up. Your sticker will be mailed once you sign up and pay for the program.
       </p>
     )
   }
@@ -594,18 +603,8 @@ function ClaimForm({ offer, email, subscribe }: { offer: Offer; email: string; s
         {field('name', 'Name', { required: true, autoComplete: 'name' })}
         {field('email', 'Email', { required: true, type: 'email', autoComplete: 'email' })}
       </div>
-      {field('line1', 'Street address', { required: true, autoComplete: 'address-line1' })}
-      {field('line2', 'Apartment, suite, etc. (optional)', { autoComplete: 'address-line2' })}
-      <div className="grid gap-4 sm:grid-cols-2">
-        {field('city', 'City', { required: true, autoComplete: 'address-level2' })}
-        {field('region', 'State / region', { autoComplete: 'address-level1' })}
-      </div>
-      <div className="grid gap-4 sm:grid-cols-2">
-        {field('postal', 'Postal code', { required: true, autoComplete: 'postal-code' })}
-        {field('country', 'Country', { required: true, autoComplete: 'country-name' })}
-      </div>
       <p className="m-0 text-[13px] leading-[1.5]" style={{ color: 'rgba(251,247,242,.55)' }}>
-        I’ll only use your address to mail your sticker.
+        No address needed yet. I’ll mail your sticker once you sign up and pay for the program.
       </p>
 
       {status === 'error' && (
@@ -614,7 +613,7 @@ function ClaimForm({ offer, email, subscribe }: { offer: Offer; email: string; s
         </div>
       )}
       <button type="submit" disabled={status === 'submitting'} className="rounded-lg px-8 py-4 text-[15px] font-semibold disabled:opacity-60" style={primaryButton()}>
-        {status === 'submitting' ? 'Sending…' : 'Send my details'}
+        {status === 'submitting' ? 'Sending…' : 'Claim my offer'}
       </button>
     </form>
   )
@@ -645,7 +644,7 @@ function ReferralForm({ offer, email }: { offer: Offer; email: string }) {
   if (status === 'success') {
     return (
       <p className="m-0 mt-5 text-[16px] leading-[1.6]" style={{ color: '#FBF7F2' }}>
-        Sent! You, your friend, and I are all on the email. If they sign up for a program, I’ll send you a sticker and a print of your choice.
+        Sent! You, your friend, and I are all on the email. If they sign up and pay for a program, I’ll mail you a sticker and a print of your choice.
       </p>
     )
   }

@@ -2,7 +2,8 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 
 // Holiday lights game. Three actions share this endpoint:
 //   play   - the email gate. Saves the player to the Resend contact list (subscribed only if they left the box ticked).
-//   claim  - a player picked a sticker offer and sent a shipping address. Emails Kelly the details. There's no limit on
+//   claim  - a player picked a sticker offer and a sticker. Emails Kelly the details. No address is collected here: stickers are
+//            mailed after the person signs up and pays, and Kelly gets the address then. There's no limit on
 //            claims: Kelly checks that people really sign up before mailing anything.
 //   refer  - a player introduces a friend: one email to the friend, with the player and Kelly copied.
 // Self-contained on purpose: Vercel's build can't resolve imports between files in api/.
@@ -134,13 +135,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const name = clean(body.name, 120)
     const offer = clean(body.offer, 20)
     const sticker = clean(body.sticker, 40)
-    const address = (body.address ?? {}) as Record<string, unknown>
-    const line1 = clean(address.line1)
-    const line2 = clean(address.line2)
-    const city = clean(address.city, 100)
-    const region = clean(address.region, 100)
-    const postal = clean(address.postal, 20)
-    const country = clean(address.country, 100)
 
     if (!name) {
       res.status(400).json({ error: 'Please add your name.' })
@@ -154,23 +148,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       res.status(400).json({ error: 'Please choose a sticker.' })
       return
     }
-    if (!line1 || !city || !postal || !country) {
-      res.status(400).json({ error: 'Please fill in your street address, city, postal code, and country so I can mail your sticker.' })
-      return
-    }
-
-    const addressHtml = [line1, line2, [city, region, postal].filter(Boolean).join(', '), country]
-      .filter(Boolean)
-      .map(escapeHtml)
-      .join('<br>')
     const html = `
       <p><strong>Offer:</strong> ${escapeHtml(OFFERS[offer])}</p>
       <p><strong>Sticker:</strong> ${escapeHtml(STICKERS[sticker])}</p>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Email list:</strong> ${subscribe ? 'Yes (subscribed)' : 'No (saved as unsubscribed)'}</p>
-      <p><strong>Mail the sticker to:</strong></p>
-      <p>${addressHtml}</p>
+      <p><em>When they sign up: apply the discount above, and mail the sticker after they pay (collect their address then).</em></p>
     `.trim()
 
     const resendRes = await fetch(RESEND_EMAILS_URL, {

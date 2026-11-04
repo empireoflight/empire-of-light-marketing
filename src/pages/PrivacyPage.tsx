@@ -154,9 +154,9 @@ export default function PrivacyPage() {
             </p>
             <p className="m-0 text-[16px] leading-[1.7] md:text-[17px]" style={{ color: '#544D5A' }}>
               <strong style={{ fontWeight: 600, color: '#131114' }}>Information from our forms and games.</strong> If you send a message,
-              sign up for an event, or play the holiday game, we collect the name, email, and message you give us. If you claim a sticker or
-              print, we also collect the mailing address you enter, and we use it only to send your item. If you leave the email list box
-              ticked, we add your name and email to our mailing list, and you can unsubscribe from any email.
+              sign up for an event, or play the holiday game, we collect the name, email, and message you give us, plus the sticker you pick if
+              you claim a sticker offer. We don’t ask for a mailing address in the game; if you later sign up for a program and are owed a
+              sticker or print, we’ll ask for your address then and use it only to mail your item. If you leave the email list box ticked, we add your name and email to our mailing list, and you can unsubscribe from any email.
             </p>
           </div>
         </div>
