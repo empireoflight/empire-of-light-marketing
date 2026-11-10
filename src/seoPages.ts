@@ -40,6 +40,13 @@ export const SEO_PAGES: Record<string, PageSeo> = {
     image: '/og-holiday.png',
     noindex: true,
   },
+  '/art': {
+    title: 'Hi, I\'m Kelly | Art and Empire of Light',
+    description:
+      'Found my art at the Kirkland Arts Center Holiday Market? Welcome! Here\'s the story behind the art, and the Reimagine, Do, Unlearn, Evolve cycle it led me to.',
+    image: '/og-art.jpg',
+    noindex: true,
+  },
   '/thesis': {
     title: 'The Empire of Light Thesis | A Team Operating System for Collective Transformation',
     description:

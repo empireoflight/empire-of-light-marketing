@@ -14,6 +14,7 @@ import LetsChatPage from './pages/LetsChatPage'
 import EventOfferPage from './pages/EventOfferPage'
 import HolidayGamePage from './pages/HolidayGamePage'
 import HolidayPage from './pages/HolidayPage'
+import ArtPage from './pages/ArtPage'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/lets-chat" element={<LetsChatPage />} />
         <Route path="/holiday" element={<HolidayPage />} />
+        <Route path="/art" element={<ArtPage />} />
         <Route path="/holiday-game" element={<HolidayGamePage />} />
         <Route path="/event" element={<EventOfferPage />} />
         <Route path="/event/:slug" element={<EventOfferPage />} />
