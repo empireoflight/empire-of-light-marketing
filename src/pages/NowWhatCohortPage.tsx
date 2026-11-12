@@ -27,7 +27,7 @@ const INCLUDES = [
 
 const CYCLE = [
   { stage: 'Reimagine', body: 'Set a vision for what you want your life to feel like, even if it’s still fuzzy.' },
-  { stage: 'Do', body: 'Run small experiments that start bringing that vision into everyday life.' },
+  { stage: 'Do', body: 'Run small experiments that start bringing that vision into everyday life. We also help you figure out what to minimize in your life, so you have the time and energy to try them.' },
   { stage: 'Unlearn', body: 'Notice and work through the friction, fear, and old patterns that come up.' },
   { stage: 'Evolve', body: 'Learn from what happened, and let your vision grow with you.' },
 ]

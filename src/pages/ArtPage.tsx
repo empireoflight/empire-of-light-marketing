@@ -250,7 +250,7 @@ export default function ArtPage() {
               <Label padX={18}>What&rsquo;s Empire of Light?</Label>
             </h2>
             <p style={{ margin: 0, fontSize: 'clamp(20px, 2.6vw, 24px)', lineHeight: 1.55, fontWeight: 600 }}>
-              It&rsquo;s a heart-centered operating framework, designed to bring out the best in people.
+              It&rsquo;s a heart-centered operating framework, designed to bring out the best in people and bring good things into the world.
             </p>
             <div className="grid grid-cols-1 gap-6 min-[961px]:grid-cols-2">
               {OFFERS.map((offer) => (
